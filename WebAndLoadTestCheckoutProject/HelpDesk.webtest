@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="HelpDesk" Id="bf5173a3-c4d9-494b-a5bb-2dbbd6217826" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="HelpDesk.389b49d7-7757-4c02-8df5-b9cd21ec967f.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="dd447c8a-8801-4a56-abd4-e49117dd71fe" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2FHelpdesk%2F" RecordedValue="http%3A%2F%2F172.22.1.26%2FHelpdesk%2F" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="7bdfedb9-e814-4da5-9f6b-a6d448fb04b0" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2FHelpdesk%2F" RecordedValue="http%3A%2F%2F172.22.1.26%2FHelpdesk%2F" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="65a1d560-0a37-4e80-99a8-4d9673897fc1" Version="1.1" Url="http://172.22.1.26/Helpdesk/" ThinkTime="7" Timeout="1" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/default.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam7.Prev" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam8.Prev" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ctl00$cphBody$cmdNext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="cmdNext" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="7a26208c-500c-4837-9fb5-a73172fc3f7f" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/default.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.ctl00$cphBody$cmdLogin" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; onc" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="{{QueryStringParam7.Prev}}" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fdefault.aspx" CorrelationBinding="{{QueryStringParam7.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdNext" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdNext" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="rvrdS875UNhnLgtdsr94tMPwsZTC6iFf9l1VoHMO2G74olxgte9LYhHTvRgUpWs2prkxeQIgVX58wCxrQr50MM5d6HwaqvnD2Q5Ha2LKv6vzUrTEJ4wnMtiUbz5d8b9/8v7N8fSWt6YLwI+DljX1gCxUsIEuIn9n3tnPSUjiq3RO59+XUXkdWX/m65wY17yVqaBngl3RC+Or9VTwmfICFX82ErfxOUMEWg5BScDfPJofvsrOCiV3RIf0bPHVREE9OGSE9vTzcm0P52SDLSvkIEsglLZdrw3zlKxtGoyXlidQrYrgwsy1g00IwHox/4+mr+KgsN7JL0iELaVyNZnfJ60xgV0/GbxNnlFBKpwAI3CC7Zd55pNJJL0u56wK8TfjDqOi3IuzaHlHyyOfQUeTsufDGy/lD4mLQnOGikc6p7fx9qgehXYMZMaDi08xuIR5hjnm+w==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="eGKeObOWvFvPd1aXWgd7uGckg7cwgtmTE0y2xx8HgeuorQDZ6fG/dsaI2GYo7c5DrXW05u4hqqE79mpq42L5Mr5VhYKi/A+nWeDVZVWFEADRmX8INWW++nEw/un2Uyiu2lbPeA==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtEmpID" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdNext" Value="Next" RecordedValue="Next" CorrelationBinding="{{FormPostParam1.ctl00$cphBody$cmdNext}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="cc5c077e-eda1-44d8-b482-093a8bce7559" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/default.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="{{QueryStringParam8.Prev}}" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fdefault.aspx" CorrelationBinding="{{QueryStringParam8.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtPassword" Value="Mejba@12" RecordedValue="Mejba@12" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="M+EizKE2LjVzsctVq2lr3X7NCbJdYJ27E0ZaB5OdpZLyRNo85UPbjYeO54hi+A/ZEtelwGOAnw803t3uQ0Pe2QzNbpU7d3XwUitwyJ0DnEqomdzPTouGHoXttYWVYmnbqgCF/PlyuPuCdq3VPZfkkufbJS6ehylnvnwkK21mUVoa3DEPjxtSMc2hc3JBxDjxJnYv0h5GZEkve3CkEtyBfG4Xv6cVsUIV6Kx2e82bwcckib2285g1V5lJtIKoMWIcVJy+MImSme7HjubQYClLxo0UtLIO6aoVr0vwCSSLKwzK1Tkb3bzBfhjaTbbeU5w1JL3v8fHe8A0DXr6pC6VewpMthe3kQ3v0biHx1L2VCNn1RnDsYZdEYywjJLMN/G1XjynhgrUKPHO8m2UKHiWqzk/aKGBSHa4kLbQKa76vhBScs9UV7oFgcho7PV2r/358MhhCjr474pMTstIEhjGBk0sMNAlhsruuRi+Uook9sstdP2MVG+S+1vHSj56G+fiOx5qpFsGZVSdyVVlW02cc7qsPR89AjtRNhlcRdeasQdvB2KTLNkduige0OZvtxQlUZLWrwKr4EfxyifQ4fX6wCNLGVJh8l4csSVcCh34PunWecfJE+NHfxaDpwvzk0Gs9mq1Z7WvzIlfCrpik6DwTvsezGDKS00s8cfpTalwmHToS6z4xJtzqcsUzeEEgz3vbWYUJlBmEgXzTms1TKT4FeA+fU+K4odrVT+ds6QQOC2Lw7K63tBKRTtPuoNHo59PF7SXUm+RcT7xRjwVUNGR0RG7F1ejuLaL+pMIj6urRtgzyYi+51cndZ+sIGeJejyIeFK68WWms7s6aZBIInv7nPopTHqE=" RecordedValue="M+EizKE2LjVzsctVq2lr3X7NCbJdYJ27E0ZaB5OdpZLyRNo85UPbjYeO54hi+A/ZEtelwGOAnw803t3uQ0Pe2QzNbpU7d3XwUitwyJ0DnEqomdzPTouGHoXttYWVYmnbqgCF/PlyuPuCdq3VPZfkkufbJS6ehylnvnwkK21mUVoa3DEPjxtSMc2hc3JBxDjxJnYv0h5GZEkve3CkEtyBfG4Xv6cVsUIV6Kx2e82bwcckib2285g1V5lJtIKoMWIcVJy+MImSme7HjubQYClLxo0UtLIO6aoVr0vwCSSLKwzK1Tkb3bzBfhjaTbbeU5w1JL3v8fHe8A0DXr6pC6VewpMthe3kQ3v0biHx1L2VCNn1RnDsYZdEYywjJLMN/G1XjynhgrUKPHO8m2UKHiWqzk/aKGBSHa4kLbQKa76vhBScs9UV7oFgcho7PV2r/358MhhCjr474pMTstIEhjGBk0sMNAlhsruuRi+Uook9sstdP2MVG+S+1vHSj56G+fiOx5qpFsGZVSdyVVlW02cc7qsPR89AjtRNhlcRdeasQdvB2KTLNkduige0OZvtxQlUZLWrwKr4EfxyifQ4fX6wCNLGVJh8l4csSVcCh34PunWecfJE+NHfxaDpwvzk0Gs9mq1Z7WvzIlfCrpik6DwTvsezGDKS00s8cfpTalwmHToS6z4xJtzqcsUzeEEgz3vbWYUJlBmEgXzTms1TKT4FeA+fU+K4odrVT+ds6QQOC2Lw7K63tBKRTtPuoNHo59PF7SXUm+RcT7xRjwVUNGR0RG7F1ejuLaL+pMIj6urRtgzyYi+51cndZ+sIGeJejyIeFK68WWms7s6aZBIInv7nPopTHqE=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="hD3o/ETGgiOmRPvIebhWWwwd10YzAnCPl7Koh1Hc13yhWOZQbKIO1tfuGQFka/k9lQTie2rlv6T61kAMv2PuVPG9yHnAaJei9GeZqWpTcvcHb9B+nqnrvIA7/md7YRIXkPzrMOdG1ZG7aIESDg15aaBKfok=" RecordedValue="hD3o/ETGgiOmRPvIebhWWwwd10YzAnCPl7Koh1Hc13yhWOZQbKIO1tfuGQFka/k9lQTie2rlv6T61kAMv2PuVPG9yHnAaJei9GeZqWpTcvcHb9B+nqnrvIA7/md7YRIXkPzrMOdG1ZG7aIESDg15aaBKfok=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdLogin" Value="Login" RecordedValue="Login" CorrelationBinding="{{FormPostParam2.ctl00$cphBody$cmdLogin}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="f95b5c94-671d-4554-b7b0-2b73e2200cc7" Version="1.1" Url="http://172.22.1.26/Helpdesk/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="356bba90-456c-4f17-8ba4-f08f166e1ec3" Version="1.1" Url="http://172.22.1.26/cdn/font-awesome/4.5.0/fonts/fontawesome-webfont.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/default.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/default.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="785ee569-41c8-4ad7-8eab-d7e661eeb6ac" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2FHelpdesk%2F" RecordedValue="http%3A%2F%2F172.22.1.26%2FHelpdesk%2F" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="5742f9df-2ea6-4bd9-bc34-49c5e9463897" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2FHelpdesk%2F" RecordedValue="http%3A%2F%2F172.22.1.26%2FHelpdesk%2F" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="f358818a-d064-4e81-9cd2-9f01713bfa1f" Version="1.1" Url="http://172.22.1.26/Helpdesk/" ThinkTime="6" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/default.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam15.Prev" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.ctl00$cphBody$cmdNext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="cmdNext" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam16.Prev" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="73b77055-d9c3-41e6-af59-a3d1b9bc3d9c" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="1" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/default.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.ctl00$cphBody$cmdLogin" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; onc" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fdefault.aspx" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fdefault.aspx" CorrelationBinding="{{QueryStringParam15.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdNext" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdNext" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="jV+GCzwKUL4vOa83ZUsmgOQAPWiuckhZBV1dJY3OomDPc7ABVozmJZRb0JxZj1leFPj8bDYidBQ0BHo20vzRlc33TDVWFr1VtMoqepYfsAQwwOXwzRlmgzIhg2ueS/hDhcVpXk/SrkcIpJhmVE1BiSsu5Ndf2i4UA6Iga1sh7lSxywz341GVwdvQxCPuDxQa4gALw4WWbrlzoOtyAnpDsDW5sCLLDftft5uXLgoqfrO2Krkp++lvp218MdGB+u5lYr8lNAZb/4TgJtX1BfuaCLhpyYDwQ6Q02cG4m0WAhfJ6PLu+vs28e5tA4o6Nbfes6qpdi5/u2oM2MzZnVTegs+0byonACB9yogamhUv4y1TBNcZ6QHVX9FSfaQzuZjuOqL2UcXn8jtWHwAfRny/TqUsTuB6qaL4hxOKG+Xsqm0b9WaXlLslQ7LoleLddbRNywHNLwQ==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="lwWifxA+ZfDREkdFFQWWkZ2FlLGtfmtUL1PkT9rRiqiI5INugt4cR5ottwPhPWK36JYFPae5wkdvlfRU5Ilj9YR/YzMnF0r/fBgKdgJDbXNfoP1Fdx2ND2P0dPweeuQhGs9GWQ==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtEmpID" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdNext" Value="Next" RecordedValue="Next" CorrelationBinding="{{FormPostParam3.ctl00$cphBody$cmdNext}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="76940857-58b6-458b-9744-20a8dccbd7eb" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/default.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fdefault.aspx" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fdefault.aspx" CorrelationBinding="{{QueryStringParam16.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtPassword" Value="Mejba@12" RecordedValue="Mejba@12" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="FnEJwUEncjzavMzs0eXkIR1VTjH3e+JMuaDRW45BdiuVOBVXNnweHQ2dyNR4pDT08CcltXllQdo0vQtlq+R5O3mWuFxxY41NLqVjIpjdxPZQ9fsik0DIlcutdUp2Q9ABmXEJ6+s5jfZnFw9wecboW3cEww2rPL14ftrQjMq/frPgPuFy0akr0uF1OXaIJYRnFxGAyNNNw5NhvSz0gGtur/CRqW6FDiaxfHo57krzxRIYM64jcAuh1P+aK6LRA2uppfx7HmS1VJwc/TwgAnAWyWP0QTKroHdIxxex9G3VwwGHSOS/CeHXp3+j32azDwqKhWyfEyoX1K078bgHLlQVGcz5k2Yibij07JC2CDBaDrwiMJWl4BBicy1hHeVU/d0PpY+qj2l2pSmqlbc6VC7rfUuwWn7PD14Jb/psx7fQT/DOZnhqQxhrSh1C1Hshx2gs7cN4bC56cfio+IjM+db5EwPfUcAQCRdMJloBGR9NRA80i6z/fqPOxAZpm/bTsIRejVl0qCcmuubhL8tbWURxOLxiKvG8XyFZojSQTlOhiDdMLE4kiATSKE6xkCHUA+Imib3zfCgeXEPYGcN6gIW5XlAfRzgkAsCdX+iGhSz7bgxPEU+JTKLJgDdBckz+ePzNe7+FUbuUnfdgP+k73EkR2xNeIqlMqJ/xamU6ZmZDc458jYPkYzOZBtouAU5KyiyGV1Ro2IQbPp4QWrCVxqFckZHoRMLCBc6wPV5JxaVIn44yBfYEez3WXYczLWjKnnj9F2eOeTCcVXAXVlYnNoFQKWt9nEnZXhNyAMYKBatE8K/7W6JYhif2Pf2w05DIy8dzeap2GmWG2mDGkEG66fsU3BwLRwM=" RecordedValue="FnEJwUEncjzavMzs0eXkIR1VTjH3e+JMuaDRW45BdiuVOBVXNnweHQ2dyNR4pDT08CcltXllQdo0vQtlq+R5O3mWuFxxY41NLqVjIpjdxPZQ9fsik0DIlcutdUp2Q9ABmXEJ6+s5jfZnFw9wecboW3cEww2rPL14ftrQjMq/frPgPuFy0akr0uF1OXaIJYRnFxGAyNNNw5NhvSz0gGtur/CRqW6FDiaxfHo57krzxRIYM64jcAuh1P+aK6LRA2uppfx7HmS1VJwc/TwgAnAWyWP0QTKroHdIxxex9G3VwwGHSOS/CeHXp3+j32azDwqKhWyfEyoX1K078bgHLlQVGcz5k2Yibij07JC2CDBaDrwiMJWl4BBicy1hHeVU/d0PpY+qj2l2pSmqlbc6VC7rfUuwWn7PD14Jb/psx7fQT/DOZnhqQxhrSh1C1Hshx2gs7cN4bC56cfio+IjM+db5EwPfUcAQCRdMJloBGR9NRA80i6z/fqPOxAZpm/bTsIRejVl0qCcmuubhL8tbWURxOLxiKvG8XyFZojSQTlOhiDdMLE4kiATSKE6xkCHUA+Imib3zfCgeXEPYGcN6gIW5XlAfRzgkAsCdX+iGhSz7bgxPEU+JTKLJgDdBckz+ePzNe7+FUbuUnfdgP+k73EkR2xNeIqlMqJ/xamU6ZmZDc458jYPkYzOZBtouAU5KyiyGV1Ro2IQbPp4QWrCVxqFckZHoRMLCBc6wPV5JxaVIn44yBfYEez3WXYczLWjKnnj9F2eOeTCcVXAXVlYnNoFQKWt9nEnZXhNyAMYKBatE8K/7W6JYhif2Pf2w05DIy8dzeap2GmWG2mDGkEG66fsU3BwLRwM=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="5qJ3NJ0jTnjHSmviNM0U8NiQhIj6rVsco0BQZtk0Uyd82JVT11n4WN16AvgGM8FIx8mwQrliuZOeucaMzQtICydB9nXNIbzEWAadA7aIT+qIE4DNg4Vb04sK4UtO1m1IRHOr6Kchdr3+OgVdwJvetichYJ0=" RecordedValue="5qJ3NJ0jTnjHSmviNM0U8NiQhIj6rVsco0BQZtk0Uyd82JVT11n4WN16AvgGM8FIx8mwQrliuZOeucaMzQtICydB9nXNIbzEWAadA7aIT+qIE4DNg4Vb04sK4UtO1m1IRHOr6Kchdr3+OgVdwJvetichYJ0=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdLogin" Value="Login" RecordedValue="Login" CorrelationBinding="{{FormPostParam4.ctl00$cphBody$cmdLogin}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="92e74de5-3d0d-469c-a464-a20eb8c50c25" Version="1.1" Url="http://172.22.1.26/Helpdesk/default.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="cf1a0eba-7e67-41c1-9b5b-01c2a7b2a711" Version="1.1" Url="http://172.22.1.26/cdn/font-awesome/4.5.0/fonts/fontawesome-webfont.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/default.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/default.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="8c761749-8cdc-445d-8865-2553758cef09" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2FHelpdesk%2FTicket_Browse.aspx" RecordedValue="http%3A%2F%2F172.22.1.26%2FHelpdesk%2FTicket_Browse.aspx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="19b38146-7dd8-4a54-ba3c-0c8b8a0f6fff" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2FHelpdesk%2FTicket_Browse.aspx" RecordedValue="http%3A%2F%2F172.22.1.26%2FHelpdesk%2FTicket_Browse.aspx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="bb8c7daa-55af-4d16-9139-01bfd8b74275" Version="1.1" Url="http://172.22.1.26/Helpdesk/Ticket_Browse.aspx" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="1" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Browse.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam7.Prev" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam8.Prev" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ctl00$cphBody$cmdNext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="cmdNext" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="72448117-95e2-4ad0-8aa0-71735939a1c1" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Browse.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.ctl00$cphBody$cmdLogin" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; onc" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="{{QueryStringParam7.Prev}}" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fTicket_Browse.aspx" CorrelationBinding="{{QueryStringParam7.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdNext" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdNext" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="vWUVR1WYxJlmmgt6AHM3DyKEkSfKZzEY8IJuyIJi4eAHGuTqdpsnEAWe1lTpB2WbeyY45tFQaseQD5jPq80nHTLbbR8E99SlYnmMbKzz4UexNMKA8JkeWMWwGO6iI+K/WjzS1yNRsonERhg1IhmmM6qxESAm+8YZ9EjqItG6cwfIx2h/jCOyVo5nzgg9iglqo6L+hVxNFGVRuj8OVN6Tu1v9t1jN1O+3BjL4LH3s7Md3dWU13pYP9gSYouHSqUTta/wA3PojyVtgK3aKWHvFACOSq6RSrgyMcoaLszgOawcYRN8Fq0O3GswX+T2gAfyhSos/GJRFudh2XGFs6hvXcYyV1IYma6Gr6n6Es9jqcKLgioJe2OMqWMdThrI5YLytCm8cYxuNzHYXAAIyGUJMGr2z6eOXe6qekXTEhpD2ORg7LZh/q38R+E0N1U8Ymmlx1RT45w==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="jXZObWR8BEA9eHsJuNSVmEv+JnTU3UuUfcyi69bLdivdrtjltxyi/BDc1tGD9aDq94YvjEPt/5hVvcLOAd6MbbNvFj2AJ6UriXU+3whGXer2bIoWeK6G+qxKIFCbdxlWZ44mMg==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtEmpID" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdNext" Value="Next" RecordedValue="Next" CorrelationBinding="{{FormPostParam1.ctl00$cphBody$cmdNext}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="f53b69cc-6cb4-47b9-9877-96e667701c8e" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Browse.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="{{QueryStringParam8.Prev}}" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fTicket_Browse.aspx" CorrelationBinding="{{QueryStringParam8.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtPassword" Value="Mejba@12" RecordedValue="Mejba@12" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="bVD+ttME1FV3WzWfNcOCKoNNNwdpsVjcuPJqyi6Qw/1lyM3Nc3IdgP9wYqOxWKPed1YOr81LBvnQoH59ygh4dyYj9yWmeK04o/9fuJTV3jkht88ImLTMr00e8ly14OB9ZOCCIiEfvasIHC5sJ/Fyhv8wlR4s41lwvh2lctUdoHYJPrQyCAlCIZs29GxQJMlOLUITRFUq/F6gM73HF1T0NTGoaOYjRn5IGmhqE3Ikd5hr+DCkiWf/xTxbchOzRcyxv8PdYOMISH0k3FQ/vxTx4MidgYQz4D1qLPXct/6mPR4EMhEpFktmIPE5Q84rdIZh3/8LmMZvCFLLTgFaKsQAwRi9n69MGTMG5I+Lv2j/e7yJtxLZe6XgEkLa6pYL3jI9bxG05hDn+ffrGKkRsWGylgPnez16DizI5wSzVZBY01QZY85kLf+dSsE3uZWnffc316fxdFvM+bizHcmTq6403gm+2HYnBRiF/4EAny2sV9xI8+fu91iQINhSCq+MfySwGffsdkd3WpxAhIgwfzTU3cuFdryhILDrMfAti57WOiUaGTu9wMTy6yJwCK+1zJJnutv2y2VKcm3WjgJI4/vUA58DLaMxrW726eThsAPalz+fMH5rdHmwRAvAs6fKMSbz4yEglmZOkfTZza92Fy4XG4HBW2nI7+9ZPJh6/3ysqTR5nERHE6Ug+BY/NXO2tEzQTNtfmBBQKStjtrI4YE9vtkfBSuThkHtKgID7ccQjt4b7WihIU1IW7Nm1zbhNz64nsFybz1MXbqcGRDIvWFeJRsxbCLrXnPJ3JoFNu8tOvpzvbZQKwTOV4WMoDLhxtJgcUTgM7Hz3SsyRdFLfl1yEIf3Hd6Q=" RecordedValue="bVD+ttME1FV3WzWfNcOCKoNNNwdpsVjcuPJqyi6Qw/1lyM3Nc3IdgP9wYqOxWKPed1YOr81LBvnQoH59ygh4dyYj9yWmeK04o/9fuJTV3jkht88ImLTMr00e8ly14OB9ZOCCIiEfvasIHC5sJ/Fyhv8wlR4s41lwvh2lctUdoHYJPrQyCAlCIZs29GxQJMlOLUITRFUq/F6gM73HF1T0NTGoaOYjRn5IGmhqE3Ikd5hr+DCkiWf/xTxbchOzRcyxv8PdYOMISH0k3FQ/vxTx4MidgYQz4D1qLPXct/6mPR4EMhEpFktmIPE5Q84rdIZh3/8LmMZvCFLLTgFaKsQAwRi9n69MGTMG5I+Lv2j/e7yJtxLZe6XgEkLa6pYL3jI9bxG05hDn+ffrGKkRsWGylgPnez16DizI5wSzVZBY01QZY85kLf+dSsE3uZWnffc316fxdFvM+bizHcmTq6403gm+2HYnBRiF/4EAny2sV9xI8+fu91iQINhSCq+MfySwGffsdkd3WpxAhIgwfzTU3cuFdryhILDrMfAti57WOiUaGTu9wMTy6yJwCK+1zJJnutv2y2VKcm3WjgJI4/vUA58DLaMxrW726eThsAPalz+fMH5rdHmwRAvAs6fKMSbz4yEglmZOkfTZza92Fy4XG4HBW2nI7+9ZPJh6/3ysqTR5nERHE6Ug+BY/NXO2tEzQTNtfmBBQKStjtrI4YE9vtkfBSuThkHtKgID7ccQjt4b7WihIU1IW7Nm1zbhNz64nsFybz1MXbqcGRDIvWFeJRsxbCLrXnPJ3JoFNu8tOvpzvbZQKwTOV4WMoDLhxtJgcUTgM7Hz3SsyRdFLfl1yEIf3Hd6Q=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="U55RwV3KUmbSSPkSowEZU5nOKPa0qS3//ZWYRYuLHTzyzXDbdTityjDOvUdS7JnKYyFz6aRi+W3pfVee6mCA+Z/eq8owoRdulMX33vns4sH4MuDGY1UnGfGN2kYOBpnk7pVfbRfMVEAL2DZhyqsVKFtBMio=" RecordedValue="U55RwV3KUmbSSPkSowEZU5nOKPa0qS3//ZWYRYuLHTzyzXDbdTityjDOvUdS7JnKYyFz6aRi+W3pfVee6mCA+Z/eq8owoRdulMX33vns4sH4MuDGY1UnGfGN2kYOBpnk7pVfbRfMVEAL2DZhyqsVKFtBMio=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdLogin" Value="Login" RecordedValue="Login" CorrelationBinding="{{FormPostParam2.ctl00$cphBody$cmdLogin}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="fe609b4b-fa23-4ae5-9fc6-4029bc6fcf27" Version="1.1" Url="http://172.22.1.26/Helpdesk/Ticket_Browse.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="a4430e6a-0ea3-45d1-ad72-a1b1af4cb981" Version="1.1" Url="http://172.22.1.26/cdn/font-awesome/4.5.0/fonts/fontawesome-webfont.eot" ThinkTime="11" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Ticket_Browse.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Browse.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="76994ced-03c0-4efd-8daf-0fc9f00f94ac" Version="1.1" Url="http://172.22.1.26/CdnService/Emp.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="text/html, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Ticket_Browse.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="1089" RecordedValue="1089" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="f70db992-6643-473b-989c-86b94ecec77f" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2FHelpdesk%2FTicket_Inbox.aspx" RecordedValue="http%3A%2F%2F172.22.1.26%2FHelpdesk%2FTicket_Inbox.aspx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="ec45e060-e7a5-4cf7-8b83-e85b36bde018" Version="1.1" Url="http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam1.Prev" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ctl00$cphBody$cmdNext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="cmdNext" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam2.Prev" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam3.Prev" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="e5eacf54-b4fc-4185-bbc0-a3b4ad7a4d32" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.ctl00$cphBody$cmdLogin" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; onc" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fTicket_Inbox.aspx" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fTicket_Inbox.aspx" CorrelationBinding="{{QueryStringParam1.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdNext" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdNext" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="3CHcEVsEDJ/22EKoY0ww1SG0fe63yms/bk+06/mT7d4u9wkqjNo/a98bYyTWH9olKIrFUI6K7sdib8qe4flRXmnfbdfLBsIhuZQ7SJU0xZkJkEz/q6T5vLlgpO4lX84mdnZHGfjQ5L0CFrKQU0aYWaGlBrcSUKdTlzEq3Dt/NKD7dZEZxm1WHtv0sygYy1AQ4q5Lkbz37YejRir2asOPZTP5pa9igjGfzUSBJcikcUR1sTSJQV/pinP4nKtmLKITkAQAk0uevZml4xrlPuud0J3ujybN7PlxeAgmoOqgLIGDbhy0F45AZkC9EFJ1n6FUNNi8APNu33x09l23Pb1no3dymzqkk26Pxl2HBkFbjtUMoYC/aBaKAU+N3Z3RdNwRpY1OdCl8aPj8x9pV/eLJGV2ieQDjvC2JLy1hF9sJE8lZQdYrFtCG5Zrb6ZzkBdGPG0DK0Q==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="ulZqOd+/5LfawCWZiSPfZbed7PY6UGLaPuPXdQFlojLpoqQL8bOrZ09sefboQU3Aix7Nir8O6OLT6ttdvMfvEjxNlsHKK8rAZiaVysdOfsN+HV7j8MG4UVV2MFEvO6J99vxnog==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtEmpID" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdNext" Value="Next" RecordedValue="Next" CorrelationBinding="{{FormPostParam1.ctl00$cphBody$cmdNext}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="e204e745-0d5a-4e09-b8d6-cd1e8226b482" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="9" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.ctl00$cphBody$cmdLogin" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; onc" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fTicket_Inbox.aspx" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fTicket_Inbox.aspx" CorrelationBinding="{{QueryStringParam2.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtPassword" Value="12345" RecordedValue="12345" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="I/oYfezP3Wbn0eiKvI7RMi9T8ocnNwqGz0uVejqE0QIx1JlIA5gsE/FzI4Mxqvzgtoa2ShyrxvKgdN2kWDZTOkV8hswogdgGWz51dua+zfMIjGLjj13xMKPHN9lOE/f9Pm2hVM2VAloTLr79FYDXIUcvk6Ku57vpDZIwZ/B8Cha2UQ4I5N/jRLrHSYWWeogAASFEhTSU7p5lANsqvUrSIYFeEvbCW92tWqz3qc5v9sp1DT7NiZyKAdd34qqbwRkSFPXhex0y42XeADDWi7empcKPJPkV9o3Bbq5EQKeU6vSfQome5UATVsPknLDNkoxsqpoyM2x6H3ZiEJdjpK1fnn0nwF7/y679WLNTMwk73OD1ENGwLkIGdJKSNWAbKicEI78qYjbTrj1+/DZ7NfwLyXy683n+kyzTw4n2OOspgWTPMNtF8C7mu4smcWC++Gj4OGxN/LStRIZmRxkBEYRJmT4dAkb2UwlEVbEv389q+m7nLaVZel5CwAwQ6DrTOW4mmiVJVVkr/30HKAuRzwcRpLJNuzSpyPU1rd9AIuLvO9itfNxSOOygUIKXHgLbbfJEbZH7Fm4MfSHSIGdZgD+0u3VZb6V77WDVs6Oy7ICMclcRW9Crc+9e9t2A6nWQazj4lSrzJqpUNaOJPplXMifLLUg31KMQ8UIjYyPAKBS2vHcCaZlH4sjBc0EQOR/70tLekjYHm3SZcUNRuKmKRzcE5hqvPb3j7f8Zw8hhwS1MCNp+LIKI/+vq6E040k+0QW3fmKc/RBTY2DMIr3nDKYxgaefgSP/Fninl7zY5odD2YD/tb2W9x6/aOzVrvMXd3SgcIYQdLap0HP11h44rZK21KyJLfV8=" RecordedValue="I/oYfezP3Wbn0eiKvI7RMi9T8ocnNwqGz0uVejqE0QIx1JlIA5gsE/FzI4Mxqvzgtoa2ShyrxvKgdN2kWDZTOkV8hswogdgGWz51dua+zfMIjGLjj13xMKPHN9lOE/f9Pm2hVM2VAloTLr79FYDXIUcvk6Ku57vpDZIwZ/B8Cha2UQ4I5N/jRLrHSYWWeogAASFEhTSU7p5lANsqvUrSIYFeEvbCW92tWqz3qc5v9sp1DT7NiZyKAdd34qqbwRkSFPXhex0y42XeADDWi7empcKPJPkV9o3Bbq5EQKeU6vSfQome5UATVsPknLDNkoxsqpoyM2x6H3ZiEJdjpK1fnn0nwF7/y679WLNTMwk73OD1ENGwLkIGdJKSNWAbKicEI78qYjbTrj1+/DZ7NfwLyXy683n+kyzTw4n2OOspgWTPMNtF8C7mu4smcWC++Gj4OGxN/LStRIZmRxkBEYRJmT4dAkb2UwlEVbEv389q+m7nLaVZel5CwAwQ6DrTOW4mmiVJVVkr/30HKAuRzwcRpLJNuzSpyPU1rd9AIuLvO9itfNxSOOygUIKXHgLbbfJEbZH7Fm4MfSHSIGdZgD+0u3VZb6V77WDVs6Oy7ICMclcRW9Crc+9e9t2A6nWQazj4lSrzJqpUNaOJPplXMifLLUg31KMQ8UIjYyPAKBS2vHcCaZlH4sjBc0EQOR/70tLekjYHm3SZcUNRuKmKRzcE5hqvPb3j7f8Zw8hhwS1MCNp+LIKI/+vq6E040k+0QW3fmKc/RBTY2DMIr3nDKYxgaefgSP/Fninl7zY5odD2YD/tb2W9x6/aOzVrvMXd3SgcIYQdLap0HP11h44rZK21KyJLfV8=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="tH1XgKpsH0P7CtkKXN2DvsEipfqqF1V7Pb06t7wWW4TjY5VoFbnLgM3eSBsgV+iN0nxgtrAl6ZPTPBLXgTBjXRYAN3JdEG/FhnSG+UMcCAPZciptKAAjgz1PtZDxJjpYkElz7LAH+xf7rHWY82UkqMRdJvI=" RecordedValue="tH1XgKpsH0P7CtkKXN2DvsEipfqqF1V7Pb06t7wWW4TjY5VoFbnLgM3eSBsgV+iN0nxgtrAl6ZPTPBLXgTBjXRYAN3JdEG/FhnSG+UMcCAPZciptKAAjgz1PtZDxJjpYkElz7LAH+xf7rHWY82UkqMRdJvI=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdLogin" Value="Login" RecordedValue="Login" CorrelationBinding="{{FormPostParam2.ctl00$cphBody$cmdLogin}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="a0c9e7ff-30f6-4a3e-b52e-cd5076ce30a4" Version="1.1" Url="http://172.22.1.26/Helpdesk/Login.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fTicket_Inbox.aspx" RecordedValue="http%3a%2f%2f172.22.1.26%2fHelpdesk%2fTicket_Inbox.aspx" CorrelationBinding="{{QueryStringParam3.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$cphBody$ToolkitScriptManager1" Value="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" RecordedValue="ctl00$cphBody$UpdatePanel1|ctl00$cphBody$cmdLogin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$txtPassword" Value="Mejba@12" RecordedValue="Mejba@12" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="mkgkKMEHbDvOkec2B1BWwKaW8xGPsOYqOl0Eb4Y5e6jYTlFCEFHbVPp08uk4PPDcTplT+m+9klRIkuvy5+prNGyzNUdsrLGM8+wBAm9aGvkD46XKiSEXVPvrtmxhb6RAxAThx0JrRr4lmNjiAIO2SRNBO2LY5jcQfvBFLbVVbgnztvajM1UUKWuzAU2IzpviMTwhia/jwnUwNcKkUacJdjGH+AThBledm220Ap69ivPTs133ouoeePMaMhS1fOuwl5UL37c74/1uujW4QYfsFOfYHWj04wWXnv47RsBVxGqSZh0hSpWul1IhSqrmG6uV9Uv4c9CEpgfKBRo2S1zumOIdi7ELJp//zyZ8LMB1NM2L7hh8s0Lq5hjs0FFkVaSQMoazQZcSvy+jIlp5Xd+mJlmD/61v9RTygo3Q19nukg2wi12x+KLsg4RXto2r136VkhIYi1LoAKeKx4tTrOEi1BIi1ElJzU7hNJ6uRFM4pUgoJwk5XU6TrGBAa8cKFpfUpFr8DUB3cqQAUSpST68bgHPu2NrhIPWk9J2BMEko6XhOPo7cR6bUnn43f1R/CKagvECgTg5gq3gKHBzRjVG37tXqI6peDkGGzq4ME4LE/M0EfRhVaEbBjY6TFOJCU3VanwLA/TaNdLd9eLEsy5cCDhmHEnHZGSH8KAF5xzvU5Cac4SXecy1a+rGgVL+kXPHgpa05BWrM04gGaIL+lRVS8BxzRYfnVA6E0NZnEhqOqgmApf8SlPjh6eG+2OM8NOdUPtE9SB8vrLfUxyh2Mx8QkZDRS0NGviZwn6YA592ZmQYbtiLJ94JuCtILdMVo3cxR02CdOqGTQ6qn1ENz8oQwld1GqbletBF0Drlba4mUHLlAlcMtUXqC+52ldS6lk8cLR+au3LoLFYVmfhkVKy8qxkV9Pc04U52wKFN2HxrK3K5jLXIo" RecordedValue="mkgkKMEHbDvOkec2B1BWwKaW8xGPsOYqOl0Eb4Y5e6jYTlFCEFHbVPp08uk4PPDcTplT+m+9klRIkuvy5+prNGyzNUdsrLGM8+wBAm9aGvkD46XKiSEXVPvrtmxhb6RAxAThx0JrRr4lmNjiAIO2SRNBO2LY5jcQfvBFLbVVbgnztvajM1UUKWuzAU2IzpviMTwhia/jwnUwNcKkUacJdjGH+AThBledm220Ap69ivPTs133ouoeePMaMhS1fOuwl5UL37c74/1uujW4QYfsFOfYHWj04wWXnv47RsBVxGqSZh0hSpWul1IhSqrmG6uV9Uv4c9CEpgfKBRo2S1zumOIdi7ELJp//zyZ8LMB1NM2L7hh8s0Lq5hjs0FFkVaSQMoazQZcSvy+jIlp5Xd+mJlmD/61v9RTygo3Q19nukg2wi12x+KLsg4RXto2r136VkhIYi1LoAKeKx4tTrOEi1BIi1ElJzU7hNJ6uRFM4pUgoJwk5XU6TrGBAa8cKFpfUpFr8DUB3cqQAUSpST68bgHPu2NrhIPWk9J2BMEko6XhOPo7cR6bUnn43f1R/CKagvECgTg5gq3gKHBzRjVG37tXqI6peDkGGzq4ME4LE/M0EfRhVaEbBjY6TFOJCU3VanwLA/TaNdLd9eLEsy5cCDhmHEnHZGSH8KAF5xzvU5Cac4SXecy1a+rGgVL+kXPHgpa05BWrM04gGaIL+lRVS8BxzRYfnVA6E0NZnEhqOqgmApf8SlPjh6eG+2OM8NOdUPtE9SB8vrLfUxyh2Mx8QkZDRS0NGviZwn6YA592ZmQYbtiLJ94JuCtILdMVo3cxR02CdOqGTQ6qn1ENz8oQwld1GqbletBF0Drlba4mUHLlAlcMtUXqC+52ldS6lk8cLR+au3LoLFYVmfhkVKy8qxkV9Pc04U52wKFN2HxrK3K5jLXIo" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="61B32C3E" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="/+AmqC5Dx7oL3kXIpX9u0I0hfDsL2cQt9xPvEtiLnWV5pAPkQ0ZawpfHHgxtUL/BXMYwhjnMHrBL9ZnoXJymp2I6eJlMqNJVFz0j8+nzbCHRYdEErL+3Ga5bw5XQt4O8WfrdIxB5CvWkIgfPIZfxUvaEy90=" RecordedValue="/+AmqC5Dx7oL3kXIpX9u0I0hfDsL2cQt9xPvEtiLnWV5pAPkQ0ZawpfHHgxtUL/BXMYwhjnMHrBL9ZnoXJymp2I6eJlMqNJVFz0j8+nzbCHRYdEErL+3Ga5bw5XQt4O8WfrdIxB5CvWkIgfPIZfxUvaEy90=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$cphBody$cmdLogin" Value="Login" RecordedValue="Login" CorrelationBinding="{{FormPostParam3.ctl00$cphBody$cmdLogin}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="c9c58572-c49e-421f-b983-eaf4756a2966" Version="1.1" Url="http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="57245d05-55bf-43d8-a989-89185b9e2f47" Version="1.1" Url="http://172.22.1.26/cdn/font-awesome/4.5.0/fonts/fontawesome-webfont.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Login.aspx?Prev=http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam4.id" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?id=" />
+            <RuleParameter Name="EndsWith" Value="'" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="GET" Guid="a259de74-acc7-47bd-a31f-a43e64cde53c" Version="1.1" Url="http://172.22.1.26/Helpdesk/Ticket.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Ticket_Inbox.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam5.id" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?id=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="170502.6260" RecordedValue="170502.6260" CorrelationBinding="{{QueryStringParam4.id}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b3c7a2f7-46c1-426d-b229-86e00b409e3a" Version="1.1" Url="http://172.22.1.26/Helpdesk/Ticket.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="65367f65-9076-47eb-91da-affa3a041e90" Version="1.1" Url="http://172.22.1.26/cdn/font-awesome/4.5.0/fonts/fontawesome-webfont.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="http://172.22.1.26/Helpdesk/Ticket.aspx?id=170502.6260" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="170502.6260" RecordedValue="170502.6260" CorrelationBinding="{{QueryStringParam5.id}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

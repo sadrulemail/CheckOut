@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterBootstrap.master.cs"
+    Inherits="MasterBootstrap" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server" >
+    <meta charset="utf-8" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <link rel="shortcut icon" href="Images/checkout.png" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/jumbotron-narrow.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/TrustBank.css" rel="stylesheet" type="text/css" />
+    <script src="script/jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script src="script/bootstrap.min.js" type="text/javascript"></script>
+    <script src="script/bootbox.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-horizontal">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+                <a href="http://www.trustbank.com.bd" target="_blank">
+                    <img src="Images/tbl_logo.png" width="324" height="86" border="0" alt="Trust Bank"
+                        class="img-responsive" />
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-6 text-right row hidden-xs" style="margin-top: 10px">
+                <a href="http://www.trustbank.com.bd" target="_blank" style="text-decoration: none">
+                    <img src="Images/web.png" width="24" height="24" border="0" alt="website" />
+                </a><a href="http://www.facebook.com/TrustBankLimited" target="_blank" style="text-decoration: none;
+                    margin-left: 5px">
+                    <img src="Images/facebook.png" width="24" height="24" border="0" alt="facebook" />
+                </a><a href="http://plus.google.com/108352700537124603046" target="_blank" style="text-decoration: none;
+                    margin-left: 5px">
+                    <img src="Images/google-plus.png" width="24" height="24" border="0" alt="google plus" />
+                </a><a href="http://www.youtube.com/TrustBankLimited" target="_blank" style="text-decoration: none;
+                    margin-left: 5px">
+                    <img src="Images/youtube.png" width="24" height="24" border="0" alt="youtube" />
+                </a>
+            </div>
+        </div>
+        <div class="bg-success h4 text-center headerline">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="col-xs-12 text-left">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div class="text-center visible-xs">
+        <img src="Images/checkout.png" width="100" height="100" border="0" alt="Checkout" />
+    </div>
+    <div class="footer text-center" style="font-size: 85%">
+        Copyright © 2014, Trust Bank Limited. All Rights Reserved.
+        <br />
+        Developed and Maintained by: In-House Software Development Team. IT Division.
+        <br />
+        Call: <a class="link" href="tel:09604016201">09604016201</a> Swift: TTBLBDDH
+    </div>
+    </form>
+</body>
+</html>

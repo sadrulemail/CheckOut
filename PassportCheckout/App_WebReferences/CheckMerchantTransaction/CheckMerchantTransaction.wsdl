@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetTransactionInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TxCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserNumberLong" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTransactionInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionInfoHttpGetIn">
+    <wsdl:part name="TxCode" type="s:string" />
+    <wsdl:part name="UserNumberLong" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionInfoHttpPostIn">
+    <wsdl:part name="TxCode" type="s:string" />
+    <wsdl:part name="UserNumberLong" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="CheckMerchantTransactionSoap">
+    <wsdl:operation name="GetTransactionInfo">
+      <wsdl:input message="tns:GetTransactionInfoSoapIn" />
+      <wsdl:output message="tns:GetTransactionInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CheckMerchantTransactionHttpGet">
+    <wsdl:operation name="GetTransactionInfo">
+      <wsdl:input message="tns:GetTransactionInfoHttpGetIn" />
+      <wsdl:output message="tns:GetTransactionInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CheckMerchantTransactionHttpPost">
+    <wsdl:operation name="GetTransactionInfo">
+      <wsdl:input message="tns:GetTransactionInfoHttpPostIn" />
+      <wsdl:output message="tns:GetTransactionInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CheckMerchantTransactionSoap" type="tns:CheckMerchantTransactionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTransactionInfo">
+      <soap:operation soapAction="http://tempuri.org/GetTransactionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CheckMerchantTransactionSoap12" type="tns:CheckMerchantTransactionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTransactionInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactionInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CheckMerchantTransactionHttpGet" type="tns:CheckMerchantTransactionHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetTransactionInfo">
+      <http:operation location="/GetTransactionInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CheckMerchantTransactionHttpPost" type="tns:CheckMerchantTransactionHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetTransactionInfo">
+      <http:operation location="/GetTransactionInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CheckMerchantTransaction">
+    <wsdl:port name="CheckMerchantTransactionSoap" binding="tns:CheckMerchantTransactionSoap">
+      <soap:address location="http://172.22.1.25/APIReferSite/Service/CheckMerchantTransaction.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CheckMerchantTransactionSoap12" binding="tns:CheckMerchantTransactionSoap12">
+      <soap12:address location="http://172.22.1.25/APIReferSite/Service/CheckMerchantTransaction.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CheckMerchantTransactionHttpGet" binding="tns:CheckMerchantTransactionHttpGet">
+      <http:address location="http://172.22.1.25/APIReferSite/Service/CheckMerchantTransaction.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CheckMerchantTransactionHttpPost" binding="tns:CheckMerchantTransactionHttpPost">
+      <http:address location="http://172.22.1.25/APIReferSite/Service/CheckMerchantTransaction.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

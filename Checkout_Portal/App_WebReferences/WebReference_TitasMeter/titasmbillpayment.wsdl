@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://172.31.8.18/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://172.31.8.18/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://172.31.8.18/">
+      <s:element name="GetAccessToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccessTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccessTokenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMeterCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMeterCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMeterCustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostMeterPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PaidAmount" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SourceTaxAmount" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReveStampAmount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChalanNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChalanDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostMeterPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostMeterPaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMeterPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CancelReason" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMeterPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteMeterPaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMeterPaymentList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMeterPaymentListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMeterPaymentListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAccessTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccessToken" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccessTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMeterCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMeterCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetMeterCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMeterCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostMeterPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:PostMeterPayment" />
+  </wsdl:message>
+  <wsdl:message name="PostMeterPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:PostMeterPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMeterPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMeterPayment" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMeterPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMeterPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMeterPaymentListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMeterPaymentList" />
+  </wsdl:message>
+  <wsdl:message name="GetMeterPaymentListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMeterPaymentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessTokenHttpPostIn">
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessTokenHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMeterCustomerHttpPostIn">
+    <wsdl:part name="CustomerCode" type="s:string" />
+    <wsdl:part name="InvoiceNo" type="s:string" />
+    <wsdl:part name="RoutingNo" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMeterCustomerHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PostMeterPaymentHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="CustomerCode" type="s:string" />
+    <wsdl:part name="InvoiceNo" type="s:string" />
+    <wsdl:part name="PaidAmount" type="s:string" />
+    <wsdl:part name="SourceTaxAmount" type="s:string" />
+    <wsdl:part name="ReveStampAmount" type="s:string" />
+    <wsdl:part name="TransactionDate" type="s:string" />
+    <wsdl:part name="RoutingNo" type="s:string" />
+    <wsdl:part name="ChalanNo" type="s:string" />
+    <wsdl:part name="ChalanDate" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostMeterPaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMeterPaymentHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="PaymentId" type="s:string" />
+    <wsdl:part name="CancelReason" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMeterPaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMeterPaymentListHttpPostIn">
+    <wsdl:part name="TransactionDate" type="s:string" />
+    <wsdl:part name="CustomerCode" type="s:string" />
+    <wsdl:part name="InvoiceNo" type="s:string" />
+    <wsdl:part name="TransactionStatus" type="s:string" />
+    <wsdl:part name="Zone" type="s:string" />
+    <wsdl:part name="RoutingNo" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMeterPaymentListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="TitasMBillPaymentSoap">
+    <wsdl:operation name="GetAccessToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get Access Token (Bearer)&lt;br&gt;Returns:&lt;br&gt;Response Code=token</wsdl:documentation>
+      <wsdl:input message="tns:GetAccessTokenSoapIn" />
+      <wsdl:output message="tns:GetAccessTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get RefID with a specified Customer Code and Invoice&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=RefID|json</wsdl:documentation>
+      <wsdl:input message="tns:GetMeterCustomerSoapIn" />
+      <wsdl:output message="tns:GetMeterCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostMeterPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Create new Payment with a specified Customer ID,invoice no etc&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1|msg: Success</wsdl:documentation>
+      <wsdl:input message="tns:PostMeterPaymentSoapIn" />
+      <wsdl:output message="tns:PostMeterPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeterPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Delete Payment  with a specified Payment ID&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1|msgSuccess</wsdl:documentation>
+      <wsdl:input message="tns:DeleteMeterPaymentSoapIn" />
+      <wsdl:output message="tns:DeleteMeterPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterPaymentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get Meter Payment List with a specified Transaction Date(mandatory), Customer Code and Invoice&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=RefID|json</wsdl:documentation>
+      <wsdl:input message="tns:GetMeterPaymentListSoapIn" />
+      <wsdl:output message="tns:GetMeterPaymentListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TitasMBillPaymentHttpPost">
+    <wsdl:operation name="GetAccessToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get Access Token (Bearer)&lt;br&gt;Returns:&lt;br&gt;Response Code=token</wsdl:documentation>
+      <wsdl:input message="tns:GetAccessTokenHttpPostIn" />
+      <wsdl:output message="tns:GetAccessTokenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get RefID with a specified Customer Code and Invoice&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=RefID|json</wsdl:documentation>
+      <wsdl:input message="tns:GetMeterCustomerHttpPostIn" />
+      <wsdl:output message="tns:GetMeterCustomerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostMeterPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Create new Payment with a specified Customer ID,invoice no etc&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1|msg: Success</wsdl:documentation>
+      <wsdl:input message="tns:PostMeterPaymentHttpPostIn" />
+      <wsdl:output message="tns:PostMeterPaymentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeterPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Delete Payment  with a specified Payment ID&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1|msgSuccess</wsdl:documentation>
+      <wsdl:input message="tns:DeleteMeterPaymentHttpPostIn" />
+      <wsdl:output message="tns:DeleteMeterPaymentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterPaymentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get Meter Payment List with a specified Transaction Date(mandatory), Customer Code and Invoice&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=RefID|json</wsdl:documentation>
+      <wsdl:input message="tns:GetMeterPaymentListHttpPostIn" />
+      <wsdl:output message="tns:GetMeterPaymentListHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TitasMBillPaymentSoap" type="tns:TitasMBillPaymentSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAccessToken">
+      <soap:operation soapAction="http://172.31.8.18/GetAccessToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterCustomer">
+      <soap:operation soapAction="http://172.31.8.18/GetMeterCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostMeterPayment">
+      <soap:operation soapAction="http://172.31.8.18/PostMeterPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeterPayment">
+      <soap:operation soapAction="http://172.31.8.18/DeleteMeterPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterPaymentList">
+      <soap:operation soapAction="http://172.31.8.18/GetMeterPaymentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TitasMBillPaymentSoap12" type="tns:TitasMBillPaymentSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAccessToken">
+      <soap12:operation soapAction="http://172.31.8.18/GetAccessToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterCustomer">
+      <soap12:operation soapAction="http://172.31.8.18/GetMeterCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostMeterPayment">
+      <soap12:operation soapAction="http://172.31.8.18/PostMeterPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeterPayment">
+      <soap12:operation soapAction="http://172.31.8.18/DeleteMeterPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterPaymentList">
+      <soap12:operation soapAction="http://172.31.8.18/GetMeterPaymentList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TitasMBillPaymentHttpPost" type="tns:TitasMBillPaymentHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetAccessToken">
+      <http:operation location="/GetAccessToken" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterCustomer">
+      <http:operation location="/GetMeterCustomer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostMeterPayment">
+      <http:operation location="/PostMeterPayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMeterPayment">
+      <http:operation location="/DeleteMeterPayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMeterPaymentList">
+      <http:operation location="/GetMeterPaymentList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TitasMBillPayment">
+    <wsdl:port name="TitasMBillPaymentSoap" binding="tns:TitasMBillPaymentSoap">
+      <soap:address location="http://172.31.8.18:100/checkout/titasmbillpayment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TitasMBillPaymentSoap12" binding="tns:TitasMBillPaymentSoap12">
+      <soap12:address location="http://172.31.8.18:100/checkout/titasmbillpayment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TitasMBillPaymentHttpPost" binding="tns:TitasMBillPaymentHttpPost">
+      <http:address location="http://172.31.8.18:100/checkout/titasmbillpayment.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

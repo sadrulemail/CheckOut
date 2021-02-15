@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ITCL Test</title>
+</head>
+<body>
+    <form method="post" action="https://testmpi.itcbd.com:18288/execHTML.jsp">
+    <textarea name="Request" id="Request" rows="15" style="width: 100%">
+<?xml version="1.0"?>
+<TKKPG>
+  <Request>
+   <Operation>CreateOrder</Operation> 
+   <Language>EN</Language>
+   <Order>
+     <Merchant>POS_999</Merchant>
+     <Amount>1900</Amount>
+     <Currency>050</Currency>
+     <Description>Test Merchant</Description>
+     <ApproveURL>http://localhost:51907/Checkout/ITCL_Approved.aspx</ApproveURL>
+     <CancelURL>http://localhost:51907/Checkout/ITCL_Cancelled.aspx</CancelURL>
+     <DeclineURL>http://localhost:51907/Checkout/ITCL_Declined.aspx</DeclineURL>
+    </Order>
+  </Request>
+ </TKKPG>
+	</textarea>
+    <br />
+    <input type="submit" />
+    </form>
+</body>
+</html>

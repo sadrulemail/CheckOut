@@ -1,0 +1,1249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebPerformenceTest" Id="dffc1cd9-926a-4eb4-97d2-e9b792d733b8" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebPerformenceTest.52a6d54b-f8cf-476b-9cbb-4710e1de4bc0.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="6589c9b7-42b6-4a2e-ab49-425804fa54fd" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2Fmsg%2FMsg.aspx" RecordedValue="http%3A%2F%2F172.22.1.26%2Fmsg%2FMsg.aspx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="7b2a2989-67e5-40be-bf70-60e23854a475" Version="1.1" Url="http://api.bing.com/qsml.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="query" Value="http%3A%2F%2F172.22.1.26%2Fmsg%2FMsg.aspx" RecordedValue="http%3A%2F%2F172.22.1.26%2Fmsg%2FMsg.aspx" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="maxwidth" Value="32765" RecordedValue="32765" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rowheight" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="sectionHeight" Value="160" RecordedValue="160" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="FORM" Value="IESS02" RecordedValue="IESS02" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="market" Value="en-US" RecordedValue="en-US" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="a2a52d5e-942f-4dd7-906a-10507a820c96" Version="1.1" Url="http://172.22.1.26/msg/Msg.aspx" ThinkTime="6" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://172.22.1.26/msg/Login.aspx?Prev=http://172.22.1.26/msg/Msg.aspx" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam21.Prev" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.ctl00$ContentPlaceHolder2$cmdNext" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="ctl00_ContentPlaceHolder2_cmdNext" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam22.Prev" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?Prev=" />
+            <RuleParameter Name="EndsWith" Value="&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="cf60f5b2-6d25-4cbc-a31a-597c5db4ffb7" Version="1.1" Url="http://172.22.1.26/msg/Login.aspx" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Login.aspx?Prev=http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.ctl00$ContentPlaceHolder2$cmdLogin" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; onc" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="http%3a%2f%2f172.22.1.26%2fmsg%2fMsg.aspx" RecordedValue="http%3a%2f%2f172.22.1.26%2fmsg%2fMsg.aspx" CorrelationBinding="{{QueryStringParam21.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$ContentPlaceHolder2$ScriptManager1" Value="ctl00$ContentPlaceHolder2$UpdatePanel1|ctl00$ContentPlaceHolder2$cmdNext" RecordedValue="ctl00$ContentPlaceHolder2$UpdatePanel1|ctl00$ContentPlaceHolder2$cmdNext" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPDwUKMTkxOTEyNTYwMg9kFgJmD2QWAgIDD2QWCgIBDw8WBB4ISW1hZ2VVcmwFIWh0dHA6Ly8xNzIuMjIuMS4yNi9JbWFnZXMvbXNnLnBuZx4LTmF2aWdhdGVVcmwFFmh0dHA6Ly8xNzIuMjIuMS4yNi9tc2dkZAIDDw8WBB4EVGV4dAUNaW50cmEgTWVzc2FnZR8BBRZodHRwOi8vMTcyLjIyLjEuMjYvbXNnZGQCBw9kFgICBQ8PFgIfAmVkZAIJD2QWAgIBDw8WAh8CBRZMb2dpbiB0byBpbnRyYSBNZXNzYWdlZGQCDQ9kFgICAw9kFgJmD2QWAgIBDw8WAh8ABSFodHRwOi8vMTcyLjIyLjEuMjYvSW1hZ2VzL21zZy5wbmdkZGR50asLuTOiJeeIaxDTBKyM4cSoSw==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="5F6FF3FE" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdAAMERd3WZmFvfEQD45pmXWJ8vovaxztkXueo4ByG79RgQiR4nNq0bDaoD6vwvIKsgCVVlh16u3+rxDgqZ/h1JBCl/qXvew==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder2$txtEmpID" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder2$cmdNext" Value="Next" RecordedValue="Next" CorrelationBinding="{{FormPostParam1.ctl00$ContentPlaceHolder2$cmdNext}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="4eb48a38-b41b-4c95-ad47-6d21a75bf8b6" Version="1.1" Url="http://172.22.1.26/msg/Login.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-MicrosoftAjax" Value="Delta=true" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Login.aspx?Prev=http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="Prev" Value="http%3a%2f%2f172.22.1.26%2fmsg%2fMsg.aspx" RecordedValue="http%3a%2f%2f172.22.1.26%2fmsg%2fMsg.aspx" CorrelationBinding="{{QueryStringParam22.Prev}}" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ctl00$ContentPlaceHolder2$ScriptManager1" Value="ctl00$ContentPlaceHolder2$UpdatePanel1|ctl00$ContentPlaceHolder2$cmdLogin" RecordedValue="ctl00$ContentPlaceHolder2$UpdatePanel1|ctl00$ContentPlaceHolder2$cmdLogin" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder2$txtPassword" Value="Mejba@12" RecordedValue="Mejba@12" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="{{$HIDDEN1.__LASTFOCUS}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="/wEPDwUKMTkxOTEyNTYwMg9kFgJmD2QWAgIDD2QWCgIBDw8WBB4ISW1hZ2VVcmwFIWh0dHA6Ly8xNzIuMjIuMS4yNi9JbWFnZXMvbXNnLnBuZx4LTmF2aWdhdGVVcmwFFmh0dHA6Ly8xNzIuMjIuMS4yNi9tc2dkZAIDDw8WBB4EVGV4dAUNaW50cmEgTWVzc2FnZR8BBRZodHRwOi8vMTcyLjIyLjEuMjYvbXNnZGQCBw9kFgICBQ8PFgIfAmVkZAIJD2QWAgIBDw8WAh8CBRZMb2dpbiB0byBpbnRyYSBNZXNzYWdlZGQCDQ9kFgICAw9kFgJmD2QWDgIBDw8WAh8ABSFodHRwOi8vMTcyLjIyLjEuMjYvSW1hZ2VzL21zZy5wbmdkZAIDDxYCHwIFsQE8aW1nIHNyYz0nRW1wSW1hZ2UuYXNweD9FTVBJRD0yMjE0JmltZ2lkPTA1M0U4MUUwLTczRTUtNDQwNy04OUIwLTI5QjNEOTg0MjVEMyZXPTIwMCcgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnIHN0eWxlPSdib3JkZXI6MXB4IHNvbGlkIGdyYXk7cGFkZGluZzoycHg7Ym9yZGVyLXJhZGl1czo1MHB4Jz48L2ltZz5kAgUPZBYEAgEPDxYGHwIFBDIyMTQeB0VuYWJsZWRoHgdWaXNpYmxlaBYCHgV2YWx1ZQUEMjIxNGQCBQ8PFgIfAgUEMjIxNGRkAgcPDxYCHwRnZBYCAgEPD2QWAh8FZWQCCw8PFgIfBGdkZAINDw8WAh8EaGRkAg8PDxYCHwRnZGRks1HDY4Egdl26PFzIPB4daWj5XO8=" RecordedValue="/wEPDwUKMTkxOTEyNTYwMg9kFgJmD2QWAgIDD2QWCgIBDw8WBB4ISW1hZ2VVcmwFIWh0dHA6Ly8xNzIuMjIuMS4yNi9JbWFnZXMvbXNnLnBuZx4LTmF2aWdhdGVVcmwFFmh0dHA6Ly8xNzIuMjIuMS4yNi9tc2dkZAIDDw8WBB4EVGV4dAUNaW50cmEgTWVzc2FnZR8BBRZodHRwOi8vMTcyLjIyLjEuMjYvbXNnZGQCBw9kFgICBQ8PFgIfAmVkZAIJD2QWAgIBDw8WAh8CBRZMb2dpbiB0byBpbnRyYSBNZXNzYWdlZGQCDQ9kFgICAw9kFgJmD2QWDgIBDw8WAh8ABSFodHRwOi8vMTcyLjIyLjEuMjYvSW1hZ2VzL21zZy5wbmdkZAIDDxYCHwIFsQE8aW1nIHNyYz0nRW1wSW1hZ2UuYXNweD9FTVBJRD0yMjE0JmltZ2lkPTA1M0U4MUUwLTczRTUtNDQwNy04OUIwLTI5QjNEOTg0MjVEMyZXPTIwMCcgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnIHN0eWxlPSdib3JkZXI6MXB4IHNvbGlkIGdyYXk7cGFkZGluZzoycHg7Ym9yZGVyLXJhZGl1czo1MHB4Jz48L2ltZz5kAgUPZBYEAgEPDxYGHwIFBDIyMTQeB0VuYWJsZWRoHgdWaXNpYmxlaBYCHgV2YWx1ZQUEMjIxNGQCBQ8PFgIfAgUEMjIxNGRkAgcPDxYCHwRnZBYCAgEPD2QWAh8FZWQCCw8PFgIfBGdkZAINDw8WAh8EaGRkAg8PDxYCHwRnZGRks1HDY4Egdl26PFzIPB4daWj5XO8=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="5F6FF3FE" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="/wEdAARpo28czSaV8urx5CKYJ+KhfJnrXvRh0Xkp646wzfaH/S//zmLySTq+xpO9AcXm4bzl0VcxX2L/iqa1U2hPxYxJ4PCwzXNE1261BhQw+wXbiznSJ2A=" RecordedValue="/wEdAARpo28czSaV8urx5CKYJ+KhfJnrXvRh0Xkp646wzfaH/S//zmLySTq+xpO9AcXm4bzl0VcxX2L/iqa1U2hPxYxJ4PCwzXNE1261BhQw+wXbiznSJ2A=" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__ASYNCPOST" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ContentPlaceHolder2$cmdLogin" Value="Login" RecordedValue="Login" CorrelationBinding="{{FormPostParam2.ctl00$ContentPlaceHolder2$cmdLogin}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="3aee46d8-f7a9-459f-a1fe-088b5e704b1f" Version="1.1" Url="http://172.22.1.26/msg/Msg.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="a35619c1-bfc6-4896-9b69-698cfc556981" Version="1.1" Url="http://172.22.1.26/msg/About.htm" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="text/html, */*; q=0.01" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="8a858b20-8561-4da3-af4b-0c292a4dfad3" Version="1.1" Url="http://172.22.1.26/msg/Labels.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="q" Value="*" RecordedValue="*" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="emp" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="d717f463-404a-4776-8f81-2e842915b544" Version="1.1" Url="http://172.22.1.26/msg/MsgHeads.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Content-Type" Value="application/json; charset=utf-8" />
+            <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="type" Value="MAIL" RecordedValue="MAIL" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="label" Value="INBOX" RecordedValue="INBOX" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="filter" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="css" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="lastmgid" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="from" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="to" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="branch" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="datefrom" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="dateto" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="attachment" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="pageid" Value="aevqeuxwppuz5sxk5vkdw2i0_487632077" RecordedValue="aevqeuxwppuz5sxk5vkdw2i0_487632077" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_" Value="1493547765201" RecordedValue="1493547765201" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="1c9d1ac1-9fe3-419a-bf3b-12663492721b" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="684e35f7-17c1-4936-9982-9410ec5f21d2" Version="1.1" Url="http://172.22.1.26/msg/Home.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="*/*" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="EMPID" Value="2214" RecordedValue="2214" CorrelationBinding="{{QueryStringParam111.EMPID}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="0d52ab1e-6441-466d-a539-bc1492e82416" Version="1.1" Url="http://172.22.1.26/msg/EmpQuota.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Login.aspx?Prev=http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam111.EMPID" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="?EMPID=" />
+            <RuleParameter Name="EndsWith" Value="&amp;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="GET" Guid="d3571971-1238-4bf5-8862-60ae47d4eaa1" Version="1.1" Url="http://172.22.1.26/msg/signalr/connect" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="transport" Value="foreverFrame" RecordedValue="foreverFrame" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientProtocol" Value="1.5" RecordedValue="1.5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionToken" Value="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" RecordedValue="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionData" Value="%5B%7B%22name%22%3A%22chathub%22%7D%5D" RecordedValue="%5B%7B%22name%22%3A%22chathub%22%7D%5D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="tid" Value="7" RecordedValue="7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="frameId" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="ea47ec73-268a-4304-a1a5-d701a244ec67" Version="1.1" Url="http://172.22.1.26/msg/signalr/negotiate" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="clientProtocol" Value="1.5" RecordedValue="1.5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionData" Value="%5B%7B%22name%22%3A%22chathub%22%7D%5D" RecordedValue="%5B%7B%22name%22%3A%22chathub%22%7D%5D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="_" Value="1493547765202" RecordedValue="1493547765202" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="37c7b81e-3d91-4883-8ff1-a5b0e30fa70b" Version="1.1" Url="http://172.22.1.26/msg/signalr/connect" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="transport" Value="webSockets" RecordedValue="webSockets" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientProtocol" Value="1.5" RecordedValue="1.5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionToken" Value="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" RecordedValue="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionData" Value="%5B%7B%22name%22%3A%22chathub%22%7D%5D" RecordedValue="%5B%7B%22name%22%3A%22chathub%22%7D%5D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="tid" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="fb3e3b79-fd1b-44c7-9413-b452a809de1d" Version="1.1" Url="http://172.22.1.26/msg/signalr/start" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="transport" Value="foreverFrame" RecordedValue="foreverFrame" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientProtocol" Value="1.5" RecordedValue="1.5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionToken" Value="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" RecordedValue="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionData" Value="%5B%7B%22name%22%3A%22chathub%22%7D%5D" RecordedValue="%5B%7B%22name%22%3A%22chathub%22%7D%5D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="_" Value="1493547765203" RecordedValue="1493547765203" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="1f81742f-a003-46d2-9125-ca1c24b21607" Version="1.1" Url="http://172.22.1.26/msg/signalr/send" ThinkTime="29" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="transport" Value="foreverFrame" RecordedValue="foreverFrame" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientProtocol" Value="1.5" RecordedValue="1.5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionToken" Value="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" RecordedValue="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionData" Value="%5B%7B%22name%22%3A%22chathub%22%7D%5D" RecordedValue="%5B%7B%22name%22%3A%22chathub%22%7D%5D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="data" Value="{&quot;H&quot;:&quot;chathub&quot;,&quot;M&quot;:&quot;registerConId&quot;,&quot;A&quot;:[&quot;2214&quot;],&quot;I&quot;:0}" RecordedValue="{&quot;H&quot;:&quot;chathub&quot;,&quot;M&quot;:&quot;registerConId&quot;,&quot;A&quot;:[&quot;2214&quot;],&quot;I&quot;:0}" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="b0b8ecb3-c380-475a-a568-79a376957366" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="7799b88b-301e-4d91-8c1b-2418f3078b58" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="29668a9d-2e3b-4ec1-b07d-118ab3520581" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="22" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="d3e1c019-cc8e-4ddc-86cd-fcb05b706247" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="7" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="cb8cba26-7935-4b13-8e55-5f094e18edc0" Version="1.1" Url="http://172.22.1.26/msg/EmpQuota.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="bfb1994c-204f-49d2-8cf5-451f4e0e14a7" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="01f14681-bb1a-4989-a89e-8352a4f01dff" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="591ac6be-6893-43a0-bcc2-b950f362c489" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="16" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="94415ccf-97c3-4253-a808-de75280ec4c5" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="13" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="2978e07a-50b4-4f3a-a344-3302b208f6f6" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="ff86b477-4998-40cc-bf56-fa186b87ca3e" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="5ea4c85b-ad2f-455e-aaaf-b1b1c6e50583" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="07b7eabc-d363-45ad-af92-9f57fc55a5fc" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="24d71285-a2a0-4623-94af-ce92f578757e" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="19" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="98ee4e8f-05cc-46e1-aede-ddad0a720fa1" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="aefd0b8a-5f0d-4e62-b6ba-983a6b3e6355" Version="1.1" Url="http://172.22.1.26/msg/signalr/reconnect" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="transport" Value="foreverFrame" RecordedValue="foreverFrame" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="messageId" Value="d-C12CB9B9-B%2C0%7C%3AY%2C3%7C%3AZ%2C1" RecordedValue="d-C12CB9B9-B%2C0%7C%3AY%2C3%7C%3AZ%2C1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientProtocol" Value="1.5" RecordedValue="1.5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionToken" Value="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" RecordedValue="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionData" Value="%5B%7B%22name%22%3A%22chathub%22%7D%5D" RecordedValue="%5B%7B%22name%22%3A%22chathub%22%7D%5D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="tid" Value="6" RecordedValue="6" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="frameId" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="fc7dd035-c2e3-42f1-81b6-6d8ea5f4a458" Version="1.1" Url="http://172.22.1.26/msg/signalr/send" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="transport" Value="foreverFrame" RecordedValue="foreverFrame" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientProtocol" Value="1.5" RecordedValue="1.5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionToken" Value="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" RecordedValue="Yf0HYT2X8Q8Q%2Bbaa%2FN%2FFKkfAcC6GnVeiBsKE0s6%2Bs%2F41f3gy40S82MWdcF7QLtqQRM%2FEytypoNRRcIv%2BhUTyh4OiQPN6yj97dK4OO3cgx%2FjAirBZ" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="connectionData" Value="%5B%7B%22name%22%3A%22chathub%22%7D%5D" RecordedValue="%5B%7B%22name%22%3A%22chathub%22%7D%5D" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="data" Value="{&quot;H&quot;:&quot;chathub&quot;,&quot;M&quot;:&quot;registerConId&quot;,&quot;A&quot;:[&quot;2214&quot;],&quot;I&quot;:1}" RecordedValue="{&quot;H&quot;:&quot;chathub&quot;,&quot;M&quot;:&quot;registerConId&quot;,&quot;A&quot;:[&quot;2214&quot;],&quot;I&quot;:1}" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="684be4ed-75ec-41cf-8405-3d8b823ff04c" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="9754445b-e2b1-43f2-b5c8-8a097a69b79d" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="1bdb985a-be9c-4daf-9b85-0c0f5dbfe626" Version="1.1" Url="http://172.22.1.26/msg/signalr/ping" ThinkTime="29" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="_" Value="1493547765204" RecordedValue="1493547765204" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="812add7f-846e-45ab-9cd9-44dff530ca44" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="18" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="26728b10-0025-464e-96bb-05802e66807d" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="11" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="6566299b-ca11-41ad-a6ff-32e82699f5d4" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="39fff6c5-0442-4286-8d67-af47a775aeb5" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="a35ff2be-f723-4bd3-a211-5c531ecbb7a7" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="9dab1208-9fd6-4249-b165-a114fa165611" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="8c05bac8-1147-492b-89df-6946a531404d" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="583f102b-15c4-4e25-9d30-4a8389e6ef1a" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="72acfe7a-a1a2-4ff4-85e8-a8348cee0473" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="82bf690c-8a61-491a-9722-bfce0925e178" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="7" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="39158d84-b764-4865-8e03-032b17f3d6a8" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="23" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="3ea6fecf-32db-4339-8bd6-9f10cdede8ea" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3832ca8f-a0c7-4acd-86c4-006a9546eb92" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="298b5d1b-ddfa-4d80-afc8-7f02a28ab1e6" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="908f7dac-0f66-44e6-9035-3b25dca9bc2e" Version="1.1" Url="http://172.22.1.26/msg/signalr/ping" ThinkTime="29" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="_" Value="1493547765205" RecordedValue="1493547765205" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="f20f40c4-7c09-4153-b3b5-2ebb4b4af814" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="8dfb10fb-70fe-43a8-9f36-d5551ae870fc" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="e4aed59b-dfd3-4d2f-bda2-e759376f1249" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="27" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3530ef05-7794-4783-8cb2-d218f58d826c" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="2cf24a7d-0539-4e45-b38f-8eb6a85030b7" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="4152bc6b-9f21-4dde-817b-eb8dc2f92ebb" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="28" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="890e6d6f-a108-422c-9624-2b9a327016b5" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="15" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="19fda8ff-4db5-4a21-bf1b-e8b806dee1c6" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="15" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="e8aa5d57-6782-496c-b3c3-de7642f044ab" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="6d1d2232-ec17-421e-8573-65cfd0378662" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="eeca53ae-c1dc-4f25-ac4a-aaad88cbfc67" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="13" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="70784807-4bc4-437c-9f09-e83bafc75e52" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="17" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="bcc0e469-4a4f-4397-a647-8ab12dff00dd" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b6b517e5-5a5c-4469-927f-acc8a24ca69f" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="9b72d507-056f-4e7a-832d-9c074b91b959" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="171bf916-be59-4a14-8272-cba6b3db1953" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="c6a47823-2c0d-41a4-b808-2d26c893dd5c" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="c901c29a-913d-486b-ab37-674b327c054a" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="0635a30a-eda6-421e-b4e7-649401608870" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="8a01ed8a-595b-48c1-8e8a-08a6d8c0a7c4" Version="1.1" Url="http://172.22.1.26/msg/signalr/ping" ThinkTime="29" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="_" Value="1493547765206" RecordedValue="1493547765206" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="dc934960-49ae-4b59-aca5-723f229395b4" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="7001be16-7a9e-4590-8210-f4b5b471f31e" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="63ae259f-3357-4ac2-a758-8159760249f6" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="15" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="4fd6e748-44e3-4f72-bc99-b4da0891ea63" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="14" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="310f7b76-86a0-42a7-89da-6d9053c39c2f" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="fd252b1b-3463-4876-ace1-97123949e380" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="1a8e7145-5a83-4b05-9065-5313640a151c" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3f866a63-9f88-4473-a67f-ae13b6017797" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="958f1e82-d2c4-4d16-b1d1-3f027b7c21bd" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="11" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="cd4bf34b-279a-49f7-8295-0c20f66f0602" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="19" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="5c29fa0f-6fc9-4d31-aa89-816179fbbf68" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="0d866273-8426-4e08-819c-17afe347b54a" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="3b982773-27a2-4ccf-a9c3-fb6d09941a49" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="26" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="f4325d1d-302d-4191-a577-1444febf121d" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="834ba098-b07c-4134-a46b-d46d34393106" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="8a7a7c4d-99cf-4673-9794-4b3e4b289c88" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="d12568d7-5825-4a33-bff8-88f806a6b886" Version="1.1" Url="http://172.22.1.26/msg/signalr/ping" ThinkTime="9" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="_" Value="1493547765207" RecordedValue="1493547765207" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b612433a-9ceb-43bf-acfe-8a024c395295" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="20" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b98190a9-82fd-485a-bd6d-057e2abc30ad" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="6a0c6416-90c8-4f36-8509-8d02bbc0cd68" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="c6ca79fb-af8a-4960-a744-519c520f351f" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="779e7566-b428-461a-b68b-7bfaaf600af4" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="ed71ac9e-44ec-4131-ba2d-60ea4f6eae6b" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="f7cbad54-a2d4-48fd-9b27-860b233161e5" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="29" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="0813cc09-16e7-44dc-8dc4-2adb4d80c960" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="83fdec1f-cd46-4809-9f18-e1f9151715e8" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="1db9f0d5-1771-478b-b077-786cca7c4181" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="56f31fb3-9bb5-4268-a3de-05c1a08f4e75" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="21" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="dbbb88ce-cd59-4af9-a60e-03b526903a05" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="0f73b56a-2a16-4731-a15f-ad7a7cae6c38" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b5ec586b-79ec-43e8-a228-77001b8d06c1" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="52f2a6b2-b07b-4710-aa4f-f79fec1146f9" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="50588b1d-581d-40cc-9707-e9c11d7d2744" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="ec52e60d-fed2-4b06-a7cc-a3c926cb791f" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="e7492080-02b9-4023-9f40-d51a14847f43" Version="1.1" Url="http://172.22.1.26/msg/signalr/ping" ThinkTime="28" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="_" Value="1493547765208" RecordedValue="1493547765208" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="25545bfc-3079-4c1f-9df7-1e99e788c9b5" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="43016f2b-73f5-4899-91ff-54627b1c3c62" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="aca7caff-dd28-44b9-b255-523dbd6fcba3" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="bccb45d2-1fc2-462c-b8aa-aaa7d34f8e88" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="dc21fbf5-6b53-4c58-a27a-f7da410fa56a" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="27" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b55690d4-014f-4cb6-abf4-7258edcff8da" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="c5af0fcc-1342-4cae-bf2b-a3e1f350ab5b" Version="1.1" Url="http://172.22.1.26/msg/audio/msg.mp3" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="521ff78d-6d0e-4fff-9539-9f766983d311" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="90e90c2a-55db-4a67-b4fd-2be785e44e74" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="26b38ca4-f619-4835-acbb-0e2ba6ca60ce" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="1ca8fae0-9416-4a11-b13f-ba9c4dc1df69" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="a6bb313a-a073-48f6-9e8e-8d4b39531e79" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b93e6030-edbf-42c4-b006-b2a97b71b339" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="92d172c5-44d0-466a-b84e-356ae31b68de" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="e0d2a722-daa9-4c48-9e42-7af4e4ede68d" Version="1.1" Url="http://172.22.1.26/msg/signalr/ping" ThinkTime="29" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="Accept" Value="text/plain, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="_" Value="1493547765209" RecordedValue="1493547765209" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3b50b125-5573-4ff7-a958-a48e76d80dfa" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="531374c2-ea79-4850-ac26-66c123c43506" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="28" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="5210db6d-ebfa-4305-bb0e-dfe1502f6e4c" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="30" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="ecac99e5-fb97-4bac-880e-33e4bc535a44" Version="1.1" Url="http://172.22.1.26/msg/MsgUnreadCount.ashx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://172.22.1.26/msg/Msg.aspx" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="empid" Value="2214" RecordedValue="2214" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

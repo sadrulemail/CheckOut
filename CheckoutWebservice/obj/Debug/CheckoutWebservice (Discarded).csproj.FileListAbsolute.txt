@@ -1,0 +1,20 @@
+D:\VS2015\CheckOut\CheckoutWebservice\bin\CheckoutWebservice.dll.config
+D:\VS2015\CheckOut\CheckoutWebservice\bin\CheckoutWebservice.dll
+D:\VS2015\CheckOut\CheckoutWebservice\bin\CheckoutWebservice.pdb
+D:\VS2015\CheckOut\CheckoutWebservice\bin\Microsoft.Exchange.WebServices.Auth.dll
+D:\VS2015\CheckOut\CheckoutWebservice\bin\Microsoft.Exchange.WebServices.dll
+D:\VS2015\CheckOut\CheckoutWebservice\bin\Microsoft.Exchange.WebServices.xml
+D:\VS2015\CheckOut\CheckoutWebservice\bin\Microsoft.Exchange.WebServices.Auth.xml
+D:\VS2015\CheckOut\CheckoutWebservice\obj\Debug\CheckoutWebservice (Discarded).csprojResolveAssemblyReference.cache
+D:\VS2015\CheckOut\CheckoutWebservice\obj\Debug\CheckoutWebservice.dll
+D:\VS2015\CheckOut\CheckoutWebservice\obj\Debug\CheckoutWebservice.pdb
+F:\D\VS2015\CheckOut\CheckoutWebservice\bin\CheckoutWebservice.dll.config
+F:\D\VS2015\CheckOut\CheckoutWebservice\bin\CheckoutWebservice.dll
+F:\D\VS2015\CheckOut\CheckoutWebservice\bin\CheckoutWebservice.pdb
+F:\D\VS2015\CheckOut\CheckoutWebservice\bin\Microsoft.Exchange.WebServices.Auth.dll
+F:\D\VS2015\CheckOut\CheckoutWebservice\bin\Microsoft.Exchange.WebServices.dll
+F:\D\VS2015\CheckOut\CheckoutWebservice\bin\Microsoft.Exchange.WebServices.xml
+F:\D\VS2015\CheckOut\CheckoutWebservice\bin\Microsoft.Exchange.WebServices.Auth.xml
+F:\D\VS2015\CheckOut\CheckoutWebservice\obj\Debug\CheckoutWebservice (Discarded).csprojResolveAssemblyReference.cache
+F:\D\VS2015\CheckOut\CheckoutWebservice\obj\Debug\CheckoutWebservice.dll
+F:\D\VS2015\CheckOut\CheckoutWebservice\obj\Debug\CheckoutWebservice.pdb

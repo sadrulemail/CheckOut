@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://ibanking.tblbd.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://ibanking.tblbd.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://ibanking.tblbd.com/">
+      <s:element name="GetDueAmountWithRefID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Customer_Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="From_Year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="From_Month" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="End_Year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="End_Month" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDueAmountWithRefIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDueAmountWithRefIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmPayment_MM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TrnID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmPayment_MMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmPayment_MMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlinePayment_Confirmation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlinePayment_ConfirmationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnlinePayment_ConfirmationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDueAmountWithRefIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDueAmountWithRefID" />
+  </wsdl:message>
+  <wsdl:message name="GetDueAmountWithRefIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDueAmountWithRefIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPayment_MMSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmPayment_MM" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPayment_MMSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmPayment_MMResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlinePayment_ConfirmationSoapIn">
+    <wsdl:part name="parameters" element="tns:OnlinePayment_Confirmation" />
+  </wsdl:message>
+  <wsdl:message name="OnlinePayment_ConfirmationSoapOut">
+    <wsdl:part name="parameters" element="tns:OnlinePayment_ConfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDueAmountWithRefIDHttpPostIn">
+    <wsdl:part name="Customer_Code" type="s:string" />
+    <wsdl:part name="From_Year" type="s:string" />
+    <wsdl:part name="From_Month" type="s:string" />
+    <wsdl:part name="End_Year" type="s:string" />
+    <wsdl:part name="End_Month" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDueAmountWithRefIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPayment_MMHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="TrnID" type="s:string" />
+    <wsdl:part name="Mobile" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPayment_MMHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OnlinePayment_ConfirmationHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="PayType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OnlinePayment_ConfirmationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="BGSL_PaymentSoap">
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get amount from BGSL Server and 14 Digit new RefID&lt;br&gt;Customer Code:&lt;br&gt;Start Year:&lt;br&gt;End Year:&lt;br&gt;Start Month:&lt;br&gt;End Month:&lt;br&gt;Key Code:&lt;br&gt;Returns:&lt;br&gt;RefID|Amount&lt;br&gt;-2: Invalid KeyCode</wsdl:documentation>
+      <wsdl:input message="tns:GetDueAmountWithRefIDSoapIn" />
+      <wsdl:output message="tns:GetDueAmountWithRefIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment_MM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark Transaction as Paid&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists&lt;br&gt;-4: Payment is not found</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmPayment_MMSoapIn" />
+      <wsdl:output message="tns:ConfirmPayment_MMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlinePayment_Confirmation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark Transaction as Paid&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists&lt;br&gt;-4: Payment is not found</wsdl:documentation>
+      <wsdl:input message="tns:OnlinePayment_ConfirmationSoapIn" />
+      <wsdl:output message="tns:OnlinePayment_ConfirmationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BGSL_PaymentHttpPost">
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get amount from BGSL Server and 14 Digit new RefID&lt;br&gt;Customer Code:&lt;br&gt;Start Year:&lt;br&gt;End Year:&lt;br&gt;Start Month:&lt;br&gt;End Month:&lt;br&gt;Key Code:&lt;br&gt;Returns:&lt;br&gt;RefID|Amount&lt;br&gt;-2: Invalid KeyCode</wsdl:documentation>
+      <wsdl:input message="tns:GetDueAmountWithRefIDHttpPostIn" />
+      <wsdl:output message="tns:GetDueAmountWithRefIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment_MM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark Transaction as Paid&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists&lt;br&gt;-4: Payment is not found</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmPayment_MMHttpPostIn" />
+      <wsdl:output message="tns:ConfirmPayment_MMHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlinePayment_Confirmation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark Transaction as Paid&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists&lt;br&gt;-4: Payment is not found</wsdl:documentation>
+      <wsdl:input message="tns:OnlinePayment_ConfirmationHttpPostIn" />
+      <wsdl:output message="tns:OnlinePayment_ConfirmationHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BGSL_PaymentSoap" type="tns:BGSL_PaymentSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <soap:operation soapAction="https://ibanking.tblbd.com/GetDueAmountWithRefID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment_MM">
+      <soap:operation soapAction="https://ibanking.tblbd.com/ConfirmPayment_MM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlinePayment_Confirmation">
+      <soap:operation soapAction="https://ibanking.tblbd.com/OnlinePayment_Confirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BGSL_PaymentSoap12" type="tns:BGSL_PaymentSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/GetDueAmountWithRefID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment_MM">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/ConfirmPayment_MM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlinePayment_Confirmation">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/OnlinePayment_Confirmation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BGSL_PaymentHttpPost" type="tns:BGSL_PaymentHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <http:operation location="/GetDueAmountWithRefID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment_MM">
+      <http:operation location="/ConfirmPayment_MM" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlinePayment_Confirmation">
+      <http:operation location="/OnlinePayment_Confirmation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BGSL_Payment">
+    <wsdl:port name="BGSL_PaymentSoap" binding="tns:BGSL_PaymentSoap">
+      <soap:address location="http://172.20.1.70/bgsl/BGSL_Payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BGSL_PaymentSoap12" binding="tns:BGSL_PaymentSoap12">
+      <soap12:address location="http://172.20.1.70/bgsl/BGSL_Payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BGSL_PaymentHttpPost" binding="tns:BGSL_PaymentHttpPost">
+      <http:address location="http://172.20.1.70/bgsl/BGSL_Payment.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://172.31.8.18/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://172.31.8.18/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://172.31.8.18/">
+      <s:element name="GetBtclDueAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Exchange_Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone_Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Last_PayDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBtclDueAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBtclDueAmountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmBtclPayment_MB_OFF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TrnID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantBranchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmBtclPayment_MB_OFFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmBtclPayment_MB_OFFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BtclPaymentCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CancelBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cancelreason" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BtclPaymentCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BtclPaymentCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BtclPaymentHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BtclPaymentHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BtclPaymentHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBtclDueAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBtclDueAmount" />
+  </wsdl:message>
+  <wsdl:message name="GetBtclDueAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBtclDueAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmBtclPayment_MB_OFFSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmBtclPayment_MB_OFF" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmBtclPayment_MB_OFFSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmBtclPayment_MB_OFFResponse" />
+  </wsdl:message>
+  <wsdl:message name="BtclPaymentCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:BtclPaymentCancel" />
+  </wsdl:message>
+  <wsdl:message name="BtclPaymentCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:BtclPaymentCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="BtclPaymentHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:BtclPaymentHistory" />
+  </wsdl:message>
+  <wsdl:message name="BtclPaymentHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:BtclPaymentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBtclDueAmountHttpPostIn">
+    <wsdl:part name="Exchange_Code" type="s:string" />
+    <wsdl:part name="Phone_Number" type="s:string" />
+    <wsdl:part name="Last_PayDate" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBtclDueAmountHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmBtclPayment_MB_OFFHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="TrnID" type="s:string" />
+    <wsdl:part name="Mobile" type="s:string" />
+    <wsdl:part name="MerchantBranchCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmBtclPayment_MB_OFFHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BtclPaymentCancelHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="CancelBy" type="s:string" />
+    <wsdl:part name="Cancelreason" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BtclPaymentCancelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BtclPaymentHistoryHttpPostIn">
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="FromDate" type="s:string" />
+    <wsdl:part name="ToDate" type="s:string" />
+    <wsdl:part name="BranchCode" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BtclPaymentHistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="BTCL_PaymentSoap">
+    <wsdl:operation name="GetBtclDueAmount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get amount from BTCL Server&lt;br&gt;Exchange Code: of specific ph no&lt;br&gt;Phone Number: of specific bill req&lt;br&gt;Last PayDate: [Sample: 20140430]&lt;br&gt;Key Code:&lt;br&gt;Returns:&lt;br&gt;Json object&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;1: For Success otherwise error</wsdl:documentation>
+      <wsdl:input message="tns:GetBtclDueAmountSoapIn" />
+      <wsdl:output message="tns:GetBtclDueAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBtclPayment_MB_OFF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark Transaction as Paid&lt;br&gt;Returns:&lt;br&gt;Json Object&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists&lt;br&gt;-4: Payment is not found&lt;br&gt;-11: Merchant Branch Code not Found</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmBtclPayment_MB_OFFSoapIn" />
+      <wsdl:output message="tns:ConfirmBtclPayment_MB_OFFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Btcl Payment Cancel&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists&lt;br&gt;-4: Payment is not found&lt;br&gt;-11: Merchant Branch Code not Found</wsdl:documentation>
+      <wsdl:input message="tns:BtclPaymentCancelSoapIn" />
+      <wsdl:output message="tns:BtclPaymentCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Btcl Payment Collection History&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-11: Merchant Branch Code not Found</wsdl:documentation>
+      <wsdl:input message="tns:BtclPaymentHistorySoapIn" />
+      <wsdl:output message="tns:BtclPaymentHistorySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BTCL_PaymentHttpPost">
+    <wsdl:operation name="GetBtclDueAmount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get amount from BTCL Server&lt;br&gt;Exchange Code: of specific ph no&lt;br&gt;Phone Number: of specific bill req&lt;br&gt;Last PayDate: [Sample: 20140430]&lt;br&gt;Key Code:&lt;br&gt;Returns:&lt;br&gt;Json object&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;1: For Success otherwise error</wsdl:documentation>
+      <wsdl:input message="tns:GetBtclDueAmountHttpPostIn" />
+      <wsdl:output message="tns:GetBtclDueAmountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBtclPayment_MB_OFF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark Transaction as Paid&lt;br&gt;Returns:&lt;br&gt;Json Object&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists&lt;br&gt;-4: Payment is not found&lt;br&gt;-11: Merchant Branch Code not Found</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmBtclPayment_MB_OFFHttpPostIn" />
+      <wsdl:output message="tns:ConfirmBtclPayment_MB_OFFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Btcl Payment Cancel&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists&lt;br&gt;-4: Payment is not found&lt;br&gt;-11: Merchant Branch Code not Found</wsdl:documentation>
+      <wsdl:input message="tns:BtclPaymentCancelHttpPostIn" />
+      <wsdl:output message="tns:BtclPaymentCancelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Btcl Payment Collection History&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-11: Merchant Branch Code not Found</wsdl:documentation>
+      <wsdl:input message="tns:BtclPaymentHistoryHttpPostIn" />
+      <wsdl:output message="tns:BtclPaymentHistoryHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BTCL_PaymentSoap" type="tns:BTCL_PaymentSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBtclDueAmount">
+      <soap:operation soapAction="http://172.31.8.18/GetBtclDueAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBtclPayment_MB_OFF">
+      <soap:operation soapAction="http://172.31.8.18/ConfirmBtclPayment_MB_OFF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentCancel">
+      <soap:operation soapAction="http://172.31.8.18/BtclPaymentCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentHistory">
+      <soap:operation soapAction="http://172.31.8.18/BtclPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BTCL_PaymentSoap12" type="tns:BTCL_PaymentSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBtclDueAmount">
+      <soap12:operation soapAction="http://172.31.8.18/GetBtclDueAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBtclPayment_MB_OFF">
+      <soap12:operation soapAction="http://172.31.8.18/ConfirmBtclPayment_MB_OFF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentCancel">
+      <soap12:operation soapAction="http://172.31.8.18/BtclPaymentCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentHistory">
+      <soap12:operation soapAction="http://172.31.8.18/BtclPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BTCL_PaymentHttpPost" type="tns:BTCL_PaymentHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetBtclDueAmount">
+      <http:operation location="/GetBtclDueAmount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBtclPayment_MB_OFF">
+      <http:operation location="/ConfirmBtclPayment_MB_OFF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentCancel">
+      <http:operation location="/BtclPaymentCancel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BtclPaymentHistory">
+      <http:operation location="/BtclPaymentHistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BTCL_Payment">
+    <wsdl:port name="BTCL_PaymentSoap" binding="tns:BTCL_PaymentSoap">
+      <soap:address location="http://172.31.8.18:100/Checkout/BTCL_Payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BTCL_PaymentSoap12" binding="tns:BTCL_PaymentSoap12">
+      <soap12:address location="http://172.31.8.18:100/Checkout/BTCL_Payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BTCL_PaymentHttpPost" binding="tns:BTCL_PaymentHttpPost">
+      <http:address location="http://172.31.8.18:100/Checkout/BTCL_Payment.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

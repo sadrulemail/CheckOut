@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetRosterEmpList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRosterEmpListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRosterEmpListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRoutingNumberList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoutingNumberListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoutingNumberListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorityEmp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorityEmpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorityEmpResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Meetings_Add_Edit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ref" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Meetings_Add_EditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Meetings_Add_EditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRosterEmpListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRosterEmpList" />
+  </wsdl:message>
+  <wsdl:message name="GetRosterEmpListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRosterEmpListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoutingNumberListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoutingNumberList" />
+  </wsdl:message>
+  <wsdl:message name="GetRoutingNumberListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoutingNumberListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorityEmpSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorityEmp" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorityEmpSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorityEmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="Meetings_Add_EditSoapIn">
+    <wsdl:part name="parameters" element="tns:Meetings_Add_Edit" />
+  </wsdl:message>
+  <wsdl:message name="Meetings_Add_EditSoapOut">
+    <wsdl:part name="parameters" element="tns:Meetings_Add_EditResponse" />
+  </wsdl:message>
+  <wsdl:portType name="intrawebServiceSoap">
+    <wsdl:operation name="GetRosterEmpList">
+      <wsdl:input message="tns:GetRosterEmpListSoapIn" />
+      <wsdl:output message="tns:GetRosterEmpListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoutingNumberList">
+      <wsdl:input message="tns:GetRoutingNumberListSoapIn" />
+      <wsdl:output message="tns:GetRoutingNumberListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityEmp">
+      <wsdl:input message="tns:GetAuthorityEmpSoapIn" />
+      <wsdl:output message="tns:GetAuthorityEmpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Meetings_Add_Edit">
+      <wsdl:input message="tns:Meetings_Add_EditSoapIn" />
+      <wsdl:output message="tns:Meetings_Add_EditSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="intrawebServiceSoap" type="tns:intrawebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRosterEmpList">
+      <soap:operation soapAction="http://tempuri.org/GetRosterEmpList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoutingNumberList">
+      <soap:operation soapAction="http://tempuri.org/GetRoutingNumberList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityEmp">
+      <soap:operation soapAction="http://tempuri.org/GetAuthorityEmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Meetings_Add_Edit">
+      <soap:operation soapAction="http://tempuri.org/Meetings_Add_Edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="intrawebServiceSoap12" type="tns:intrawebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRosterEmpList">
+      <soap12:operation soapAction="http://tempuri.org/GetRosterEmpList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoutingNumberList">
+      <soap12:operation soapAction="http://tempuri.org/GetRoutingNumberList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityEmp">
+      <soap12:operation soapAction="http://tempuri.org/GetAuthorityEmp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Meetings_Add_Edit">
+      <soap12:operation soapAction="http://tempuri.org/Meetings_Add_Edit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="intrawebService">
+    <wsdl:port name="intrawebServiceSoap" binding="tns:intrawebServiceSoap">
+      <soap:address location="http://localhost:51907/Checkout/intrawebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="intrawebServiceSoap12" binding="tns:intrawebServiceSoap12">
+      <soap12:address location="http://localhost:51907/Checkout/intrawebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

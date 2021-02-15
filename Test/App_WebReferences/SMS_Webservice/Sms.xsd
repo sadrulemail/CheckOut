@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PushSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Msg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Priority" type="xs:int" />
+        <xs:element minOccurs="0" name="TypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="KeyCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PushSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PushSMSResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

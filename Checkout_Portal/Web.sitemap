@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Menu" url="" roles="*">
+
+    <siteMapNode url="" title="CheckOut" description="" roles="ADMIN,USER,GUEST" >
+      <siteMapNode url="Default.aspx" title="Home Page" description="" roles="*" />
+      <siteMapNode url="Checkout_Link.aspx" title="Receipt Link/Print" description="" roles="ADMIN,USER,GUEST" />
+      <siteMapNode url="CheckoutPaymentLog.aspx" title="Payment Browse" description="" roles="ADMIN" />
+      <siteMapNode url="CheckoutPaymentSummary.aspx" title="Payment Summary" description="" roles="ADMIN" />
+      <siteMapNode url="CheckoutPayEdit.aspx" title="Payment Trn Edit" description="" roles="ADMIN" />
+
+      
+      <siteMapNode url="BtclPayReport.aspx" title="BTCL Report" description="" roles="ADMIN,USER" />
+      <siteMapNode url="NID_Report.aspx" title="NID Report" description="" roles="ADMIN,USER" />
+      <siteMapNode url="BhbfcReport.aspx" title="BHBFC Report" description="" roles="ADMIN,USER" />
+      <siteMapNode url="WestZoneReconcilation.aspx" title="West Zone Reconcilation" description="" roles="ADMIN,Reconcilation" />
+       <siteMapNode url="Bkash_Report.aspx" title="bKash Report" description="" roles="ADMIN,USER" branch="1" />
+      <!--<siteMapNode url="WestZoneReconDetail.aspx" title="West Zone Reconcile Details" description="" roles="ADMIN,USER,GUEST" />-->
+    </siteMapNode>
+    
+    <siteMapNode url="" title="Passport" description="" roles="ADMIN,PASSPORT,USER,GUEST" >
+      <siteMapNode url="Passport_Link.aspx" title="Receipt Link/Print" description="" roles="ADMIN,PASSPORT,USER,GUEST" />      
+      <siteMapNode url="Branchwise.aspx" title="Branch wise Report" description="" roles="ADMIN,PASSPORT,USER" />
+      <siteMapNode url="Passport.aspx" title="Passport Report" description="" roles="ADMIN" />
+      <siteMapNode url="Passport_Not_Verified_Log.aspx" title="Not Verified Log" description="" roles="ADMIN,PASSPORT,USER" />
+      <siteMapNode url="Passport_Unlock.aspx" title="Passport Unlock" description="" roles="ADMIN" />
+     <siteMapNode url="PassportEdit_Authorize.aspx" title="Authorize Pending" description="" roles="ADMIN,PASSPORT,USER" />
+    </siteMapNode>    
+    
+    
+    <siteMapNode url="" title="Titas Gas" description="" roles="ADMIN,USER" >
+      <siteMapNode url="Titas_Payment.aspx" title="Titas Non-Metered" description="" roles="ADMIN,USER" />
+      <siteMapNode url="Titas_Payment_Metered.aspx" title="Titas Metered" description="" roles="ADMIN,USER" />
+      <siteMapNode url="Titas_Report.aspx" title="Titas Reports" description="" roles="ADMIN,USER" />
+      <siteMapNode url="Titas_Reconciliation.aspx" title="Titas Reconciliation" description="" roles="ADMIN,USER" />
+    </siteMapNode> 
+
+
+    <siteMapNode url="" title="Admin" description="" roles="ADMIN">
+     
+      <siteMapNode url="MerchantInf.aspx" title="Merchant List" description="" roles="ADMIN" branch="1" dept="90" />
+       <siteMapNode url="MerchantDetailInf.aspx" title="" description="" roles="ADMIN" branch="1" dept="90" />
+      <siteMapNode url="MerchantPermission.aspx" title="Merchant Permission" description="" roles="ADMIN" branch="1" dept="90" />
+      
+      
+      <siteMapNode url="App_Users.aspx" title="App Users" description="" roles="ADMIN" />
+    </siteMapNode>
+    <siteMapNode url="" title="Profile" description="" roles="*">      
+      <siteMapNode url="PasswordChange.aspx" title="Change Password" description="" roles="*" target="_blank"  />
+      <siteMapNode url="LogOut.aspx" title="Logout" description="" roles="*" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.100.42:90/SLMSService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" />
+  <xs:element name="TestService">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" minOccurs="0" name="TestServiceResult" nillable="true" type="q1:TokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Test">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" minOccurs="0" name="TestResult" nillable="true" type="q2:TokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokenByUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokenByUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" minOccurs="0" name="GetTokenByUserResult" nillable="true" type="q3:TokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillLedger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TXNNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TokenNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExchangeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastPayDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PayStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillLedgerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" minOccurs="0" name="GetBillLedgerResult" nillable="true" type="q4:BillRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BillPaymentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TXNNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TokenNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExchangeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastPayDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PaidAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="BillStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BillPaymentRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" minOccurs="0" name="BillPaymentRequestResult" nillable="true" type="q5:BillPaymentResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentCollectionHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TXNNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TokenNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ToDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentCollectionHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" minOccurs="0" name="GetPaymentCollectionHistoryResult" nillable="true" type="q6:BillPaidHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TokenNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OldPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" minOccurs="0" name="ChangePasswordRequestResult" nillable="true" type="q7:ChangePasswordResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentCancelRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TXNNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TokenNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExchangeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastPayDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BillStatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentCancelRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" minOccurs="0" name="PaymentCancelRequestResult" nillable="true" type="q8:PaymentCancelResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

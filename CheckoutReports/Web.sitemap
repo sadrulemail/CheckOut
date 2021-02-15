@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Home" description="Home Page" roles="*" >
+    <siteMapNode url="" title="Passport" description="" roles="ADMIN,PASSPORT,PASSPORT_PRINT">      
+      <siteMapNode url="Passport.aspx" title="Passport Payments" description="" roles="ADMIN,PASSPORT" />
+      <siteMapNode url="Passport_Not_Verified_Log.aspx" title="Not Verified Log" description="" roles="ADMIN,PASSPORT" />
+      <siteMapNode url="Passport_Receipt.aspx" title="Passport Receipt" description="" roles="ADMIN,PASSPORT_PRINT" />
+    </siteMapNode>
+    <siteMapNode url="" title="REB" description="" roles="ADMIN,REB_UPLOAD,REB_DOWNLOAD">
+      <siteMapNode url="REB_Upload.aspx" title="REB Upload" description="" roles="ADMIN,REB_UPLOAD" />
+      <siteMapNode url="REB_Browse.aspx" title="REB Download" description="" roles="ADMIN,REB_DOWNLOAD" />
+      <siteMapNode url="REB_Download_Log.aspx" title="REB Download Log" description="" roles="ADMIN,REB_DOWNLOAD" />
+    </siteMapNode>
+    <siteMapNode url="" title="Profile" description="" roles="*">      
+      <siteMapNode url="PasswordChange.aspx" title="Password Change"  description="" roles="*" />
+      <siteMapNode url="LogOut.aspx" title="Logout" description="" roles="*" />
+    </siteMapNode>
+    <siteMapNode url="" title="Site Admin" description="" roles="ADMIN">
+      <siteMapNode url="Users.aspx" title="User Management" description="" roles="ADMIN" />
+      <siteMapNode url="PasswordReset.aspx" title="Password Reset"  description="" roles="ADMIN" orgid="2,3" />
+      <siteMapNode url="Login_Log.aspx" title="Login Log" description="" roles="ADMIN" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

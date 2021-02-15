@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://ibanking.tblbd.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://ibanking.tblbd.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://ibanking.tblbd.com/">
+      <s:element name="GetDueAmountWithRefID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaskID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDueAmountWithRefIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDueAmountWithRefIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TrnID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmPaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDueAmountWithRefIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDueAmountWithRefID" />
+  </wsdl:message>
+  <wsdl:message name="GetDueAmountWithRefIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDueAmountWithRefIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmPayment" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDueAmountWithRefIDHttpPostIn">
+    <wsdl:part name="NID" type="s:string" />
+    <wsdl:part name="TaskID" type="s:string" />
+    <wsdl:part name="ServiceType" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDueAmountWithRefIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPaymentHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="TrnID" type="s:string" />
+    <wsdl:part name="Mobile" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="NID_PaymentSoap">
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get amount from NID Server and 14 Digit new RefID&lt;br&gt;Returns:&lt;br&gt;ServiceType: (R: REGULAR , E: URGENT)&lt;br&gt;RefID|Amount&lt;br&gt;-2: Invalid KeyCode</wsdl:documentation>
+      <wsdl:input message="tns:GetDueAmountWithRefIDSoapIn" />
+      <wsdl:output message="tns:GetDueAmountWithRefIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark Transaction as Paid&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmPaymentSoapIn" />
+      <wsdl:output message="tns:ConfirmPaymentSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="NID_PaymentHttpPost">
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get amount from NID Server and 14 Digit new RefID&lt;br&gt;Returns:&lt;br&gt;ServiceType: (R: REGULAR , E: URGENT)&lt;br&gt;RefID|Amount&lt;br&gt;-2: Invalid KeyCode</wsdl:documentation>
+      <wsdl:input message="tns:GetDueAmountWithRefIDHttpPostIn" />
+      <wsdl:output message="tns:GetDueAmountWithRefIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark Transaction as Paid&lt;br&gt;Returns:&lt;br&gt;1: Success&lt;br&gt;-1: Failed to Update&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;-3: TrnID Already Exists</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmPaymentHttpPostIn" />
+      <wsdl:output message="tns:ConfirmPaymentHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NID_PaymentSoap" type="tns:NID_PaymentSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <soap:operation soapAction="https://ibanking.tblbd.com/GetDueAmountWithRefID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment">
+      <soap:operation soapAction="https://ibanking.tblbd.com/ConfirmPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NID_PaymentSoap12" type="tns:NID_PaymentSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/GetDueAmountWithRefID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/ConfirmPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NID_PaymentHttpPost" type="tns:NID_PaymentHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDueAmountWithRefID">
+      <http:operation location="/GetDueAmountWithRefID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPayment">
+      <http:operation location="/ConfirmPayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NID_Payment">
+    <wsdl:port name="NID_PaymentSoap" binding="tns:NID_PaymentSoap">
+      <soap:address location="https://172.20.1.27/CheckOutWebService/NID_Payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NID_PaymentSoap12" binding="tns:NID_PaymentSoap12">
+      <soap12:address location="https://172.20.1.27/CheckOutWebService/NID_Payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NID_PaymentHttpPost" binding="tns:NID_PaymentHttpPost">
+      <http:address location="https://172.20.1.27/CheckOutWebService/NID_Payment.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

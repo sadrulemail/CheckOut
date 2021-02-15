@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.Master.cs" Inherits="Master" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta name="Organization" content="Trust Bank Limited" />
+    <meta name="Developer" content="Trust Bank In-House Software Development Team" />
+    <meta name="Web" content="www.trustbank.com.bd" />
+    <meta name="Facebook" content="www.fb.com/TrustBankLimited" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Stylesheet.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.alerts.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.watermark.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.timeago.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/TrustBank.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script type="text/javascript">
+        function ToggleTreeTD() {
+            if (document.getElementById('MenuTreeTD').style.display == '') {
+                document.getElementById('MenuTreeTD').style.display = 'none';
+                document.getElementById('MenuTreeToggleTD').className = 'ResizeTDHide';
+                document.getElementById('MenuTreeToggleTD').title = 'Show Menu »';
+            }
+            else {
+                document.getElementById('MenuTreeTD').style.display = '';
+                document.getElementById('MenuTreeToggleTD').className = 'ResizeTD';
+                document.getElementById('MenuTreeToggleTD').title = '« Hide Menu';
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div class="TopTitle">
+        <table width="100%">
+            <tr>
+                <td valign="top" style="padding: 10px" class="AppTitle">
+                    <a href="Default.aspx" class="AppTitle">
+                        <img src="Images/checkout-64.png" width="30" height="30" border="0" />
+                        <%= ConfigurationSettings.AppSettings["AppTitle"] %></a>
+                </td>
+                <td valign="bottom" align="right" style="font-family: Verdana; line-height: 150%">
+                    <asp:Literal ID="LoginStatus" runat="server"></asp:Literal>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="MainTitle">
+        <asp:ContentPlaceHolder ID="cphTitle" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="min-height: 400px" class="maindiv">
+        <table style="width: 100%; border-collapse: collapse">
+            <tr>
+                <td valign="top" id="MenuTreeTD" style="display: ''; width: 200px; padding: 0">
+                    <div class="left-div">
+                        <asp:TreeView ID="TreeView2" runat="server" DataSourceID="SiteMapDataSource1" OnTreeNodeDataBound="TreeView1_TreeNodeDataBound"
+                            PopulateNodesFromClient="true" EnableViewState="False" ShowExpandCollapse="false"
+                            CssClass="treemenu" ImageSet="Simple">
+                            <HoverNodeStyle CssClass="tree-node-hover" />
+                            <SelectedNodeStyle CssClass="tree-node-selected" />
+                            <RootNodeStyle Font-Bold="True" CssClass="tree-node-parent" VerticalPadding="4px" />
+                            <NodeStyle CssClass="tree-node" VerticalPadding="2px" />
+                        </asp:TreeView>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+                    </div>
+                </td>
+                <td valign="top" width="7px" id="MenuTreeToggleTD" class="ResizeTD" title="« Hide Menu"
+                    onclick="javascript:ToggleTreeTD()">
+                    &nbsp;&nbsp;
+                </td>
+                <td valign="top">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" RenderCurrentNodeAsLink="True"
+                        Font-Underline="False" Font-Bold="False" Visible="false">
+                        <CurrentNodeStyle Font-Bold="True" CssClass="df" ForeColor="White" />
+                        <NodeStyle Font-Underline="False" />
+                    </asp:SiteMapPath>
+                    <div style="padding: 7px 7px 30px 7px">
+                        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <asp:Literal ID="Copyright" runat="server"></asp:Literal></div>
+    </form>
+</body>
+</html>

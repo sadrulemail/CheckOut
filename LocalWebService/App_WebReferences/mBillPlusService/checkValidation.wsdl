@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:checkValidation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:checkValidation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:checkValidation">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="checkValidatorRequest">
+    <wsdl:part name="org_code" type="xsd:string" />
+    <wsdl:part name="acc_num" type="xsd:string" />
+    <wsdl:part name="billcycle" type="xsd:string" />
+    <wsdl:part name="org_br_code" type="xsd:string" />
+    <wsdl:part name="pc_code" type="xsd:string" />
+    <wsdl:part name="pc_br_code" type="xsd:string" />
+    <wsdl:part name="user_name" type="xsd:string" />
+    <wsdl:part name="customer_code" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="otp" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkValidatorResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="bankTransactionRequest">
+    <wsdl:part name="srv_chrg" type="xsd:string" />
+    <wsdl:part name="req_id" type="xsd:string" />
+    <wsdl:part name="acc_num" type="xsd:string" />
+    <wsdl:part name="trns_id" type="xsd:string" />
+    <wsdl:part name="customer_code" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="pc_code" type="xsd:string" />
+    <wsdl:part name="otp" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="bankTransactionResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="checkValidationPortType">
+    <wsdl:operation name="checkValidator">
+      <documentation>Get a listing of products by category</documentation>
+      <wsdl:input message="tns:checkValidatorRequest" />
+      <wsdl:output message="tns:checkValidatorResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="bankTransaction">
+      <documentation>Get a listing of products by category</documentation>
+      <wsdl:input message="tns:bankTransactionRequest" />
+      <wsdl:output message="tns:bankTransactionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="checkValidationBinding" type="tns:checkValidationPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="checkValidator">
+      <soap:operation soapAction="urn:checkValidation#checkValidator" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:checkValidator" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:checkValidator" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bankTransaction">
+      <soap:operation soapAction="urn:checkValidation#bankTransaction" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:bankTransaction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:bankTransaction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="checkValidation">
+    <wsdl:port name="checkValidationPort" binding="tns:checkValidationBinding">
+      <soap:address location="http://163.53.150.181/mBillPlus/SOAP_wsdl/checkValidation.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://ibanking.tblbd.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://ibanking.tblbd.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://ibanking.tblbd.com/">
+      <s:element name="Get_Bill_Due_Info">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acc_num" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billcycle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Bill_Due_InfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Bill_Due_InfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Bill_Due_Info_MB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acc_num" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billcycle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Bill_Due_Info_MBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Bill_Due_Info_MBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Confirm_Payment_MB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Account_Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bill_Cycle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TrnID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Confirm_Payment_MBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Confirm_Payment_MBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Confirm_Payment_Online">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ref_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Confirm_Payment_OnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Confirm_Payment_OnlineResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Payment_Cancelled">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ref_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Payment_CancelledResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Payment_CancelledResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reconcile_Summary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="otc" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reconcile_SummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Reconcile_SummaryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reconcile_Details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reconcile_DetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Reconcile_DetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reconcile_Confirmation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reconcile_ConfirmationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Reconcile_ConfirmationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_Bill_Due_InfoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Bill_Due_Info" />
+  </wsdl:message>
+  <wsdl:message name="Get_Bill_Due_InfoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Bill_Due_InfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Bill_Due_Info_MBSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Bill_Due_Info_MB" />
+  </wsdl:message>
+  <wsdl:message name="Get_Bill_Due_Info_MBSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Bill_Due_Info_MBResponse" />
+  </wsdl:message>
+  <wsdl:message name="Confirm_Payment_MBSoapIn">
+    <wsdl:part name="parameters" element="tns:Confirm_Payment_MB" />
+  </wsdl:message>
+  <wsdl:message name="Confirm_Payment_MBSoapOut">
+    <wsdl:part name="parameters" element="tns:Confirm_Payment_MBResponse" />
+  </wsdl:message>
+  <wsdl:message name="Confirm_Payment_OnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:Confirm_Payment_Online" />
+  </wsdl:message>
+  <wsdl:message name="Confirm_Payment_OnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:Confirm_Payment_OnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Payment_CancelledSoapIn">
+    <wsdl:part name="parameters" element="tns:Payment_Cancelled" />
+  </wsdl:message>
+  <wsdl:message name="Payment_CancelledSoapOut">
+    <wsdl:part name="parameters" element="tns:Payment_CancelledResponse" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_SummarySoapIn">
+    <wsdl:part name="parameters" element="tns:Reconcile_Summary" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_SummarySoapOut">
+    <wsdl:part name="parameters" element="tns:Reconcile_SummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_DetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Reconcile_Details" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_DetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Reconcile_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_ConfirmationSoapIn">
+    <wsdl:part name="parameters" element="tns:Reconcile_Confirmation" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_ConfirmationSoapOut">
+    <wsdl:part name="parameters" element="tns:Reconcile_ConfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Bill_Due_InfoHttpPostIn">
+    <wsdl:part name="acc_num" type="s:string" />
+    <wsdl:part name="billcycle" type="s:string" />
+    <wsdl:part name="otc" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Bill_Due_InfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Bill_Due_Info_MBHttpPostIn">
+    <wsdl:part name="acc_num" type="s:string" />
+    <wsdl:part name="billcycle" type="s:string" />
+    <wsdl:part name="otc" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Bill_Due_Info_MBHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Confirm_Payment_MBHttpPostIn">
+    <wsdl:part name="Account_Number" type="s:string" />
+    <wsdl:part name="Bill_Cycle" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="TrnID" type="s:string" />
+    <wsdl:part name="MobileNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Confirm_Payment_MBHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Confirm_Payment_OnlineHttpPostIn">
+    <wsdl:part name="ref_id" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Confirm_Payment_OnlineHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Payment_CancelledHttpPostIn">
+    <wsdl:part name="ref_id" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Payment_CancelledHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_SummaryHttpPostIn">
+    <wsdl:part name="PayDate" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="otc" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_SummaryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_DetailsHttpPostIn">
+    <wsdl:part name="PayDate" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="otc" type="s:string" />
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_DetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_ConfirmationHttpPostIn">
+    <wsdl:part name="PayDate" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+    <wsdl:part name="otc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Reconcile_ConfirmationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="MbillPlus_paymentSoap">
+    <wsdl:operation name="Get_Bill_Due_Info">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Bill due Information&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Get_Bill_Due_InfoSoapIn" />
+      <wsdl:output message="tns:Get_Bill_Due_InfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Bill_Due_Info_MB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Bill due Information through MB&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Get_Bill_Due_Info_MBSoapIn" />
+      <wsdl:output message="tns:Get_Bill_Due_Info_MBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_MB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Payment Confirmation through MB&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-1: Payment already Used by another Trxn&lt;br&gt;-2: Invalid Keycode&lt;br&gt;-3: Payment Not Completed&lt;br&gt;-4: Ref id not found&lt;br&gt;L101: Payment not Verified</wsdl:documentation>
+      <wsdl:input message="tns:Confirm_Payment_MBSoapIn" />
+      <wsdl:output message="tns:Confirm_Payment_MBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_Online">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Online Payment Confirmation &lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-1: Payment already Used by another Trxn&lt;br&gt;-2: Invalid Keycode&lt;br&gt;-3: Payment not Completed&lt;br&gt;L101: Payment not Verified</wsdl:documentation>
+      <wsdl:input message="tns:Confirm_Payment_OnlineSoapIn" />
+      <wsdl:output message="tns:Confirm_Payment_OnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Cancelled">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Payment Cancel&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Payment_CancelledSoapIn" />
+      <wsdl:output message="tns:Payment_CancelledSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Summary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Reconcile Summary&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;410: Mandatory field NULL&lt;br&gt;409: Not permitted for this action&lt;br&gt;449: Confirmation failed&lt;br&gt;460: Data Mismatch&lt;br&gt;460: Already Reconciled&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Reconcile_SummarySoapIn" />
+      <wsdl:output message="tns:Reconcile_SummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Details">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Reconcile Details&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;410: Mandatory field NULL&lt;br&gt;409: Not permitted for this action&lt;br&gt;449: Confirmation failed&lt;br&gt;460: Data Mismatch&lt;br&gt;460: Already Reconciled&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Reconcile_DetailsSoapIn" />
+      <wsdl:output message="tns:Reconcile_DetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Confirmation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Reconcile Confirmation&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;410: Mandatory field NULL&lt;br&gt;409: Not permitted for this action&lt;br&gt;449: Confirmation failed&lt;br&gt;460: Data Mismatch&lt;br&gt;460: Already Reconciled&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Reconcile_ConfirmationSoapIn" />
+      <wsdl:output message="tns:Reconcile_ConfirmationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MbillPlus_paymentHttpPost">
+    <wsdl:operation name="Get_Bill_Due_Info">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Bill due Information&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Get_Bill_Due_InfoHttpPostIn" />
+      <wsdl:output message="tns:Get_Bill_Due_InfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Bill_Due_Info_MB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Bill due Information through MB&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Get_Bill_Due_Info_MBHttpPostIn" />
+      <wsdl:output message="tns:Get_Bill_Due_Info_MBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_MB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Payment Confirmation through MB&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-1: Payment already Used by another Trxn&lt;br&gt;-2: Invalid Keycode&lt;br&gt;-3: Payment Not Completed&lt;br&gt;-4: Ref id not found&lt;br&gt;L101: Payment not Verified</wsdl:documentation>
+      <wsdl:input message="tns:Confirm_Payment_MBHttpPostIn" />
+      <wsdl:output message="tns:Confirm_Payment_MBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_Online">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Online Payment Confirmation &lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-1: Payment already Used by another Trxn&lt;br&gt;-2: Invalid Keycode&lt;br&gt;-3: Payment not Completed&lt;br&gt;L101: Payment not Verified</wsdl:documentation>
+      <wsdl:input message="tns:Confirm_Payment_OnlineHttpPostIn" />
+      <wsdl:output message="tns:Confirm_Payment_OnlineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Cancelled">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Payment Cancel&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;448: Data Not Found&lt;br&gt;450: More than one bill&lt;br&gt;420: Insert Failed&lt;br&gt;421: Update Failed&lt;br&gt;444: User name Mismatch&lt;br&gt;410: Mandatory field NULL&lt;br&gt;460: Data Mismatch&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Payment_CancelledHttpPostIn" />
+      <wsdl:output message="tns:Payment_CancelledHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Summary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Reconcile Summary&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;410: Mandatory field NULL&lt;br&gt;409: Not permitted for this action&lt;br&gt;449: Confirmation failed&lt;br&gt;460: Data Mismatch&lt;br&gt;460: Already Reconciled&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Reconcile_SummaryHttpPostIn" />
+      <wsdl:output message="tns:Reconcile_SummaryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Details">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Reconcile Details&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;410: Mandatory field NULL&lt;br&gt;409: Not permitted for this action&lt;br&gt;449: Confirmation failed&lt;br&gt;460: Data Mismatch&lt;br&gt;460: Already Reconciled&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Reconcile_DetailsHttpPostIn" />
+      <wsdl:output message="tns:Reconcile_DetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Confirmation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Reconcile Confirmation&lt;br&gt;Returns:&lt;br&gt;400: Success&lt;br&gt;410: Mandatory field NULL&lt;br&gt;409: Not permitted for this action&lt;br&gt;449: Confirmation failed&lt;br&gt;460: Data Mismatch&lt;br&gt;460: Already Reconciled&lt;br&gt;-2: Invalid Keycode</wsdl:documentation>
+      <wsdl:input message="tns:Reconcile_ConfirmationHttpPostIn" />
+      <wsdl:output message="tns:Reconcile_ConfirmationHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MbillPlus_paymentSoap" type="tns:MbillPlus_paymentSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Bill_Due_Info">
+      <soap:operation soapAction="https://ibanking.tblbd.com/Get_Bill_Due_Info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Bill_Due_Info_MB">
+      <soap:operation soapAction="https://ibanking.tblbd.com/Get_Bill_Due_Info_MB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_MB">
+      <soap:operation soapAction="https://ibanking.tblbd.com/Confirm_Payment_MB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_Online">
+      <soap:operation soapAction="https://ibanking.tblbd.com/Confirm_Payment_Online" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Cancelled">
+      <soap:operation soapAction="https://ibanking.tblbd.com/Payment_Cancelled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Summary">
+      <soap:operation soapAction="https://ibanking.tblbd.com/Reconcile_Summary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Details">
+      <soap:operation soapAction="https://ibanking.tblbd.com/Reconcile_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Confirmation">
+      <soap:operation soapAction="https://ibanking.tblbd.com/Reconcile_Confirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MbillPlus_paymentSoap12" type="tns:MbillPlus_paymentSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Bill_Due_Info">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/Get_Bill_Due_Info" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Bill_Due_Info_MB">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/Get_Bill_Due_Info_MB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_MB">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/Confirm_Payment_MB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_Online">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/Confirm_Payment_Online" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Cancelled">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/Payment_Cancelled" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Summary">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/Reconcile_Summary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Details">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/Reconcile_Details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Confirmation">
+      <soap12:operation soapAction="https://ibanking.tblbd.com/Reconcile_Confirmation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MbillPlus_paymentHttpPost" type="tns:MbillPlus_paymentHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Get_Bill_Due_Info">
+      <http:operation location="/Get_Bill_Due_Info" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Bill_Due_Info_MB">
+      <http:operation location="/Get_Bill_Due_Info_MB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_MB">
+      <http:operation location="/Confirm_Payment_MB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirm_Payment_Online">
+      <http:operation location="/Confirm_Payment_Online" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Payment_Cancelled">
+      <http:operation location="/Payment_Cancelled" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Summary">
+      <http:operation location="/Reconcile_Summary" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Details">
+      <http:operation location="/Reconcile_Details" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reconcile_Confirmation">
+      <http:operation location="/Reconcile_Confirmation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MbillPlus_payment">
+    <wsdl:port name="MbillPlus_paymentSoap" binding="tns:MbillPlus_paymentSoap">
+      <soap:address location="http://172.20.1.27:200/Checkout/MbillPlus_payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MbillPlus_paymentSoap12" binding="tns:MbillPlus_paymentSoap12">
+      <soap12:address location="http://172.20.1.27:200/Checkout/MbillPlus_payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MbillPlus_paymentHttpPost" binding="tns:MbillPlus_paymentHttpPost">
+      <http:address location="http://172.20.1.27:200/Checkout/MbillPlus_payment.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

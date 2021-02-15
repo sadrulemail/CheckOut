@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://172.31.8.18/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://172.31.8.18/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://172.31.8.18/">
+      <s:element name="GetCustomerInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerInformationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostPaymentEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Particulars" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Surcharge" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostPaymentEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostPaymentEntryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePaymentEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CancelReason" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePaymentEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeletePaymentEntryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDemandNoteInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDemandNoteInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDemandNoteInformationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostDemandNotePayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostDemandNotePaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostDemandNotePaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDemandNotePayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CancelReason" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDemandNotePaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteDemandNotePaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDailyPaymentHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HistoryType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoutingCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDailyPaymentHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDailyPaymentHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCustomerInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostPaymentEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:PostPaymentEntry" />
+  </wsdl:message>
+  <wsdl:message name="PostPaymentEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:PostPaymentEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePaymentEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePaymentEntry" />
+  </wsdl:message>
+  <wsdl:message name="DeletePaymentEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePaymentEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDemandNoteInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDemandNoteInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetDemandNoteInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDemandNoteInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostDemandNotePaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:PostDemandNotePayment" />
+  </wsdl:message>
+  <wsdl:message name="PostDemandNotePaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:PostDemandNotePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDemandNotePaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDemandNotePayment" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDemandNotePaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDemandNotePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDailyPaymentHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDailyPaymentHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetDailyPaymentHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDailyPaymentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInformationHttpPostIn">
+    <wsdl:part name="CustomerID" type="s:string" />
+    <wsdl:part name="RoutingCode" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerInformationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PostPaymentEntryHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="PaymentID" type="s:string" />
+    <wsdl:part name="Particulars" type="s:string" />
+    <wsdl:part name="MobileNo" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="Surcharge" type="s:string" />
+    <wsdl:part name="RoutingNo" type="s:string" />
+    <wsdl:part name="CustomerCode" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostPaymentEntryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeletePaymentEntryHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="CancelReason" type="s:string" />
+    <wsdl:part name="RoutingCode" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeletePaymentEntryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDemandNoteInformationHttpPostIn">
+    <wsdl:part name="InvoiceNo" type="s:string" />
+    <wsdl:part name="RoutingCode" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDemandNoteInformationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PostDemandNotePaymentHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="InvoiceNo" type="s:string" />
+    <wsdl:part name="CustomerId" type="s:string" />
+    <wsdl:part name="RoutingNo" type="s:string" />
+    <wsdl:part name="MobileNo" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostDemandNotePaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDemandNotePaymentHttpPostIn">
+    <wsdl:part name="RefID" type="s:string" />
+    <wsdl:part name="PaymentID" type="s:string" />
+    <wsdl:part name="CancelReason" type="s:string" />
+    <wsdl:part name="RoutingCode" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDemandNotePaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDailyPaymentHistoryHttpPostIn">
+    <wsdl:part name="PayDate" type="s:string" />
+    <wsdl:part name="HistoryType" type="s:string" />
+    <wsdl:part name="RoutingCode" type="s:string" />
+    <wsdl:part name="EmpID" type="s:string" />
+    <wsdl:part name="KeyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDailyPaymentHistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="TitasBillPaymentSoap">
+    <wsdl:operation name="GetCustomerInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get Customer Code with a specified Customer ID&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=RefID|json</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerInformationSoapIn" />
+      <wsdl:output message="tns:GetCustomerInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostPaymentEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Create new Payment with a specified Customer ID&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1|refid: Success</wsdl:documentation>
+      <wsdl:input message="tns:PostPaymentEntrySoapIn" />
+      <wsdl:output message="tns:PostPaymentEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Delete Payment Entry with a specified Payment ID&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1000: Success</wsdl:documentation>
+      <wsdl:input message="tns:DeletePaymentEntrySoapIn" />
+      <wsdl:output message="tns:DeletePaymentEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDemandNoteInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get  Demand Note Info with a specified Invoice No&lt;br&gt;Returns:&lt;br&gt;Response Code=1: Success</wsdl:documentation>
+      <wsdl:input message="tns:GetDemandNoteInformationSoapIn" />
+      <wsdl:output message="tns:GetDemandNoteInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostDemandNotePayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Create new Payment with a specified Invoice No&lt;br&gt;Returns:&lt;br&gt;Response Code=1|refid: Success</wsdl:documentation>
+      <wsdl:input message="tns:PostDemandNotePaymentSoapIn" />
+      <wsdl:output message="tns:PostDemandNotePaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDemandNotePayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Delete Demand Note Payment  with a specified Payment ID&lt;br&gt;Returns:&lt;br&gt;Response Code=1000: Success</wsdl:documentation>
+      <wsdl:input message="tns:DeleteDemandNotePaymentSoapIn" />
+      <wsdl:output message="tns:DeleteDemandNotePaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyPaymentHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get Daily Payment and Demand Note History&lt;br&gt;HistoryType:DailyPaymentHistory(1),DailyDemandNotePayHistory(2)&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1: json</wsdl:documentation>
+      <wsdl:input message="tns:GetDailyPaymentHistorySoapIn" />
+      <wsdl:output message="tns:GetDailyPaymentHistorySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TitasBillPaymentHttpPost">
+    <wsdl:operation name="GetCustomerInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get Customer Code with a specified Customer ID&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=RefID|json</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerInformationHttpPostIn" />
+      <wsdl:output message="tns:GetCustomerInformationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostPaymentEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Create new Payment with a specified Customer ID&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1|refid: Success</wsdl:documentation>
+      <wsdl:input message="tns:PostPaymentEntryHttpPostIn" />
+      <wsdl:output message="tns:PostPaymentEntryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Delete Payment Entry with a specified Payment ID&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1000: Success</wsdl:documentation>
+      <wsdl:input message="tns:DeletePaymentEntryHttpPostIn" />
+      <wsdl:output message="tns:DeletePaymentEntryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDemandNoteInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get  Demand Note Info with a specified Invoice No&lt;br&gt;Returns:&lt;br&gt;Response Code=1: Success</wsdl:documentation>
+      <wsdl:input message="tns:GetDemandNoteInformationHttpPostIn" />
+      <wsdl:output message="tns:GetDemandNoteInformationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostDemandNotePayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Create new Payment with a specified Invoice No&lt;br&gt;Returns:&lt;br&gt;Response Code=1|refid: Success</wsdl:documentation>
+      <wsdl:input message="tns:PostDemandNotePaymentHttpPostIn" />
+      <wsdl:output message="tns:PostDemandNotePaymentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDemandNotePayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Delete Demand Note Payment  with a specified Payment ID&lt;br&gt;Returns:&lt;br&gt;Response Code=1000: Success</wsdl:documentation>
+      <wsdl:input message="tns:DeleteDemandNotePaymentHttpPostIn" />
+      <wsdl:output message="tns:DeleteDemandNotePaymentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyPaymentHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Get Daily Payment and Demand Note History&lt;br&gt;HistoryType:DailyPaymentHistory(1),DailyDemandNotePayHistory(2)&lt;br&gt;Returns:&lt;br&gt;-2: Invalid KeyCode&lt;br&gt;Response Code=1: json</wsdl:documentation>
+      <wsdl:input message="tns:GetDailyPaymentHistoryHttpPostIn" />
+      <wsdl:output message="tns:GetDailyPaymentHistoryHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TitasBillPaymentSoap" type="tns:TitasBillPaymentSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerInformation">
+      <soap:operation soapAction="http://172.31.8.18/GetCustomerInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostPaymentEntry">
+      <soap:operation soapAction="http://172.31.8.18/PostPaymentEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentEntry">
+      <soap:operation soapAction="http://172.31.8.18/DeletePaymentEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDemandNoteInformation">
+      <soap:operation soapAction="http://172.31.8.18/GetDemandNoteInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostDemandNotePayment">
+      <soap:operation soapAction="http://172.31.8.18/PostDemandNotePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDemandNotePayment">
+      <soap:operation soapAction="http://172.31.8.18/DeleteDemandNotePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyPaymentHistory">
+      <soap:operation soapAction="http://172.31.8.18/GetDailyPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TitasBillPaymentSoap12" type="tns:TitasBillPaymentSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerInformation">
+      <soap12:operation soapAction="http://172.31.8.18/GetCustomerInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostPaymentEntry">
+      <soap12:operation soapAction="http://172.31.8.18/PostPaymentEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentEntry">
+      <soap12:operation soapAction="http://172.31.8.18/DeletePaymentEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDemandNoteInformation">
+      <soap12:operation soapAction="http://172.31.8.18/GetDemandNoteInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostDemandNotePayment">
+      <soap12:operation soapAction="http://172.31.8.18/PostDemandNotePayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDemandNotePayment">
+      <soap12:operation soapAction="http://172.31.8.18/DeleteDemandNotePayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyPaymentHistory">
+      <soap12:operation soapAction="http://172.31.8.18/GetDailyPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TitasBillPaymentHttpPost" type="tns:TitasBillPaymentHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetCustomerInformation">
+      <http:operation location="/GetCustomerInformation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostPaymentEntry">
+      <http:operation location="/PostPaymentEntry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePaymentEntry">
+      <http:operation location="/DeletePaymentEntry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDemandNoteInformation">
+      <http:operation location="/GetDemandNoteInformation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostDemandNotePayment">
+      <http:operation location="/PostDemandNotePayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDemandNotePayment">
+      <http:operation location="/DeleteDemandNotePayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyPaymentHistory">
+      <http:operation location="/GetDailyPaymentHistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TitasBillPayment">
+    <wsdl:port name="TitasBillPaymentSoap" binding="tns:TitasBillPaymentSoap">
+      <soap:address location="http://172.31.8.18:100/checkout/titasbillpayment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TitasBillPaymentSoap12" binding="tns:TitasBillPaymentSoap12">
+      <soap12:address location="http://172.31.8.18:100/checkout/titasbillpayment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TitasBillPaymentHttpPost" binding="tns:TitasBillPaymentHttpPost">
+      <http:address location="http://172.31.8.18:100/checkout/titasbillpayment.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

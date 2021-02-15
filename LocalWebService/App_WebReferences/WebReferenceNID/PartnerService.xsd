@@ -1,0 +1,2513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bean.partner.ws.service.bvrs.soa.tigerit.com/" targetNamespace="http://bean.partner.ws.service.bvrs.soa.tigerit.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="addBankTransaction" type="tns:addBankTransaction" />
+  <xs:element name="addBankTransactionResponse" type="tns:addBankTransactionResponse" />
+  <xs:element name="addBulkBankTransaction" type="tns:addBulkBankTransaction" />
+  <xs:element name="addBulkBankTransactionResponse" type="tns:addBulkBankTransactionResponse" />
+  <xs:element name="addSonaliBankTransaction" type="tns:addSonaliBankTransaction" />
+  <xs:element name="addSonaliBankTransactionResponse" type="tns:addSonaliBankTransactionResponse" />
+  <xs:element name="changeExpiredPassword" type="tns:changeExpiredPassword" />
+  <xs:element name="changeExpiredPasswordResponse" type="tns:changeExpiredPasswordResponse" />
+  <xs:element name="changePassword" type="tns:changePassword" />
+  <xs:element name="changePasswordResponse" type="tns:changePasswordResponse" />
+  <xs:element name="createBulkOperation" type="tns:createBulkOperation" />
+  <xs:element name="createBulkOperationResponse" type="tns:createBulkOperationResponse" />
+  <xs:element name="createSubUser" type="tns:createSubUser" />
+  <xs:element name="createSubUserResponse" type="tns:createSubUserResponse" />
+  <xs:element name="deleteBulkOperation" type="tns:deleteBulkOperation" />
+  <xs:element name="deleteBulkOperationResponse" type="tns:deleteBulkOperationResponse" />
+  <xs:element name="deleteSubUser" type="tns:deleteSubUser" />
+  <xs:element name="deleteSubUserResponse" type="tns:deleteSubUserResponse" />
+  <xs:element name="expireSubUserPassword" type="tns:expireSubUserPassword" />
+  <xs:element name="expireSubUserPasswordResponse" type="tns:expireSubUserPasswordResponse" />
+  <xs:element name="getBulkOperations" type="tns:getBulkOperations" />
+  <xs:element name="getBulkOperationsResponse" type="tns:getBulkOperationsResponse" />
+  <xs:element name="getCardDistributionInfo" type="tns:getCardDistributionInfo" />
+  <xs:element name="getCardDistributionInfoResponse" type="tns:getCardDistributionInfoResponse" />
+  <xs:element name="getCardIssueApplications" type="tns:getCardIssueApplications" />
+  <xs:element name="getCardIssueApplicationsResponse" type="tns:getCardIssueApplicationsResponse" />
+  <xs:element name="getCardStatusForMobile" type="tns:getCardStatusForMobile" />
+  <xs:element name="getCardStatusForMobileResponse" type="tns:getCardStatusForMobileResponse" />
+  <xs:element name="getPartnerCardIssueCount" type="tns:getPartnerCardIssueCount" />
+  <xs:element name="getPartnerCardIssueCountResponse" type="tns:getPartnerCardIssueCountResponse" />
+  <xs:element name="getPollingCenter" type="tns:getPollingCenter" />
+  <xs:element name="getPollingCenterResponse" type="tns:getPollingCenterResponse" />
+  <xs:element name="getPollingCenterTypeTwo" type="tns:getPollingCenterTypeTwo" />
+  <xs:element name="getPollingCenterTypeTwoResponse" type="tns:getPollingCenterTypeTwoResponse" />
+  <xs:element name="getServiceLogDetail" type="tns:getServiceLogDetail" />
+  <xs:element name="getServiceLogDetailResponse" type="tns:getServiceLogDetailResponse" />
+  <xs:element name="getServiceLogSummary" type="tns:getServiceLogSummary" />
+  <xs:element name="getServiceLogSummaryResponse" type="tns:getServiceLogSummaryResponse" />
+  <xs:element name="getSmsCardDistributionInfo" type="tns:getSmsCardDistributionInfo" />
+  <xs:element name="getSmsCardDistributionInfoResponse" type="tns:getSmsCardDistributionInfoResponse" />
+  <xs:element name="getUpdatedVoterInformation" type="tns:getUpdatedVoterInformation" />
+  <xs:element name="getUpdatedVoterInformationResponse" type="tns:getUpdatedVoterInformationResponse" />
+  <xs:element name="getUserInfo" type="tns:getUserInfo" />
+  <xs:element name="getUserInfoResponse" type="tns:getUserInfoResponse" />
+  <xs:element name="getUserServices" type="tns:getUserServices" />
+  <xs:element name="getUserServicesResponse" type="tns:getUserServicesResponse" />
+  <xs:element name="getVoterCountFromVoterArea" type="tns:getVoterCountFromVoterArea" />
+  <xs:element name="getVoterCountFromVoterAreaResponse" type="tns:getVoterCountFromVoterAreaResponse" />
+  <xs:element name="getVoterInformation" type="tns:getVoterInformation" />
+  <xs:element name="getVoterInformationByVoterNo" type="tns:getVoterInformationByVoterNo" />
+  <xs:element name="getVoterInformationByVoterNoResponse" type="tns:getVoterInformationByVoterNoResponse" />
+  <xs:element name="getVoterInformationResponse" type="tns:getVoterInformationResponse" />
+  <xs:element name="getVoterInformationTypeFive" type="tns:getVoterInformationTypeFive" />
+  <xs:element name="getVoterInformationTypeFiveResponse" type="tns:getVoterInformationTypeFiveResponse" />
+  <xs:element name="getVoterInformationTypeFour" type="tns:getVoterInformationTypeFour" />
+  <xs:element name="getVoterInformationTypeFourResponse" type="tns:getVoterInformationTypeFourResponse" />
+  <xs:element name="getVoterInformationTypeOne" type="tns:getVoterInformationTypeOne" />
+  <xs:element name="getVoterInformationTypeOneByFormNo" type="tns:getVoterInformationTypeOneByFormNo" />
+  <xs:element name="getVoterInformationTypeOneByFormNoResponse" type="tns:getVoterInformationTypeOneByFormNoResponse" />
+  <xs:element name="getVoterInformationTypeOneFromVoterArea" type="tns:getVoterInformationTypeOneFromVoterArea" />
+  <xs:element name="getVoterInformationTypeOneFromVoterAreaResponse" type="tns:getVoterInformationTypeOneFromVoterAreaResponse" />
+  <xs:element name="getVoterInformationTypeOneResponse" type="tns:getVoterInformationTypeOneResponse" />
+  <xs:element name="getVoterInformationTypeSeven" type="tns:getVoterInformationTypeSeven" />
+  <xs:element name="getVoterInformationTypeSevenResponse" type="tns:getVoterInformationTypeSevenResponse" />
+  <xs:element name="getVoterInformationTypeSix" type="tns:getVoterInformationTypeSix" />
+  <xs:element name="getVoterInformationTypeSixResponse" type="tns:getVoterInformationTypeSixResponse" />
+  <xs:element name="getVoterInformationTypeThree" type="tns:getVoterInformationTypeThree" />
+  <xs:element name="getVoterInformationTypeThreeResponse" type="tns:getVoterInformationTypeThreeResponse" />
+  <xs:element name="getVoterInformationTypeTwo" type="tns:getVoterInformationTypeTwo" />
+  <xs:element name="getVoterInformationTypeTwoResponse" type="tns:getVoterInformationTypeTwoResponse" />
+  <xs:element name="heartbeat" type="tns:heartbeat" />
+  <xs:element name="heartbeatResponse" type="tns:heartbeatResponse" />
+  <xs:element name="identify" type="tns:identify" />
+  <xs:element name="identifyByBiometricData" type="tns:identifyByBiometricData" />
+  <xs:element name="identifyByBiometricDataResponse" type="tns:identifyByBiometricDataResponse" />
+  <xs:element name="identifyByNationalId" type="tns:identifyByNationalId" />
+  <xs:element name="identifyByNationalIdResponse" type="tns:identifyByNationalIdResponse" />
+  <xs:element name="identifyByPassportNumber" type="tns:identifyByPassportNumber" />
+  <xs:element name="identifyByPassportNumberResponse" type="tns:identifyByPassportNumberResponse" />
+  <xs:element name="identifyResponse" type="tns:identifyResponse" />
+  <xs:element name="issueCard" type="tns:issueCard" />
+  <xs:element name="issueCardResponse" type="tns:issueCardResponse" />
+  <xs:element name="listSubUser" type="tns:listSubUser" />
+  <xs:element name="listSubUserResponse" type="tns:listSubUserResponse" />
+  <xs:element name="login" type="tns:login" />
+  <xs:element name="loginResponse" type="tns:loginResponse" />
+  <xs:element name="logout" type="tns:logout" />
+  <xs:element name="logoutResponse" type="tns:logoutResponse" />
+  <xs:element name="migrateVoterFromPartner" type="tns:migrateVoterFromPartner" />
+  <xs:element name="migrateVoterFromPartnerResponse" type="tns:migrateVoterFromPartnerResponse" />
+  <xs:element name="migrateVoterFromPartnerTwo" type="tns:migrateVoterFromPartnerTwo" />
+  <xs:element name="migrateVoterFromPartnerTwoResponse" type="tns:migrateVoterFromPartnerTwoResponse" />
+  <xs:element name="query" type="tns:query" />
+  <xs:element name="queryResponse" type="tns:queryResponse" />
+  <xs:element name="regenerateBulkOperation" type="tns:regenerateBulkOperation" />
+  <xs:element name="regenerateBulkOperationResponse" type="tns:regenerateBulkOperationResponse" />
+  <xs:element name="report" type="tns:report" />
+  <xs:element name="reportResponse" type="tns:reportResponse" />
+  <xs:element name="setInputFilePathBulkOperation" type="tns:setInputFilePathBulkOperation" />
+  <xs:element name="setInputFilePathBulkOperationResponse" type="tns:setInputFilePathBulkOperationResponse" />
+  <xs:element name="updateBulkOperationStatus" type="tns:updateBulkOperationStatus" />
+  <xs:element name="updateBulkOperationStatusResponse" type="tns:updateBulkOperationStatusResponse" />
+  <xs:element name="updateSubUser" type="tns:updateSubUser" />
+  <xs:element name="updateSubUserResponse" type="tns:updateSubUserResponse" />
+  <xs:element name="updateUserInfo" type="tns:updateUserInfo" />
+  <xs:element name="updateUserInfoResponse" type="tns:updateUserInfoResponse" />
+  <xs:element name="verify" type="tns:verify" />
+  <xs:element name="verifyByNationalId" type="tns:verifyByNationalId" />
+  <xs:element name="verifyByNationalIdResponse" type="tns:verifyByNationalIdResponse" />
+  <xs:element name="verifyByNidDobEncodedPrint" type="tns:verifyByNidDobEncodedPrint" />
+  <xs:element name="verifyByNidDobEncodedPrintResponse" type="tns:verifyByNidDobEncodedPrintResponse" />
+  <xs:element name="verifyByNidDobFingers" type="tns:verifyByNidDobFingers" />
+  <xs:element name="verifyByNidDobFingersResponse" type="tns:verifyByNidDobFingersResponse" />
+  <xs:element name="verifyPartnerCardChangeTransactionId" type="tns:verifyPartnerCardChangeTransactionId" />
+  <xs:element name="verifyPartnerCardChangeTransactionIdResponse" type="tns:verifyPartnerCardChangeTransactionIdResponse" />
+  <xs:element name="verifyResponse" type="tns:verifyResponse" />
+  <xs:complexType name="report">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:reportServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="criteria" type="tns:voterSearchCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="serviceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="requestHeader" type="tns:requestHeader" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="voterSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="currentAddressSearchCriteria" type="tns:addressSearchCriteria" />
+      <xs:element minOccurs="0" name="generalDataSearchCriteria" type="tns:generalDataSearchCriteria" />
+      <xs:element minOccurs="0" name="otherSearchCriteria" type="tns:otherDataSearchCriteria" />
+      <xs:element minOccurs="0" name="permanentAddressSearchCriteria" type="tns:addressSearchCriteria" />
+      <xs:element minOccurs="0" name="personalDataSearchCriteria" type="tns:personalDataSearchCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="area" type="xs:string" />
+      <xs:element minOccurs="0" name="city" type="xs:string" />
+      <xs:element minOccurs="0" name="district" type="xs:string" />
+      <xs:element minOccurs="0" name="division" type="xs:string" />
+      <xs:element minOccurs="0" name="house" type="xs:string" />
+      <xs:element minOccurs="0" name="otherArea" type="xs:string" />
+      <xs:element minOccurs="0" name="otherVillage" type="xs:string" />
+      <xs:element minOccurs="0" name="postcode" type="xs:string" />
+      <xs:element minOccurs="0" name="postoffice" type="xs:string" />
+      <xs:element minOccurs="0" name="rmo" type="xs:string" />
+      <xs:element minOccurs="0" name="union" type="xs:string" />
+      <xs:element minOccurs="0" name="upozila" type="xs:string" />
+      <xs:element minOccurs="0" name="village" type="xs:string" />
+      <xs:element minOccurs="0" name="voterArea" type="xs:string" />
+      <xs:element minOccurs="0" name="voterAt" type="xs:string" />
+      <xs:element minOccurs="0" name="ward" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generalDataSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="afisStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="formNumbers" type="xs:string" />
+      <xs:element minOccurs="0" name="pins" type="xs:string" />
+      <xs:element minOccurs="0" name="serialNumbers" type="xs:string" />
+      <xs:element minOccurs="0" name="statuses" type="xs:string" />
+      <xs:element minOccurs="0" name="tags" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNumbers" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="otherDataSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bloodGroup" type="xs:string" />
+      <xs:element minOccurs="0" name="clientCreationDate" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfDeath" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfDeathFather" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfDeathMother" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfDeathSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="driving" type="xs:string" />
+      <xs:element minOccurs="0" name="education" type="xs:string" />
+      <xs:element minOccurs="0" name="educationOther" type="xs:string" />
+      <xs:element minOccurs="0" name="educationSub" type="xs:string" />
+      <xs:element minOccurs="0" name="enrollmentDate" type="xs:string" />
+      <xs:element minOccurs="0" name="identification" type="xs:string" />
+      <xs:element minOccurs="0" name="laptop" type="xs:string" />
+      <xs:element minOccurs="0" name="lockFlag" type="xs:string" />
+      <xs:element minOccurs="0" name="mobile" type="xs:string" />
+      <xs:element minOccurs="0" name="nidFather" type="xs:string" />
+      <xs:element minOccurs="0" name="nidMother" type="xs:string" />
+      <xs:element minOccurs="0" name="nidSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="noFinger" type="xs:string" />
+      <xs:element minOccurs="0" name="noFingerprint" type="xs:string" />
+      <xs:element minOccurs="0" name="passport" type="xs:string" />
+      <xs:element minOccurs="0" name="phone" type="xs:string" />
+      <xs:element minOccurs="0" name="religion" type="xs:string" />
+      <xs:element minOccurs="0" name="religionOther" type="xs:string" />
+      <xs:element minOccurs="0" name="tin" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoFather" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoMother" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoSpouse" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personalDataSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthPlace" type="xs:string" />
+      <xs:element minOccurs="0" name="birthRegistrationNo" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfBirth" type="xs:string" />
+      <xs:element minOccurs="0" name="disability" type="xs:string" />
+      <xs:element minOccurs="0" name="disabilityOther" type="xs:string" />
+      <xs:element minOccurs="0" name="father" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" type="xs:string" />
+      <xs:element minOccurs="0" name="maritalStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="mother" type="xs:string" />
+      <xs:element minOccurs="0" name="nameBn" type="xs:string" />
+      <xs:element minOccurs="0" name="nameEn" type="xs:string" />
+      <xs:element minOccurs="0" name="placeOfBirthOther" type="xs:string" />
+      <xs:element minOccurs="0" name="profession" type="xs:string" />
+      <xs:element minOccurs="0" name="spouse" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="requestHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientIP" type="xs:string" />
+      <xs:element minOccurs="0" name="clientName" type="xs:string" />
+      <xs:element minOccurs="0" name="interfaceVersion" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionUuid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:reportServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="voterList" nillable="true" type="tns:voterInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="serviceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="operationResult" type="tns:operationResult" />
+      <xs:element minOccurs="0" name="serviceDescription" type="xs:string" />
+      <xs:element minOccurs="0" name="serviceId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="voterInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bloodGroup" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="disability" type="xs:string" />
+      <xs:element minOccurs="0" name="drivingLicense" type="xs:string" />
+      <xs:element minOccurs="0" name="education" type="xs:string" />
+      <xs:element minOccurs="0" name="father" type="xs:string" />
+      <xs:element minOccurs="0" name="formNo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="fpNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" type="xs:string" />
+      <xs:element minOccurs="0" name="identificationMark" type="xs:string" />
+      <xs:element minOccurs="0" name="maritalStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="matchPercentage" type="xs:double" />
+      <xs:element minOccurs="0" name="mobile" type="xs:string" />
+      <xs:element minOccurs="0" name="mother" type="xs:string" />
+      <xs:element minOccurs="0" name="nameBangla" type="xs:string" />
+      <xs:element minOccurs="0" name="nameEnglish" type="xs:string" />
+      <xs:element minOccurs="0" name="nationalId" type="xs:string" />
+      <xs:element minOccurs="0" name="occupation" type="xs:string" />
+      <xs:element minOccurs="0" name="passportNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="permanentAddress" type="tns:voterAddress" />
+      <xs:element minOccurs="0" name="phone" type="xs:string" />
+      <xs:element minOccurs="0" name="photo" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="placeOfBirth" type="xs:string" />
+      <xs:element minOccurs="0" name="presentAddress" type="tns:voterAddress" />
+      <xs:element minOccurs="0" name="religion" type="xs:string" />
+      <xs:element minOccurs="0" name="slno" type="xs:long" />
+      <xs:element minOccurs="0" name="spouse" type="xs:string" />
+      <xs:element minOccurs="0" name="tin" type="xs:string" />
+      <xs:element minOccurs="0" name="voterArea" type="xs:string" />
+      <xs:element minOccurs="0" name="voterAreaCode" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="voterAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="additionalMouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="additionalVillageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="cityCorporationOrMunicipality" type="xs:string" />
+      <xs:element minOccurs="0" name="district" type="xs:string" />
+      <xs:element minOccurs="0" name="division" type="xs:string" />
+      <xs:element minOccurs="0" name="homeOrHoldingNo" type="xs:string" />
+      <xs:element minOccurs="0" name="mouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="postOffice" type="xs:string" />
+      <xs:element minOccurs="0" name="postalCode" type="xs:string" />
+      <xs:element minOccurs="0" name="rmo" type="xs:string" />
+      <xs:element minOccurs="0" name="unionOrWard" type="xs:string" />
+      <xs:element minOccurs="0" name="upozila" type="xs:string" />
+      <xs:element minOccurs="0" name="villageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="voterArea" type="xs:string" />
+      <xs:element minOccurs="0" name="wardForUnionPorishod" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="operationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="error" type="tns:serviceError" />
+      <xs:element name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="serviceError">
+    <xs:sequence>
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="errorMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:loginServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginServiceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:loginServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="allowedServices" nillable="true" type="tns:service" />
+          <xs:element name="isPartnerAdmin" type="xs:boolean" />
+          <xs:element minOccurs="0" name="locationLevel" type="xs:string" />
+          <xs:element minOccurs="0" name="locationLevelId" type="xs:string" />
+          <xs:element minOccurs="0" name="sessionUuid" type="xs:string" />
+          <xs:element minOccurs="0" name="userType" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="service">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="operationList" nillable="true" type="tns:operation" />
+      <xs:element minOccurs="0" name="type" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="operation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dataList" nillable="true" type="tns:operationData" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="service" type="xs:string" />
+      <xs:element minOccurs="0" name="type" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="operationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dataType" type="xs:string" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="operation" type="xs:string" />
+      <xs:element minOccurs="0" name="type" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:updateUserInfoServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateUserInfoServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="user">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bioLoginData" type="tns:bioLoginData" />
+      <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="designation" type="xs:string" />
+      <xs:element minOccurs="0" name="district" type="xs:string" />
+      <xs:element minOccurs="0" name="division" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element name="isPartnerAdmin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="lastName" type="xs:string" />
+      <xs:element minOccurs="0" name="loginName" type="xs:string" />
+      <xs:element minOccurs="0" name="loginPassword" type="xs:string" />
+      <xs:element minOccurs="0" name="mobile" type="xs:string" />
+      <xs:element minOccurs="0" name="nid" type="xs:string" />
+      <xs:element minOccurs="0" name="partner" type="tns:partner" />
+      <xs:element name="partnerAdmin" type="xs:boolean" />
+      <xs:element name="passwordExpires" type="xs:boolean" />
+      <xs:element minOccurs="0" name="phone" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roleList" nillable="true" type="tns:role" />
+      <xs:element minOccurs="0" name="status" type="xs:string" />
+      <xs:element minOccurs="0" name="type" type="xs:string" />
+      <xs:element minOccurs="0" name="upozila" type="xs:string" />
+      <xs:element name="useBiomatricLogin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="userRegionType" type="xs:string" />
+      <xs:element minOccurs="0" name="verificationCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bioLoginData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appletFinger" type="xs:base64Binary" />
+      <xs:element name="fingerHeight" type="xs:int" />
+      <xs:element name="fingerId" type="xs:int" />
+      <xs:element name="fingerWidth" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="partner">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressLine1" type="xs:string" />
+      <xs:element minOccurs="0" name="addressLine2" type="xs:string" />
+      <xs:element minOccurs="0" name="corporateEmailDomain" type="xs:string" />
+      <xs:element minOccurs="0" name="credentialEmail" type="xs:string" />
+      <xs:element minOccurs="0" name="department" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="ipList" type="xs:string" />
+      <xs:element minOccurs="0" name="maxSessionCount" type="xs:long" />
+      <xs:element minOccurs="0" name="maxSubUser" type="xs:long" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="slaList" nillable="true" type="tns:sla" />
+      <xs:element minOccurs="0" name="status" type="xs:string" />
+      <xs:element minOccurs="0" name="type" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="userList" nillable="true" type="tns:user" />
+      <xs:element minOccurs="0" name="website" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sla">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="partnerList" nillable="true" type="tns:partner" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="permissionList" nillable="true" type="tns:permission" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="permission">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="permissionOn" type="xs:string" />
+      <xs:element name="permissionOnId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="role">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="permissionList" nillable="true" type="tns:permission" />
+      <xs:element minOccurs="0" name="status" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="userList" nillable="true" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateUserInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:updateUserInfoServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateUserInfoServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeOneByFormNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationTypeOneByFormNoRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeOneByFormNoRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="formNo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeOneByFormNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getDetailVoterInformationResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDetailVoterInformationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="father" type="xs:string" />
+          <xs:element minOccurs="0" name="gender" type="xs:string" />
+          <xs:element minOccurs="0" name="mother" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="nameEn" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="permanentAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="photo" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="presentAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="spouse" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updateBulkOperationStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:updateBulkOperationStatusServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateBulkOperationStatusServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bulkOperationId" type="xs:long" />
+          <xs:element minOccurs="0" name="failedReason" type="xs:string" />
+          <xs:element minOccurs="0" name="operationStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="outputFilePath" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updateBulkOperationStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:updateBulkOperationStatusServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateBulkOperationStatusServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="listSubUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:listSubUserServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listSubUserServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="listSubUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:listSubUserServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listSubUserServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="userList" nillable="true" type="tns:user" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterCountFromVoterArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterCountFromVoterAreaServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterCountFromVoterAreaServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="gender" type="xs:string" />
+          <xs:element minOccurs="0" name="slNoEnd" type="xs:long" />
+          <xs:element minOccurs="0" name="slNoStart" type="xs:long" />
+          <xs:element minOccurs="0" name="voterAreaId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterCountFromVoterAreaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVoterCountFromVoterAreaServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterCountFromVoterAreaServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getServiceLogDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getServiceLogDetailServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getServiceLogDetailServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="recordCount" type="xs:int" />
+          <xs:element minOccurs="0" name="serviceLogSearchCriteria" type="tns:serviceLogSearchCriteria" />
+          <xs:element name="startIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="serviceLogSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="externalOrgId" type="xs:long" />
+      <xs:element minOccurs="0" name="fromDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="operationId" type="xs:long" />
+      <xs:element minOccurs="0" name="serviceStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="toDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="userId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getServiceLogDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getServiceLogDetailServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getServiceLogDetailServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceLogDetailList" nillable="true" type="tns:serviceLogDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="serviceLogDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element minOccurs="0" name="errorDetail" type="xs:string" />
+      <xs:element minOccurs="0" name="externalOrgName" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="loginName" type="xs:string" />
+      <xs:element minOccurs="0" name="operationName" type="xs:string" />
+      <xs:element minOccurs="0" name="requestTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="serviceStatus" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyByNationalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:identifyByNationalIdServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyByNationalIdServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="nationalId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="identifyByNationalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:identifyByNationalIdServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyByNationalIdServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="voterInfo" type="tns:voterInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeTwo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationPartnerRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationPartnerRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeTwoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getDetailVoterInformationResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="issueCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:issueCardServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="issueCardServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardIssueApplication" type="tns:cardIssueApplication" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="cardIssueApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressChange" type="tns:cardIssueAddressChange" />
+      <xs:element minOccurs="0" name="applicantName" type="xs:string" />
+      <xs:element minOccurs="0" name="applicantsContact" type="xs:string" />
+      <xs:element minOccurs="0" name="applicationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="bankId" type="xs:string" />
+      <xs:element minOccurs="0" name="centerDeliveryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="createdBy" type="xs:string" />
+      <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="currentStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="deliveryCenter" type="xs:string" />
+      <xs:element minOccurs="0" name="deliveryType" type="xs:string" />
+      <xs:element minOccurs="0" name="duplicateReason" type="xs:string" />
+      <xs:element minOccurs="0" name="expectedDeliveryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gdApplicationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gdNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="isAddressChange" type="xs:string" />
+      <xs:element minOccurs="0" name="issueFrom" type="xs:string" />
+      <xs:element minOccurs="0" name="issueRef" type="xs:string" />
+      <xs:element minOccurs="0" name="issueType" type="xs:string" />
+      <xs:element minOccurs="0" name="lastUpdateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="lastUpdatedBy" type="xs:string" />
+      <xs:element minOccurs="0" name="maReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="maReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="maoReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="maoReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mbReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mbReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mdbReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mdbReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="meReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="meReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mfnReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mfnReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mhReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mhReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mmnReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mmnReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mmsReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mmsReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mnbReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mnbReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mneReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mneReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="moReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="moReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedArea" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedAreaOther" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedBirthRegistration" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedBlood" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedDob" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="modifiedDrivingLicense" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedEducation" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedFather" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedHouse" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedMaritialStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedMother" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedNameBn" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedNameEn" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedNidFather" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedNidMother" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedNidSibling" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedNidSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedPassport" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedPhoto" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="modifiedPostcode" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedPostoffice" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedProfession" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedSignature" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="modifiedSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedTin" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedVillage" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedVillageOther" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedWard" type="xs:long" />
+      <xs:element minOccurs="0" name="mpReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mpReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mpcReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mpcReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mpoReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mpoReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="msReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="msReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="msnReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="msnReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mvReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mvReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mvoReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mvoReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mwReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mwReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="nationalId" type="xs:string" />
+      <xs:element minOccurs="0" name="note" type="xs:string" />
+      <xs:element minOccurs="0" name="noteRef" type="xs:string" />
+      <xs:element minOccurs="0" name="payment" type="xs:string" />
+      <xs:element minOccurs="0" name="policeContactNo" type="xs:string" />
+      <xs:element minOccurs="0" name="policeOfficerDesignation" type="xs:string" />
+      <xs:element minOccurs="0" name="policeStationName" type="xs:string" />
+      <xs:element minOccurs="0" name="polliceOfficerName" type="xs:string" />
+      <xs:element minOccurs="0" name="receivedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="registrationNo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="statusHistoryList" nillable="true" type="tns:applicationStatusHistory" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="supportingDocList" nillable="true" type="tns:supportingDoc" />
+      <xs:element name="totalRecords" type="xs:long" />
+      <xs:element minOccurs="0" name="transactionId" type="xs:string" />
+      <xs:element minOccurs="0" name="voterDeliveryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="voterId" type="xs:string" />
+      <xs:element minOccurs="0" name="voterName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cardIssueAddressChange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="area" type="xs:string" />
+      <xs:element minOccurs="0" name="areaOther" type="xs:string" />
+      <xs:element minOccurs="0" name="city" type="xs:string" />
+      <xs:element minOccurs="0" name="district" type="xs:string" />
+      <xs:element minOccurs="0" name="division" type="xs:string" />
+      <xs:element minOccurs="0" name="eunion" type="xs:string" />
+      <xs:element minOccurs="0" name="house" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="postcode" type="xs:string" />
+      <xs:element minOccurs="0" name="postoffice" type="xs:string" />
+      <xs:element minOccurs="0" name="rmo" type="xs:string" />
+      <xs:element minOccurs="0" name="upozila" type="xs:string" />
+      <xs:element minOccurs="0" name="village" type="xs:string" />
+      <xs:element minOccurs="0" name="villageOther" type="xs:string" />
+      <xs:element minOccurs="0" name="ward" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="applicationStatusHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cardStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="changedBy" type="xs:string" />
+      <xs:element minOccurs="0" name="changedOn" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="supportingDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="docType" type="xs:string" />
+      <xs:element minOccurs="0" name="docTypeOther" type="xs:string" />
+      <xs:element minOccurs="0" name="fileExtension" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="note" type="xs:string" />
+      <xs:element minOccurs="0" name="scannedDoc" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="issueCardResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:issueCardServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="issueCardServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardIssueApplicationId" type="xs:long" />
+          <xs:element minOccurs="0" name="registrationNo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="deleteSubUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:deleteSubUserServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteSubUserServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="userId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="deleteSubUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:deleteSubUserServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteSubUserServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="identifyByPassportNumber">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:identifyByPassportNumberServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyByPassportNumberServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="passportNumber" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="identifyByPassportNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:identifyByPassportNumberServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyByPassportNumberServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="voterInfo" type="tns:voterInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeSeven">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationPartnerRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeSevenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVoterInfoServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInfoServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="voterInfo" type="tns:voterInfoDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="voterInfoDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:voterInformation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="permanentAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="presentAddress" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="voterInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="biometricInformation" type="tns:voterBiometricInformation" />
+      <xs:element minOccurs="0" name="demographicInformation" type="tns:voterDemographicInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="voterBiometricInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="photo" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="signature" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="voterDemographicInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="additionalMouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="additionalVillageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="bloodGroup" type="xs:string" />
+      <xs:element minOccurs="0" name="cityCorporationOrMunicipality" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dateOfDeath" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="deathYearOfFather" type="xs:string" />
+      <xs:element minOccurs="0" name="deathYearOfMother" type="xs:string" />
+      <xs:element minOccurs="0" name="deathYearOfSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="district" type="xs:string" />
+      <xs:element minOccurs="0" name="division" type="xs:string" />
+      <xs:element minOccurs="0" name="drivingLicenseNo" type="xs:string" />
+      <xs:element minOccurs="0" name="education" type="xs:string" />
+      <xs:element minOccurs="0" name="educationOther" type="xs:string" />
+      <xs:element minOccurs="0" name="educationSub" type="xs:string" />
+      <xs:element minOccurs="0" name="fathersName" type="xs:string" />
+      <xs:element minOccurs="0" name="formNo" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" type="xs:string" />
+      <xs:element minOccurs="0" name="hasNoFinger" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hasNoFingerPrint" type="xs:boolean" />
+      <xs:element minOccurs="0" name="homeOrHoldingNo" type="xs:string" />
+      <xs:element minOccurs="0" name="identifyingSymbol" type="xs:string" />
+      <xs:element minOccurs="0" name="maritialStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="mobileNo" type="xs:string" />
+      <xs:element minOccurs="0" name="mothersName" type="xs:string" />
+      <xs:element minOccurs="0" name="mouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="nameBangla" type="xs:string" />
+      <xs:element minOccurs="0" name="nameEnglish" type="xs:string" />
+      <xs:element minOccurs="0" name="nationalId" type="xs:string" />
+      <xs:element minOccurs="0" name="nationalIdOfFather" type="xs:string" />
+      <xs:element minOccurs="0" name="nationalIdOfMother" type="xs:string" />
+      <xs:element minOccurs="0" name="nationalIdOfSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="natureOfDisability" type="xs:string" />
+      <xs:element minOccurs="0" name="natureOfDisabilityOther" type="xs:string" />
+      <xs:element minOccurs="0" name="occupation" type="xs:string" />
+      <xs:element minOccurs="0" name="passportNo" type="xs:string" />
+      <xs:element minOccurs="0" name="perAdditionalMouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="perAdditionalVillageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="perCityCorporationOrMunicipality" type="xs:string" />
+      <xs:element minOccurs="0" name="perDistrict" type="xs:string" />
+      <xs:element minOccurs="0" name="perDivision" type="xs:string" />
+      <xs:element minOccurs="0" name="perHomeOrHoldingNo" type="xs:string" />
+      <xs:element minOccurs="0" name="perMouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="perPostOffice" type="xs:string" />
+      <xs:element minOccurs="0" name="perPostalCode" type="xs:string" />
+      <xs:element minOccurs="0" name="perRmo" type="xs:string" />
+      <xs:element minOccurs="0" name="perUnionOrWard" type="xs:string" />
+      <xs:element minOccurs="0" name="perUozilla" type="xs:string" />
+      <xs:element minOccurs="0" name="perVillageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="perWardForUnionPorishod" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneNo" type="xs:string" />
+      <xs:element minOccurs="0" name="placeOfBirth" type="xs:string" />
+      <xs:element minOccurs="0" name="placeOfBirthOther" type="xs:string" />
+      <xs:element minOccurs="0" name="postOffice" type="xs:string" />
+      <xs:element minOccurs="0" name="postalCode" type="xs:string" />
+      <xs:element minOccurs="0" name="religion" type="xs:string" />
+      <xs:element minOccurs="0" name="religionOther" type="xs:string" />
+      <xs:element minOccurs="0" name="rmo" type="xs:string" />
+      <xs:element minOccurs="0" name="serialNo" type="xs:string" />
+      <xs:element minOccurs="0" name="spouseName" type="xs:string" />
+      <xs:element minOccurs="0" name="status" type="xs:string" />
+      <xs:element minOccurs="0" name="tag" type="xs:string" />
+      <xs:element minOccurs="0" name="tinNo" type="xs:string" />
+      <xs:element minOccurs="0" name="unionOrWard" type="xs:string" />
+      <xs:element minOccurs="0" name="uozilla" type="xs:string" />
+      <xs:element minOccurs="0" name="villageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="voterArea" type="xs:string" />
+      <xs:element minOccurs="0" name="voterBirthRegistrationNo" type="xs:string" />
+      <xs:element minOccurs="0" name="voterId" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNo" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoOfFather" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoOfMother" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoOfSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="voterOfVoterArea" type="xs:string" />
+      <xs:element minOccurs="0" name="wardForUnionPorishod" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verify">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:verifyServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="fingerprints" type="tns:fingerprints" />
+          <xs:element minOccurs="0" name="nationalId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="fingerprints">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="leftIndex" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftMiddle" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftPinky" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftRing" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftThumb" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightIndex" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightMiddle" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightPinky" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightRing" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightThumb" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:verifyServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="matchPercentage" type="xs:double" />
+          <xs:element minOccurs="0" name="voterInfo" type="tns:voterInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getSmsCardDistributionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getCardDistributionInfoServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardDistributionInfoServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="nationalIdOrFormNo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getSmsCardDistributionInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getCardDistributionInfoServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardDistributionInfoServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="distributionAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="distributionDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getUserServices">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getUserServicesServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserServicesServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getUserServicesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getUserServicesServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserServicesServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceList" nillable="true" type="tns:service" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="migrateVoterFromPartner">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:migrateVoterFromPartnerServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="migrateVoterFromPartnerServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="demographicInformation" type="tns:demographicInformation" />
+          <xs:element minOccurs="0" name="document1" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="document2" type="xs:base64Binary" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="fingerPrintException" nillable="true" type="tns:fingerPrintException" />
+          <xs:element minOccurs="0" name="upozillaUserComment" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="demographicInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="additionalMouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="additionalVillageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="afisStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="bloodGroup" type="xs:string" />
+      <xs:element minOccurs="0" name="cardIssueReferenceNo" type="xs:string" />
+      <xs:element minOccurs="0" name="cityCorporationOrMunicipality" type="xs:string" />
+      <xs:element minOccurs="0" name="cityCorporationOrMunicipalityId" type="xs:long" />
+      <xs:element minOccurs="0" name="cityCorporationOrMunicipalityIdAsString" type="xs:string" />
+      <xs:element minOccurs="0" name="creationDateClient" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dateOfBirthString" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfDeath" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dateOfDeathString" type="xs:string" />
+      <xs:element minOccurs="0" name="deathDateOfFather" type="xs:string" />
+      <xs:element minOccurs="0" name="deathDateOfMother" type="xs:string" />
+      <xs:element minOccurs="0" name="deathDateOfSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="district" type="xs:string" />
+      <xs:element minOccurs="0" name="districtId" type="xs:string" />
+      <xs:element minOccurs="0" name="division" type="xs:string" />
+      <xs:element minOccurs="0" name="divisionId" type="xs:long" />
+      <xs:element minOccurs="0" name="divisionIdAsString" type="xs:string" />
+      <xs:element minOccurs="0" name="drivingLLicenseNo" type="xs:string" />
+      <xs:element minOccurs="0" name="education" type="xs:string" />
+      <xs:element minOccurs="0" name="educationOther" type="xs:string" />
+      <xs:element minOccurs="0" name="educationSub" type="xs:string" />
+      <xs:element minOccurs="0" name="fathersName" type="xs:string" />
+      <xs:element minOccurs="0" name="formNo" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" type="xs:string" />
+      <xs:element minOccurs="0" name="hasNoFinger" type="xs:long" />
+      <xs:element minOccurs="0" name="hasNoFingerAsString" type="xs:string" />
+      <xs:element minOccurs="0" name="hasNoFingerPrint" type="xs:long" />
+      <xs:element minOccurs="0" name="hasNoFingerPrintAsString" type="xs:string" />
+      <xs:element minOccurs="0" name="homeOrHoldingNo" type="xs:string" />
+      <xs:element minOccurs="0" name="identifyingSymbol" type="xs:string" />
+      <xs:element minOccurs="0" name="laptopId" type="xs:string" />
+      <xs:element minOccurs="0" name="lockFlag" type="xs:string" />
+      <xs:element minOccurs="0" name="maritalStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="mobileNo" type="xs:string" />
+      <xs:element minOccurs="0" name="mothersName" type="xs:string" />
+      <xs:element minOccurs="0" name="mouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="mouzaOrMohollaId" type="xs:string" />
+      <xs:element minOccurs="0" name="nameBn" type="xs:string" />
+      <xs:element minOccurs="0" name="nameEn" type="xs:string" />
+      <xs:element minOccurs="0" name="natureOfDisability" type="xs:string" />
+      <xs:element minOccurs="0" name="natureOfDisabilityOther" type="xs:string" />
+      <xs:element minOccurs="0" name="nidFather" type="xs:string" />
+      <xs:element minOccurs="0" name="nidMother" type="xs:string" />
+      <xs:element minOccurs="0" name="nidSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="occupation" type="xs:string" />
+      <xs:element minOccurs="0" name="passportNo" type="xs:string" />
+      <xs:element minOccurs="0" name="perAdditionalMouzaOrMohollaId" type="xs:string" />
+      <xs:element minOccurs="0" name="perAdditionalVillageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="perCityCorporationOrMunicipality" type="xs:string" />
+      <xs:element minOccurs="0" name="perCityCorporationOrMunicipalityId" type="xs:long" />
+      <xs:element minOccurs="0" name="perCityCorporationOrMunicipalityIdAsString" type="xs:string" />
+      <xs:element minOccurs="0" name="perDistrict" type="xs:string" />
+      <xs:element minOccurs="0" name="perDistrictId" type="xs:string" />
+      <xs:element minOccurs="0" name="perDivision" type="xs:string" />
+      <xs:element minOccurs="0" name="perDivisionId" type="xs:long" />
+      <xs:element minOccurs="0" name="perDivisionIdAsString" type="xs:string" />
+      <xs:element minOccurs="0" name="perHomeOrHoldingNo" type="xs:string" />
+      <xs:element minOccurs="0" name="perMouzaOrMoholla" type="xs:string" />
+      <xs:element minOccurs="0" name="perMouzaOrMohollaId" type="xs:string" />
+      <xs:element minOccurs="0" name="perPostOffice" type="xs:string" />
+      <xs:element minOccurs="0" name="perPostalCode" type="xs:string" />
+      <xs:element minOccurs="0" name="perRmo" type="xs:string" />
+      <xs:element minOccurs="0" name="perUnionOrWard" type="xs:string" />
+      <xs:element minOccurs="0" name="perUnionOrWardId" type="xs:string" />
+      <xs:element minOccurs="0" name="perUozilla" type="xs:string" />
+      <xs:element minOccurs="0" name="perUpozilaId" type="xs:string" />
+      <xs:element minOccurs="0" name="perVillageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="perWardForUnionPorishod" type="xs:long" />
+      <xs:element minOccurs="0" name="perWardForUnionPorishodAsString" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneNo" type="xs:string" />
+      <xs:element minOccurs="0" name="pin" type="xs:string" />
+      <xs:element minOccurs="0" name="placeOfBirth" type="xs:string" />
+      <xs:element minOccurs="0" name="postOffice" type="xs:string" />
+      <xs:element minOccurs="0" name="postalCode" type="xs:string" />
+      <xs:element minOccurs="0" name="religion" type="xs:string" />
+      <xs:element minOccurs="0" name="religionOther" type="xs:string" />
+      <xs:element minOccurs="0" name="rmo" type="xs:string" />
+      <xs:element minOccurs="0" name="serialNo" type="xs:long" />
+      <xs:element minOccurs="0" name="spouseName" type="xs:string" />
+      <xs:element minOccurs="0" name="status" type="xs:string" />
+      <xs:element minOccurs="0" name="tag" type="xs:string" />
+      <xs:element minOccurs="0" name="tinNo" type="xs:string" />
+      <xs:element minOccurs="0" name="unionOrWard" type="xs:string" />
+      <xs:element minOccurs="0" name="unionOrWardId" type="xs:string" />
+      <xs:element minOccurs="0" name="uozilla" type="xs:string" />
+      <xs:element minOccurs="0" name="updatedBy" type="xs:string" />
+      <xs:element minOccurs="0" name="updatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="upozilaId" type="xs:string" />
+      <xs:element minOccurs="0" name="villageOrRoad" type="xs:string" />
+      <xs:element minOccurs="0" name="voterArea" type="xs:string" />
+      <xs:element minOccurs="0" name="voterAreaId" type="xs:string" />
+      <xs:element minOccurs="0" name="voterBirthRegistrationNo" type="xs:string" />
+      <xs:element minOccurs="0" name="voterId" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNo" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoFather" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoMother" type="xs:string" />
+      <xs:element minOccurs="0" name="voterNoSpouse" type="xs:string" />
+      <xs:element minOccurs="0" name="voterOfVoterArea" type="xs:string" />
+      <xs:element minOccurs="0" name="voterPlaceOfBirthOther" type="xs:string" />
+      <xs:element minOccurs="0" name="wardForUnionPorishod" type="xs:long" />
+      <xs:element minOccurs="0" name="wardForUnionPorishodAsString" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fingerPrintException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="originalFinger" type="tns:fingerIndex" />
+      <xs:element minOccurs="0" name="reason" type="xs:string" />
+      <xs:element minOccurs="0" name="remarks" type="xs:string" />
+      <xs:element minOccurs="0" name="substituteFinger" type="tns:fingerIndex" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="migrateVoterFromPartnerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:migrateVoterFromPartnerServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="migrateVoterFromPartnerServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceWarningList" nillable="true" type="tns:serviceWarning" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="serviceWarning">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="referenceId" type="xs:string" />
+      <xs:element minOccurs="0" name="warning" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:changePasswordServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePasswordServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="confirmNewPassword" type="xs:string" />
+          <xs:element minOccurs="0" name="newPassword" type="xs:string" />
+          <xs:element minOccurs="0" name="oldPassword" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="changePasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:changePasswordServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePasswordServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="identifyByBiometricData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:identifyByBiometricDataServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyByBiometricDataServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biometricData" type="tns:biometricInformation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="biometricInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birthCertificateDocument" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="formDocumentPageOne" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="formDocumentPageTwo" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="leftIndex" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftIndexISO" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftIndexMOD" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftIndexWSQ" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftThumb" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftThumbISO" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftThumbMOD" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="leftThumbWSQ" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="passportDocument" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="photo" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightIndex" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightIndexISO" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightIndexMOD" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightIndexWSQ" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightThumb" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightThumbISO" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightThumbMOD" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="rightThumbWSQ" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="signature" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="specialFormDocumentPageOne" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="specialFormDocumentPageTwo" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyByBiometricDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:identifyByBiometricDataServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyByBiometricDataServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="voterInfo" type="tns:voterInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updateSubUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:updateSubUserServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateSubUserServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updateSubUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:updateSubUserServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateSubUserServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="heartbeat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:heartbeatServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="heartbeatServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="heartbeatResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:heartbeatServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="heartbeatServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getUpdatedVoterInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nationalId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getUpdatedVoterInformationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVoterInformationServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="voterInformation" type="tns:voterInformation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="verifyByNidDobFingers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:verifyServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyByNidDobFingersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:verifyTypeTwoServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyTypeTwoServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="migrateVoterFromPartnerTwo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:migrateVoterFromPartnerServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="migrateVoterFromPartnerTwoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:migrateVoterFromPartnerServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyPartnerCardChangeTransactionId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVerfiyCardChangeTransactionServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVerfiyCardChangeTransactionServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="amount" type="xs:long" />
+          <xs:element minOccurs="0" name="bankCode" type="xs:string" />
+          <xs:element minOccurs="0" name="deliverType" type="xs:string" />
+          <xs:element minOccurs="0" name="issueTypeCode" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="verifyPartnerCardChangeTransactionIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVerfiyCardChangeTransactionServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVerfiyCardChangeTransactionServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardChangeTransactionStatus" type="tns:cardChangeTransactionStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="cardChangeTransactionStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:string" />
+      <xs:element minOccurs="0" name="nid" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionTime" type="xs:string" />
+      <xs:element minOccurs="0" name="txid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardIssueApplications">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getCardIssueApplicationsServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardIssueApplicationsServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="applicationSearchCriteria" type="tns:applicationSearchCriteria" />
+          <xs:element name="recordCount" type="xs:int" />
+          <xs:element name="startIndex" type="xs:int" />
+          <xs:element name="totalRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="applicationSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="applicationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="applicationDateFilterFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="applicationDateFilterTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="applicationId" type="xs:long" />
+      <xs:element minOccurs="0" name="bvrsUser" type="xs:string" />
+      <xs:element minOccurs="0" name="centerDeliveryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="currentStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="deliveryCenter" type="xs:string" />
+      <xs:element minOccurs="0" name="deliveryType" type="xs:string" />
+      <xs:element minOccurs="0" name="district" type="xs:string" />
+      <xs:element minOccurs="0" name="division" type="xs:string" />
+      <xs:element minOccurs="0" name="duplicateReason" type="xs:string" />
+      <xs:element minOccurs="0" name="expectedDeliveryDateFilterFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="expectedDeliveryDateFilterTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="expectedDeliveryDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="expectedDeliveryDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="issueRef" type="xs:string" />
+      <xs:element minOccurs="0" name="issueType" type="xs:string" />
+      <xs:element minOccurs="0" name="issuedFrom" type="xs:string" />
+      <xs:element minOccurs="0" name="maReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="maReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="maoReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="maoReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mbReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mbReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mdbReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mdbReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mfnReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mfnReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mhReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mhReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mmnReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mmnReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mmsReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mmsReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mnbReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mnbReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mneReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mneReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mpReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mpReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mpcReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mpcReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mpoReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mpoReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="msReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="msReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="msnReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="msnReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mvReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mvReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mvoReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mvoReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="mwReferred" type="xs:string" />
+      <xs:element minOccurs="0" name="mwReferredApproved" type="xs:string" />
+      <xs:element minOccurs="0" name="nationalId" type="xs:string" />
+      <xs:element minOccurs="0" name="note" type="xs:string" />
+      <xs:element minOccurs="0" name="noteRef" type="xs:string" />
+      <xs:element minOccurs="0" name="printDateFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="printDateTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="receivedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="receivedDateFilterFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="receivedDateFilterTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="referTo" type="xs:string" />
+      <xs:element minOccurs="0" name="registrationNo" type="xs:string" />
+      <xs:element minOccurs="0" name="status" type="xs:string" />
+      <xs:element minOccurs="0" name="voterDeliveryDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardIssueApplicationsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getCardIssueApplicationsServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardIssueApplicationsServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="cardIssueApplicationList" nillable="true" type="tns:cardIssueApplication" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="identify">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:identifyServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fingerprints" type="tns:fingerprints" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="identifyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:identifyServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="identifyServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="voterList" nillable="true" type="tns:voterInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="createBulkOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:createBulkOperationServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createBulkOperationServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="operationType" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="createBulkOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:createBulkOperationServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createBulkOperationServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bulkOperationId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationByVoterNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationByVoterNoServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationByVoterNoServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="voterNo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationByVoterNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVoterInformationServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPartnerCardIssueCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getCardIssueCountServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardIssueCountServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="criteria" type="tns:cardIssueCountSearchCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="cardIssueCountSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cardIssueTypeCode" type="xs:string" />
+      <xs:element minOccurs="0" name="deliveryType" type="xs:string" />
+      <xs:element minOccurs="0" name="nid" type="xs:string" />
+      <xs:element minOccurs="0" name="voterUuid" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPartnerCardIssueCountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getCardIssueCountServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardIssueCountServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardIssueInfo" type="tns:cardIssueSum" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="cardIssueSum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cardIssueServiceCode" type="xs:string" />
+      <xs:element minOccurs="0" name="fee" type="xs:string" />
+      <xs:element minOccurs="0" name="sum" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="expireSubUserPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:expireSubUserPasswordServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="expireSubUserPasswordServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="userId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="expireSubUserPasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:expireSubUserPasswordServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="expireSubUserPasswordServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getCardStatusForMobile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getPartnerCardStatusRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPartnerCardStatusRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="registrationNo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getCardStatusForMobileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getPartnerCardStatusResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPartnerCardStatusResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="applicantContact" type="xs:string" />
+          <xs:element minOccurs="0" name="applicantName" type="xs:string" />
+          <xs:element minOccurs="0" name="applicationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="applicationId" type="xs:long" />
+          <xs:element minOccurs="0" name="expectedDeliveryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="issueFrom" type="xs:string" />
+          <xs:element minOccurs="0" name="issueRef" type="xs:string" />
+          <xs:element minOccurs="0" name="issueType" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="note" type="xs:string" />
+          <xs:element minOccurs="0" name="noteRef" type="xs:string" />
+          <xs:element minOccurs="0" name="registrationNo" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="verifyByNidDobEncodedPrint">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:verifyServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyByNidDobEncodedPrintResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:verifyTypeTwoServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyByNationalId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:verifyByNationalIdServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyByNationalIdServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="idFor" type="xs:string" />
+          <xs:element minOccurs="0" name="nationalId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="verifyByNationalIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:verifyByNationalIdServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verifyByNationalIdServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="voterInfo" type="tns:voterInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeSix">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationPartnerRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeSixResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getDetailVoterInformationTypeSixResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDetailVoterInformationTypeSixResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bloodGroup" type="xs:string" />
+          <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="father" type="xs:string" />
+          <xs:element minOccurs="0" name="gender" type="xs:string" />
+          <xs:element minOccurs="0" name="mother" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="nameEn" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="permanentAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="presentAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="religion" type="xs:string" />
+          <xs:element minOccurs="0" name="religionOther" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="spouse" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeOneFromVoterArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationFromVoterArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationFromVoterArea">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="gender" type="xs:string" />
+          <xs:element minOccurs="0" name="nameBn" type="xs:string" />
+          <xs:element minOccurs="0" name="nameEn" type="xs:string" />
+          <xs:element minOccurs="0" name="voterAreaId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeOneFromVoterAreaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getDetailVoterInformationResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardDistributionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getCardDistributionInfoServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCardDistributionInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getCardDistributionInfoServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeOne">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationPartnerRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeOneResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getDetailVoterInformationResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addBulkBankTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:bulkBankTransactionServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bulkBankTransactionServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bankCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="transactionList" nillable="true" type="tns:bankPaymentTransaction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bankPaymentTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="bankBranch" type="xs:string" />
+      <xs:element minOccurs="0" name="bankId" type="xs:string" />
+      <xs:element minOccurs="0" name="bvrsCardIssueTypeId" type="xs:decimal" />
+      <xs:element minOccurs="0" name="deliveryType" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentMode" type="xs:string" />
+      <xs:element minOccurs="0" name="txnId" type="xs:string" />
+      <xs:element minOccurs="0" name="voterId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addBulkBankTransactionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:bulkBankTransactionServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bulkBankTransactionServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="query">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:queryServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="criteria" type="tns:voterSearchCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="queryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:queryServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="queryServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="voterList" nillable="true" type="tns:voterInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="deleteBulkOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:deleteBulkOperationServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteBulkOperationServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="bulkOperationidList" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="deleteBulkOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:deleteBulkOperationServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteBulkOperationServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceWarningList" nillable="true" type="tns:serviceWarning" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeFive">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationPartnerTypeFiveRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationPartnerTypeFiveRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeFiveResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVoterInformationTypeFivePartnerResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeFivePartnerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="father" type="xs:string" />
+          <xs:element minOccurs="0" name="gender" type="xs:string" />
+          <xs:element minOccurs="0" name="mother" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="nameEn" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="permanentAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="placeOfBirth" type="xs:string" />
+          <xs:element minOccurs="0" name="placeOfBirthOther" type="xs:string" />
+          <xs:element minOccurs="0" name="religion" type="xs:string" />
+          <xs:element minOccurs="0" name="religionOther" type="xs:string" />
+          <xs:element minOccurs="0" name="spouse" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="changeExpiredPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:changeExpiredPasswordServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeExpiredPasswordServiceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmNewPassword" type="xs:string" />
+      <xs:element minOccurs="0" name="loginName" type="xs:string" />
+      <xs:element minOccurs="0" name="newPassword" type="xs:string" />
+      <xs:element minOccurs="0" name="oldPassword" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeExpiredPasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:changeExpiredPasswordServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changeExpiredPasswordServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getPollingCenter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:pollingCenterServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pollingCenterServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getPollingCenterResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:pollingCenterServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pollingCenterServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="centerNameBng" type="xs:string" />
+          <xs:element minOccurs="0" name="centerNameEng" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="slno" type="xs:string" />
+          <xs:element minOccurs="0" name="voterArea" type="xs:string" />
+          <xs:element minOccurs="0" name="voterNo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVoterInformationServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="logout">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:logoutServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="logoutServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="logoutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:logoutServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="logoutServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getPollingCenterTypeTwo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:pollingCenterTypeTwoServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pollingCenterTypeTwoServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dob" type="xs:string" />
+          <xs:element minOccurs="0" name="formNo" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getPollingCenterTypeTwoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:pollingCenterServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createSubUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:createSubUserServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createSubUserServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="confirmPassword" type="xs:string" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="createSubUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:createSubUserServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createSubUserServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getServiceLogSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getServiceLogSummaryServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getServiceLogSummaryServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="recordCount" type="xs:int" />
+          <xs:element minOccurs="0" name="serviceLogSearchCriteria" type="tns:serviceLogSearchCriteria" />
+          <xs:element name="startIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getServiceLogSummaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getServiceLogSummaryServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getServiceLogSummaryServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceLogSummaryList" nillable="true" type="tns:serviceLogSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="serviceLogSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="grandTotal" type="xs:long" />
+      <xs:element minOccurs="0" name="operationName" type="xs:string" />
+      <xs:element minOccurs="0" name="totalNumberOfFailure" type="xs:long" />
+      <xs:element minOccurs="0" name="totalNumberOfSuccess" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addSonaliBankTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:bankTransactionServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bankTransactionServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element name="amount" type="xs:long" />
+          <xs:element minOccurs="0" name="bankCode" type="xs:string" />
+          <xs:element minOccurs="0" name="deliverType" type="xs:string" />
+          <xs:element minOccurs="0" name="issueTypeCode" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentMode" type="xs:string" />
+          <xs:element minOccurs="0" name="transactionId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="addSonaliBankTransactionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:bankTransactionServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bankTransactionServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getUserInfoServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserInfoServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getUserInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getUserInfoServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserInfoServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user" type="tns:user" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="regenerateBulkOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:regenerateBulkOperationServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="regenerateBulkOperationServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="bulkOperationidList" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="regenerateBulkOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:regenerateBulkOperationServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="regenerateBulkOperationServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="serviceWarningList" nillable="true" type="tns:serviceWarning" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeThree">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationPartnerRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeThreeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVoterInformationPartnerResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationPartnerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="xs:string" />
+          <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="father" type="xs:string" />
+          <xs:element minOccurs="0" name="gender" type="xs:string" />
+          <xs:element minOccurs="0" name="mother" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="nameEn" type="xs:string" />
+          <xs:element minOccurs="0" name="nid" type="xs:string" />
+          <xs:element minOccurs="0" name="spouse" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeFour">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getVoterInformationPartnerRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVoterInformationTypeFourResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getVoterInformationPartnerResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBulkOperations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:getBulkOperationServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBulkOperationServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bulkOperationSearchCriteria" type="tns:bulkOperationSearchCriteria" />
+          <xs:element name="recordCount" type="xs:int" />
+          <xs:element name="startIndex" type="xs:int" />
+          <xs:element name="totalRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bulkOperationSearchCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fromDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="toDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBulkOperationsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getBulkOperationServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getBulkOperationServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="bulkOperationsList" nillable="true" type="tns:bulkOperations" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bulkOperations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="createdBy" type="xs:string" />
+      <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="externalOrgId" type="xs:long" />
+      <xs:element minOccurs="0" name="failedReason" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="inputFileExtension" type="xs:string" />
+      <xs:element minOccurs="0" name="inputFilePath" type="xs:string" />
+      <xs:element minOccurs="0" name="operationStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="operationType" type="xs:string" />
+      <xs:element minOccurs="0" name="outputFileExtension" type="xs:string" />
+      <xs:element minOccurs="0" name="outputFilePath" type="xs:string" />
+      <xs:element name="totalRecords" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addBankTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:bankTransactionServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addBankTransactionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:bankTransactionServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setInputFilePathBulkOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="tns:setInputFilePathBulkOperationServiceRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setInputFilePathBulkOperationServiceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:long" />
+          <xs:element minOccurs="0" name="inputFileExtension" type="xs:string" />
+          <xs:element minOccurs="0" name="inputFilePath" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="setInputFilePathBulkOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:setInputFilePathBulkOperationServiceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setInputFilePathBulkOperationServiceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:serviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bulkOperationId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="fingerIndex">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RIGHT_THUMB" />
+      <xs:enumeration value="RIGHT_INDEX" />
+      <xs:enumeration value="RIGHT_MIDDLE" />
+      <xs:enumeration value="RIGHT_RING" />
+      <xs:enumeration value="RIGHT_PINKY" />
+      <xs:enumeration value="LEFT_THUMB" />
+      <xs:enumeration value="LEFT_INDEX" />
+      <xs:enumeration value="LEFT_MIDDLE" />
+      <xs:enumeration value="LEFT_RING" />
+      <xs:enumeration value="LEFT_PINKY" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

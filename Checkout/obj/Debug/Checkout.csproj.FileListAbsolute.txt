@@ -1,0 +1,5 @@
+E:\Documents\Visual Studio 2013\Projects\Checkout\Checkout\bin\Checkout.dll.config
+E:\Documents\Visual Studio 2013\Projects\Checkout\Checkout\bin\Checkout.dll
+E:\Documents\Visual Studio 2013\Projects\Checkout\Checkout\bin\Checkout.pdb
+E:\Documents\Visual Studio 2013\Projects\Checkout\Checkout\obj\Debug\Checkout.dll
+E:\Documents\Visual Studio 2013\Projects\Checkout\Checkout\obj\Debug\Checkout.pdb

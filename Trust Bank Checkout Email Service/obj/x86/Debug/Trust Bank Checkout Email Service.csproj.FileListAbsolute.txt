@@ -1,0 +1,8 @@
+D:\VS2015\CheckOut\Trust Bank Checkout Email Service\obj\x86\Debug\Trust Bank Checkout Email Service.csprojResolveAssemblyReference.cache
+D:\VS2015\CheckOut\Trust Bank Checkout Email Service\obj\x86\Debug\Trust_Bank_Checkout_Email_Service.CheckOutEmailService.resources
+D:\VS2015\CheckOut\Trust Bank Checkout Email Service\obj\x86\Debug\Trust_Bank_Checkout_Email_Service.ProjectInstaller.resources
+D:\VS2015\CheckOut\Trust Bank Checkout Email Service\obj\x86\Debug\Trust Bank Checkout Email Service.csproj.GenerateResource.Cache
+F:\D\VS2015\CheckOut\Trust Bank Checkout Email Service\obj\x86\Debug\Trust Bank Checkout Email Service.csprojResolveAssemblyReference.cache
+F:\D\VS2015\CheckOut\Trust Bank Checkout Email Service\obj\x86\Debug\Trust_Bank_Checkout_Email_Service.CheckOutEmailService.resources
+F:\D\VS2015\CheckOut\Trust Bank Checkout Email Service\obj\x86\Debug\Trust_Bank_Checkout_Email_Service.ProjectInstaller.resources
+F:\D\VS2015\CheckOut\Trust Bank Checkout Email Service\obj\x86\Debug\Trust Bank Checkout Email Service.csproj.GenerateResource.Cache

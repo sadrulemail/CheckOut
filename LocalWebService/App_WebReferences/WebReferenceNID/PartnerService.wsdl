@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://bean.partner.ws.service.bvrs.soa.tigerit.com/" name="PartnerService" targetNamespace="http://bean.partner.ws.service.bvrs.soa.tigerit.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://180.211.162.70/service/PartnerService?xsd=1" namespace="http://bean.partner.ws.service.bvrs.soa.tigerit.com/" />
+    </xsd:schema>
+  </types>
+  <message name="login">
+    <part name="parameters" element="tns:login" />
+  </message>
+  <message name="loginResponse">
+    <part name="parameters" element="tns:loginResponse" />
+  </message>
+  <message name="logout">
+    <part name="parameters" element="tns:logout" />
+  </message>
+  <message name="logoutResponse">
+    <part name="parameters" element="tns:logoutResponse" />
+  </message>
+  <message name="updateUserInfo">
+    <part name="parameters" element="tns:updateUserInfo" />
+  </message>
+  <message name="updateUserInfoResponse">
+    <part name="parameters" element="tns:updateUserInfoResponse" />
+  </message>
+  <message name="changePassword">
+    <part name="parameters" element="tns:changePassword" />
+  </message>
+  <message name="changePasswordResponse">
+    <part name="parameters" element="tns:changePasswordResponse" />
+  </message>
+  <message name="changeExpiredPassword">
+    <part name="parameters" element="tns:changeExpiredPassword" />
+  </message>
+  <message name="changeExpiredPasswordResponse">
+    <part name="parameters" element="tns:changeExpiredPasswordResponse" />
+  </message>
+  <message name="getUserServices">
+    <part name="parameters" element="tns:getUserServices" />
+  </message>
+  <message name="getUserServicesResponse">
+    <part name="parameters" element="tns:getUserServicesResponse" />
+  </message>
+  <message name="getUserInfo">
+    <part name="parameters" element="tns:getUserInfo" />
+  </message>
+  <message name="getUserInfoResponse">
+    <part name="parameters" element="tns:getUserInfoResponse" />
+  </message>
+  <message name="listSubUser">
+    <part name="parameters" element="tns:listSubUser" />
+  </message>
+  <message name="listSubUserResponse">
+    <part name="parameters" element="tns:listSubUserResponse" />
+  </message>
+  <message name="expireSubUserPassword">
+    <part name="parameters" element="tns:expireSubUserPassword" />
+  </message>
+  <message name="expireSubUserPasswordResponse">
+    <part name="parameters" element="tns:expireSubUserPasswordResponse" />
+  </message>
+  <message name="updateSubUser">
+    <part name="parameters" element="tns:updateSubUser" />
+  </message>
+  <message name="updateSubUserResponse">
+    <part name="parameters" element="tns:updateSubUserResponse" />
+  </message>
+  <message name="deleteSubUser">
+    <part name="parameters" element="tns:deleteSubUser" />
+  </message>
+  <message name="deleteSubUserResponse">
+    <part name="parameters" element="tns:deleteSubUserResponse" />
+  </message>
+  <message name="createSubUser">
+    <part name="parameters" element="tns:createSubUser" />
+  </message>
+  <message name="createSubUserResponse">
+    <part name="parameters" element="tns:createSubUserResponse" />
+  </message>
+  <message name="verify">
+    <part name="parameters" element="tns:verify" />
+  </message>
+  <message name="verifyResponse">
+    <part name="parameters" element="tns:verifyResponse" />
+  </message>
+  <message name="identify">
+    <part name="parameters" element="tns:identify" />
+  </message>
+  <message name="identifyResponse">
+    <part name="parameters" element="tns:identifyResponse" />
+  </message>
+  <message name="query">
+    <part name="parameters" element="tns:query" />
+  </message>
+  <message name="queryResponse">
+    <part name="parameters" element="tns:queryResponse" />
+  </message>
+  <message name="report">
+    <part name="parameters" element="tns:report" />
+  </message>
+  <message name="reportResponse">
+    <part name="parameters" element="tns:reportResponse" />
+  </message>
+  <message name="identifyByNationalId">
+    <part name="parameters" element="tns:identifyByNationalId" />
+  </message>
+  <message name="identifyByNationalIdResponse">
+    <part name="parameters" element="tns:identifyByNationalIdResponse" />
+  </message>
+  <message name="verifyByNationalId">
+    <part name="parameters" element="tns:verifyByNationalId" />
+  </message>
+  <message name="verifyByNationalIdResponse">
+    <part name="parameters" element="tns:verifyByNationalIdResponse" />
+  </message>
+  <message name="identifyByBiometricData">
+    <part name="parameters" element="tns:identifyByBiometricData" />
+  </message>
+  <message name="identifyByBiometricDataResponse">
+    <part name="parameters" element="tns:identifyByBiometricDataResponse" />
+  </message>
+  <message name="identifyByPassportNumber">
+    <part name="parameters" element="tns:identifyByPassportNumber" />
+  </message>
+  <message name="identifyByPassportNumberResponse">
+    <part name="parameters" element="tns:identifyByPassportNumberResponse" />
+  </message>
+  <message name="getServiceLogDetail">
+    <part name="parameters" element="tns:getServiceLogDetail" />
+  </message>
+  <message name="getServiceLogDetailResponse">
+    <part name="parameters" element="tns:getServiceLogDetailResponse" />
+  </message>
+  <message name="getServiceLogSummary">
+    <part name="parameters" element="tns:getServiceLogSummary" />
+  </message>
+  <message name="getServiceLogSummaryResponse">
+    <part name="parameters" element="tns:getServiceLogSummaryResponse" />
+  </message>
+  <message name="getVoterInformation">
+    <part name="parameters" element="tns:getVoterInformation" />
+  </message>
+  <message name="getVoterInformationResponse">
+    <part name="parameters" element="tns:getVoterInformationResponse" />
+  </message>
+  <message name="getVoterInformationByVoterNo">
+    <part name="parameters" element="tns:getVoterInformationByVoterNo" />
+  </message>
+  <message name="getVoterInformationByVoterNoResponse">
+    <part name="parameters" element="tns:getVoterInformationByVoterNoResponse" />
+  </message>
+  <message name="getUpdatedVoterInformation">
+    <part name="parameters" element="tns:getUpdatedVoterInformation" />
+  </message>
+  <message name="getUpdatedVoterInformationResponse">
+    <part name="parameters" element="tns:getUpdatedVoterInformationResponse" />
+  </message>
+  <message name="createBulkOperation">
+    <part name="parameters" element="tns:createBulkOperation" />
+  </message>
+  <message name="createBulkOperationResponse">
+    <part name="parameters" element="tns:createBulkOperationResponse" />
+  </message>
+  <message name="getBulkOperations">
+    <part name="parameters" element="tns:getBulkOperations" />
+  </message>
+  <message name="getBulkOperationsResponse">
+    <part name="parameters" element="tns:getBulkOperationsResponse" />
+  </message>
+  <message name="setInputFilePathBulkOperation">
+    <part name="parameters" element="tns:setInputFilePathBulkOperation" />
+  </message>
+  <message name="setInputFilePathBulkOperationResponse">
+    <part name="parameters" element="tns:setInputFilePathBulkOperationResponse" />
+  </message>
+  <message name="regenerateBulkOperation">
+    <part name="parameters" element="tns:regenerateBulkOperation" />
+  </message>
+  <message name="regenerateBulkOperationResponse">
+    <part name="parameters" element="tns:regenerateBulkOperationResponse" />
+  </message>
+  <message name="deleteBulkOperation">
+    <part name="parameters" element="tns:deleteBulkOperation" />
+  </message>
+  <message name="deleteBulkOperationResponse">
+    <part name="parameters" element="tns:deleteBulkOperationResponse" />
+  </message>
+  <message name="updateBulkOperationStatus">
+    <part name="parameters" element="tns:updateBulkOperationStatus" />
+  </message>
+  <message name="updateBulkOperationStatusResponse">
+    <part name="parameters" element="tns:updateBulkOperationStatusResponse" />
+  </message>
+  <message name="heartbeat">
+    <part name="parameters" element="tns:heartbeat" />
+  </message>
+  <message name="heartbeatResponse">
+    <part name="parameters" element="tns:heartbeatResponse" />
+  </message>
+  <message name="getVoterInformationTypeOne">
+    <part name="parameters" element="tns:getVoterInformationTypeOne" />
+  </message>
+  <message name="getVoterInformationTypeOneResponse">
+    <part name="parameters" element="tns:getVoterInformationTypeOneResponse" />
+  </message>
+  <message name="getVoterInformationTypeTwo">
+    <part name="parameters" element="tns:getVoterInformationTypeTwo" />
+  </message>
+  <message name="getVoterInformationTypeTwoResponse">
+    <part name="parameters" element="tns:getVoterInformationTypeTwoResponse" />
+  </message>
+  <message name="getVoterInformationTypeThree">
+    <part name="parameters" element="tns:getVoterInformationTypeThree" />
+  </message>
+  <message name="getVoterInformationTypeThreeResponse">
+    <part name="parameters" element="tns:getVoterInformationTypeThreeResponse" />
+  </message>
+  <message name="getVoterInformationTypeFour">
+    <part name="parameters" element="tns:getVoterInformationTypeFour" />
+  </message>
+  <message name="getVoterInformationTypeFourResponse">
+    <part name="parameters" element="tns:getVoterInformationTypeFourResponse" />
+  </message>
+  <message name="getVoterInformationTypeFive">
+    <part name="parameters" element="tns:getVoterInformationTypeFive" />
+  </message>
+  <message name="getVoterInformationTypeFiveResponse">
+    <part name="parameters" element="tns:getVoterInformationTypeFiveResponse" />
+  </message>
+  <message name="getVoterInformationTypeSix">
+    <part name="parameters" element="tns:getVoterInformationTypeSix" />
+  </message>
+  <message name="getVoterInformationTypeSixResponse">
+    <part name="parameters" element="tns:getVoterInformationTypeSixResponse" />
+  </message>
+  <message name="getVoterInformationTypeOneFromVoterArea">
+    <part name="parameters" element="tns:getVoterInformationTypeOneFromVoterArea" />
+  </message>
+  <message name="getVoterInformationTypeOneFromVoterAreaResponse">
+    <part name="parameters" element="tns:getVoterInformationTypeOneFromVoterAreaResponse" />
+  </message>
+  <message name="getVoterInformationTypeOneByFormNo">
+    <part name="parameters" element="tns:getVoterInformationTypeOneByFormNo" />
+  </message>
+  <message name="getVoterInformationTypeOneByFormNoResponse">
+    <part name="parameters" element="tns:getVoterInformationTypeOneByFormNoResponse" />
+  </message>
+  <message name="getCardStatusForMobile">
+    <part name="parameters" element="tns:getCardStatusForMobile" />
+  </message>
+  <message name="getCardStatusForMobileResponse">
+    <part name="parameters" element="tns:getCardStatusForMobileResponse" />
+  </message>
+  <message name="getPollingCenter">
+    <part name="parameters" element="tns:getPollingCenter" />
+  </message>
+  <message name="getPollingCenterResponse">
+    <part name="parameters" element="tns:getPollingCenterResponse" />
+  </message>
+  <message name="getPollingCenterTypeTwo">
+    <part name="parameters" element="tns:getPollingCenterTypeTwo" />
+  </message>
+  <message name="getPollingCenterTypeTwoResponse">
+    <part name="parameters" element="tns:getPollingCenterTypeTwoResponse" />
+  </message>
+  <message name="issueCard">
+    <part name="parameters" element="tns:issueCard" />
+  </message>
+  <message name="issueCardResponse">
+    <part name="parameters" element="tns:issueCardResponse" />
+  </message>
+  <message name="migrateVoterFromPartner">
+    <part name="parameters" element="tns:migrateVoterFromPartner" />
+  </message>
+  <message name="migrateVoterFromPartnerResponse">
+    <part name="parameters" element="tns:migrateVoterFromPartnerResponse" />
+  </message>
+  <message name="getVoterCountFromVoterArea">
+    <part name="parameters" element="tns:getVoterCountFromVoterArea" />
+  </message>
+  <message name="getVoterCountFromVoterAreaResponse">
+    <part name="parameters" element="tns:getVoterCountFromVoterAreaResponse" />
+  </message>
+  <message name="getCardIssueApplications">
+    <part name="parameters" element="tns:getCardIssueApplications" />
+  </message>
+  <message name="getCardIssueApplicationsResponse">
+    <part name="parameters" element="tns:getCardIssueApplicationsResponse" />
+  </message>
+  <message name="migrateVoterFromPartnerTwo">
+    <part name="parameters" element="tns:migrateVoterFromPartnerTwo" />
+  </message>
+  <message name="migrateVoterFromPartnerTwoResponse">
+    <part name="parameters" element="tns:migrateVoterFromPartnerTwoResponse" />
+  </message>
+  <message name="getPartnerCardIssueCount">
+    <part name="parameters" element="tns:getPartnerCardIssueCount" />
+  </message>
+  <message name="getPartnerCardIssueCountResponse">
+    <part name="parameters" element="tns:getPartnerCardIssueCountResponse" />
+  </message>
+  <message name="verifyPartnerCardChangeTransactionId">
+    <part name="parameters" element="tns:verifyPartnerCardChangeTransactionId" />
+  </message>
+  <message name="verifyPartnerCardChangeTransactionIdResponse">
+    <part name="parameters" element="tns:verifyPartnerCardChangeTransactionIdResponse" />
+  </message>
+  <message name="addSonaliBankTransaction">
+    <part name="parameters" element="tns:addSonaliBankTransaction" />
+  </message>
+  <message name="addSonaliBankTransactionResponse">
+    <part name="parameters" element="tns:addSonaliBankTransactionResponse" />
+  </message>
+  <message name="addBankTransaction">
+    <part name="parameters" element="tns:addBankTransaction" />
+  </message>
+  <message name="addBankTransactionResponse">
+    <part name="parameters" element="tns:addBankTransactionResponse" />
+  </message>
+  <message name="addBulkBankTransaction">
+    <part name="parameters" element="tns:addBulkBankTransaction" />
+  </message>
+  <message name="addBulkBankTransactionResponse">
+    <part name="parameters" element="tns:addBulkBankTransactionResponse" />
+  </message>
+  <portType name="PartnerService">
+    <operation name="login">
+      <input message="tns:login" />
+      <output message="tns:loginResponse" />
+    </operation>
+    <operation name="logout">
+      <input message="tns:logout" />
+      <output message="tns:logoutResponse" />
+    </operation>
+    <operation name="updateUserInfo">
+      <input message="tns:updateUserInfo" />
+      <output message="tns:updateUserInfoResponse" />
+    </operation>
+    <operation name="changePassword">
+      <input message="tns:changePassword" />
+      <output message="tns:changePasswordResponse" />
+    </operation>
+    <operation name="changeExpiredPassword">
+      <input message="tns:changeExpiredPassword" />
+      <output message="tns:changeExpiredPasswordResponse" />
+    </operation>
+    <operation name="getUserServices">
+      <input message="tns:getUserServices" />
+      <output message="tns:getUserServicesResponse" />
+    </operation>
+    <operation name="getUserInfo">
+      <input message="tns:getUserInfo" />
+      <output message="tns:getUserInfoResponse" />
+    </operation>
+    <operation name="listSubUser">
+      <input message="tns:listSubUser" />
+      <output message="tns:listSubUserResponse" />
+    </operation>
+    <operation name="expireSubUserPassword">
+      <input message="tns:expireSubUserPassword" />
+      <output message="tns:expireSubUserPasswordResponse" />
+    </operation>
+    <operation name="updateSubUser">
+      <input message="tns:updateSubUser" />
+      <output message="tns:updateSubUserResponse" />
+    </operation>
+    <operation name="deleteSubUser">
+      <input message="tns:deleteSubUser" />
+      <output message="tns:deleteSubUserResponse" />
+    </operation>
+    <operation name="createSubUser">
+      <input message="tns:createSubUser" />
+      <output message="tns:createSubUserResponse" />
+    </operation>
+    <operation name="verify">
+      <input message="tns:verify" />
+      <output message="tns:verifyResponse" />
+    </operation>
+    <operation name="identify">
+      <input message="tns:identify" />
+      <output message="tns:identifyResponse" />
+    </operation>
+    <operation name="query">
+      <input message="tns:query" />
+      <output message="tns:queryResponse" />
+    </operation>
+    <operation name="report">
+      <input message="tns:report" />
+      <output message="tns:reportResponse" />
+    </operation>
+    <operation name="identifyByNationalId">
+      <input message="tns:identifyByNationalId" />
+      <output message="tns:identifyByNationalIdResponse" />
+    </operation>
+    <operation name="verifyByNationalId">
+      <input message="tns:verifyByNationalId" />
+      <output message="tns:verifyByNationalIdResponse" />
+    </operation>
+    <operation name="identifyByBiometricData">
+      <input message="tns:identifyByBiometricData" />
+      <output message="tns:identifyByBiometricDataResponse" />
+    </operation>
+    <operation name="identifyByPassportNumber">
+      <input message="tns:identifyByPassportNumber" />
+      <output message="tns:identifyByPassportNumberResponse" />
+    </operation>
+    <operation name="getServiceLogDetail">
+      <input message="tns:getServiceLogDetail" />
+      <output message="tns:getServiceLogDetailResponse" />
+    </operation>
+    <operation name="getServiceLogSummary">
+      <input message="tns:getServiceLogSummary" />
+      <output message="tns:getServiceLogSummaryResponse" />
+    </operation>
+    <operation name="getVoterInformation">
+      <input message="tns:getVoterInformation" />
+      <output message="tns:getVoterInformationResponse" />
+    </operation>
+    <operation name="getVoterInformationByVoterNo">
+      <input message="tns:getVoterInformationByVoterNo" />
+      <output message="tns:getVoterInformationByVoterNoResponse" />
+    </operation>
+    <operation name="getUpdatedVoterInformation">
+      <input message="tns:getUpdatedVoterInformation" />
+      <output message="tns:getUpdatedVoterInformationResponse" />
+    </operation>
+    <operation name="createBulkOperation">
+      <input message="tns:createBulkOperation" />
+      <output message="tns:createBulkOperationResponse" />
+    </operation>
+    <operation name="getBulkOperations">
+      <input message="tns:getBulkOperations" />
+      <output message="tns:getBulkOperationsResponse" />
+    </operation>
+    <operation name="setInputFilePathBulkOperation">
+      <input message="tns:setInputFilePathBulkOperation" />
+      <output message="tns:setInputFilePathBulkOperationResponse" />
+    </operation>
+    <operation name="regenerateBulkOperation">
+      <input message="tns:regenerateBulkOperation" />
+      <output message="tns:regenerateBulkOperationResponse" />
+    </operation>
+    <operation name="deleteBulkOperation">
+      <input message="tns:deleteBulkOperation" />
+      <output message="tns:deleteBulkOperationResponse" />
+    </operation>
+    <operation name="updateBulkOperationStatus">
+      <input message="tns:updateBulkOperationStatus" />
+      <output message="tns:updateBulkOperationStatusResponse" />
+    </operation>
+    <operation name="heartbeat">
+      <input message="tns:heartbeat" />
+      <output message="tns:heartbeatResponse" />
+    </operation>
+    <operation name="getVoterInformationTypeOne">
+      <input message="tns:getVoterInformationTypeOne" />
+      <output message="tns:getVoterInformationTypeOneResponse" />
+    </operation>
+    <operation name="getVoterInformationTypeTwo">
+      <input message="tns:getVoterInformationTypeTwo" />
+      <output message="tns:getVoterInformationTypeTwoResponse" />
+    </operation>
+    <operation name="getVoterInformationTypeThree">
+      <input message="tns:getVoterInformationTypeThree" />
+      <output message="tns:getVoterInformationTypeThreeResponse" />
+    </operation>
+    <operation name="getVoterInformationTypeFour">
+      <input message="tns:getVoterInformationTypeFour" />
+      <output message="tns:getVoterInformationTypeFourResponse" />
+    </operation>
+    <operation name="getVoterInformationTypeFive">
+      <input message="tns:getVoterInformationTypeFive" />
+      <output message="tns:getVoterInformationTypeFiveResponse" />
+    </operation>
+    <operation name="getVoterInformationTypeSix">
+      <input message="tns:getVoterInformationTypeSix" />
+      <output message="tns:getVoterInformationTypeSixResponse" />
+    </operation>
+    <operation name="getVoterInformationTypeOneFromVoterArea">
+      <input message="tns:getVoterInformationTypeOneFromVoterArea" />
+      <output message="tns:getVoterInformationTypeOneFromVoterAreaResponse" />
+    </operation>
+    <operation name="getVoterInformationTypeOneByFormNo">
+      <input message="tns:getVoterInformationTypeOneByFormNo" />
+      <output message="tns:getVoterInformationTypeOneByFormNoResponse" />
+    </operation>
+    <operation name="getCardStatusForMobile">
+      <input message="tns:getCardStatusForMobile" />
+      <output message="tns:getCardStatusForMobileResponse" />
+    </operation>
+    <operation name="getPollingCenter">
+      <input message="tns:getPollingCenter" />
+      <output message="tns:getPollingCenterResponse" />
+    </operation>
+    <operation name="getPollingCenterTypeTwo">
+      <input message="tns:getPollingCenterTypeTwo" />
+      <output message="tns:getPollingCenterTypeTwoResponse" />
+    </operation>
+    <operation name="issueCard">
+      <input message="tns:issueCard" />
+      <output message="tns:issueCardResponse" />
+    </operation>
+    <operation name="migrateVoterFromPartner">
+      <input message="tns:migrateVoterFromPartner" />
+      <output message="tns:migrateVoterFromPartnerResponse" />
+    </operation>
+    <operation name="getVoterCountFromVoterArea">
+      <input message="tns:getVoterCountFromVoterArea" />
+      <output message="tns:getVoterCountFromVoterAreaResponse" />
+    </operation>
+    <operation name="getCardIssueApplications">
+      <input message="tns:getCardIssueApplications" />
+      <output message="tns:getCardIssueApplicationsResponse" />
+    </operation>
+    <operation name="migrateVoterFromPartnerTwo">
+      <input message="tns:migrateVoterFromPartnerTwo" />
+      <output message="tns:migrateVoterFromPartnerTwoResponse" />
+    </operation>
+    <operation name="getPartnerCardIssueCount">
+      <input message="tns:getPartnerCardIssueCount" />
+      <output message="tns:getPartnerCardIssueCountResponse" />
+    </operation>
+    <operation name="verifyPartnerCardChangeTransactionId">
+      <input message="tns:verifyPartnerCardChangeTransactionId" />
+      <output message="tns:verifyPartnerCardChangeTransactionIdResponse" />
+    </operation>
+    <operation name="addSonaliBankTransaction">
+      <input message="tns:addSonaliBankTransaction" />
+      <output message="tns:addSonaliBankTransactionResponse" />
+    </operation>
+    <operation name="addBankTransaction">
+      <input message="tns:addBankTransaction" />
+      <output message="tns:addBankTransactionResponse" />
+    </operation>
+    <operation name="addBulkBankTransaction">
+      <input message="tns:addBulkBankTransaction" />
+      <output message="tns:addBulkBankTransactionResponse" />
+    </operation>
+  </portType>
+  <binding name="PartnerServicePortBinding" type="tns:PartnerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="logout">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateUserInfo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="changePassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="changeExpiredPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUserServices">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUserInfo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listSubUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="expireSubUserPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateSubUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteSubUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createSubUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verify">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="identify">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="query">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="report">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="identifyByNationalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verifyByNationalId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="identifyByBiometricData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="identifyByPassportNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getServiceLogDetail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getServiceLogSummary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationByVoterNo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUpdatedVoterInformation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createBulkOperation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBulkOperations">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setInputFilePathBulkOperation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="regenerateBulkOperation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteBulkOperation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateBulkOperationStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="heartbeat">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationTypeOne">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationTypeTwo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationTypeThree">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationTypeFour">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationTypeFive">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationTypeSix">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationTypeOneFromVoterArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterInformationTypeOneByFormNo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCardStatusForMobile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPollingCenter">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPollingCenterTypeTwo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="issueCard">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="migrateVoterFromPartner">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getVoterCountFromVoterArea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCardIssueApplications">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="migrateVoterFromPartnerTwo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPartnerCardIssueCount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verifyPartnerCardChangeTransactionId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addSonaliBankTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addBankTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addBulkBankTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PartnerService">
+    <port name="PartnerServicePort" binding="tns:PartnerServicePortBinding">
+      <soap:address location="https://180.211.162.70/service/PartnerService" />
+    </port>
+  </service>
+</definitions>

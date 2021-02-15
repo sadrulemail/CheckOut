@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.Simple.Master.cs"
+    Inherits="Master_Simple" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Src="AKControl.ascx" TagName="AKControl" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Stylesheet.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.alerts.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.watermark.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.timeago.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/TrustBank.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div class="TopTitle">
+        <td valign="top" style="padding: 10px;">
+            <table width="100%">
+                <tr>
+                    <td valign="top" style="padding: 10px;" class="AppTitle">
+                        <div class="AppTitle">
+                         <img src="Images/checkout-64.png" width="30" height="30" border="0" />
+                            <%= ConfigurationSettings.AppSettings["AppTitle"] %></div>
+                    </td>
+                    <td valign="top" align="right">
+                    </td>
+                </tr>
+            </table>
+    </div>
+    <div class="MainTitle">
+        <asp:ContentPlaceHolder ID="cphTitle" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="maindiv">
+        <table style="width: 100%;" width="100%">
+            <tr>
+                <td valign="top" align="center">
+                    <div style="padding: 20px 5px 50px 5px">
+                        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <asp:Literal ID="Copyright" runat="server"></asp:Literal></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OnlineBillCollectionService.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TokenRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="TokenNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TokenRequest" nillable="true" type="tns:TokenRequest" />
+  <xs:complexType name="BillRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillDetails" nillable="true" type="tns:ArrayOfBillLedger" />
+      <xs:element minOccurs="0" name="ExchangeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="TXNNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BillRequest" nillable="true" type="tns:BillRequest" />
+  <xs:complexType name="ArrayOfBillLedger">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BillLedger" nillable="true" type="tns:BillLedger" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBillLedger" nillable="true" type="tns:ArrayOfBillLedger" />
+  <xs:complexType name="BillLedger">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BTCL_Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BillMonth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillPayStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillYear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExchangeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastPayDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="RowNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="TXNNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="VAT" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BillLedger" nillable="true" type="tns:BillLedger" />
+  <xs:complexType name="BillPaymentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="TXNNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BillPaymentResponse" nillable="true" type="tns:BillPaymentResponse" />
+  <xs:complexType name="BillPaidHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillDetails" nillable="true" type="tns:ArrayOfBillLedgerHistory" />
+      <xs:element minOccurs="0" name="ExchangeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="TXNNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BillPaidHistory" nillable="true" type="tns:BillPaidHistory" />
+  <xs:complexType name="ArrayOfBillLedgerHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BillLedgerHistory" nillable="true" type="tns:BillLedgerHistory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBillLedgerHistory" nillable="true" type="tns:ArrayOfBillLedgerHistory" />
+  <xs:complexType name="BillLedgerHistory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BillLedger">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BANK_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="BRANCH_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BillLedgerHistory" nillable="true" type="tns:BillLedgerHistory" />
+  <xs:complexType name="ChangePasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChangePasswordResponse" nillable="true" type="tns:ChangePasswordResponse" />
+  <xs:complexType name="PaymentCancelResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BillPaymentResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaymentCancelResponse" nillable="true" type="tns:PaymentCancelResponse" />
+</xs:schema>

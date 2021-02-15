@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.100.42:90/SLMSService.svc?xsd=xsd0" filename="SLMSService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://192.168.100.42:90/SLMSService.svc?wsdl" filename="SLMSService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.100.42:90/SLMSService.svc?xsd=xsd2" filename="SLMSService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.168.100.42:90/SLMSService.svc?xsd=xsd1" filename="SLMSService1.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

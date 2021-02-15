@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="CheckOutPerformenceTest" Id="187acae7-b553-43dc-974f-00641c0e625e" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="CheckOutPerformenceTest.c5e4671d-9bca-4843-8a92-0e4d0da93e15.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="88cff927-655a-4955-a9cd-4fa320f749d5" Version="1.1" Url="https://ibanking.tblbd.com/testcheckout/testpayment.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="1" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="50e987a9-965b-4c94-b8d3-f203de0f06af" Version="1.1" Url="https://ibanking.tblbd.com/testcheckout/testpayment.aspx" ThinkTime="14" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.txtPaymentSuccessUrl" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="txtPaymentSuccessUrl" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.cmdSubmit2" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="cmdSubmit2" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.ddlMarchentType" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;Tes" />
+            <RuleParameter Name="Index" Value="31" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.ddlMethod" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;POS" />
+            <RuleParameter Name="Index" Value="36" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="51d91374-59e9-4ad1-82d7-d6a5807b97dc" Version="1.1" Url="https://ibanking.tblbd.com/testcheckout/testpayment.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://ibanking.tblbd.com/testcheckout/testpayment.aspx" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="__EVENTTARGET" Value="{{$HIDDEN1.__EVENTTARGET}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="/wEPDwUJLTQ5OTU2MTcyD2QWAgIDD2QWAgILDxAPFgIeC18hRGF0YUJvdW5kZ2QPFh0CAQICAgMCBAIFAgYCBwIIAgkCCgILAgwCDQIOAg8CEAIRAhICEwIUAhUCFgIXAhgCGQIaAhsCHAIdFh0QBSANCg0KRnV0dXJlIFNvbHV0aW9uIGZvciBCdXNpbmVzcwUDRlNCZxAFIEFkYW1qZWUgQ2FudG9ubWVudCBQdWJsaWMgU2Nob29sBQRBQ1BTZxAFKkJha2hyYWJhZCBHYXMgRGlzdHJpYnV0aW9uIENvbXBhbnkgTGltaXRlZAUEQkdTTGcQBRRCYW5nbGFkZXNoIEFpciBGb3JjZQUDQkFGZxAFF0JhbmdsYWZpcmUgU29sdXRpb24gTHRkBQpCQU5HTEFGSVJFZxAFFkJhcmlzaGFsIENhZGV0IENvbGxlZ2UFCkJhcmlzaGFsQ0NnEAUNQ2FkZXQgQ29sbGVnZQUFQ0NQQVlnEAUjQ2FudG9ubWVudCBFbmdsaXNoIFNjaG9vbCAmIENvbGxlZ2UFBENFU0NnEAUeRGF1ZCBQdWJsaWMgU2Nob29sIGFuZCBDb2xsZWdlBQREUFNDZxAFDEVhc3kgUGF5IFdheQUKRUFTWVBBWVdBWWcQBQZla2RhbGEFBkVLREFMQWcQBQ9Gb3N0ZXIgUGF5bWVudHMFBkZPU1RFUmcQBQlIdW1hYyBMYWIFCEhVTUFDTEFCZxAFHUpheXB1cmhhdCBHaXJscyBDYWRldCBDb2xsZWdlBQxKYXlwdXJoYXRHQ0NnEAUYS2h1bG5hIERldmVsb3BtZW50IEhvdXNlBQNLREFnEAUWTWlyemFwdXIgQ2FkZXQgQ29sbGVnZQUKTWlyemFwdXJDQ2cQBQtOYXRpb25hbCBJRAUDTklEZxAFLE5pcmpob3IgQ2FudG9ubWVudCBQdWJsaWMgU2Nob29sIGFuZCBDb2xsZWdlBQVOQ1BTQ2cQBRxSdXJhbCBFbGVjdHJpZmljYXRpb24gQm9hcmQgBQNSRUJnEAUJU2VuYWt1bmphBQdTRU5BS05KZxAFDFNlbmFtYWxhbmNoYQUIU0VOQU1MQ0hnEAUrU2hhaGVlZCBCaXIgVXR0YW0gTHQgQW53YXIgR2lybHPigJkgQ29sbGVnZQUEU0FHQ2cQBQxTaHVyam8gTXVraGkFC1NIVVJKT01VS0hJZxAFC1N3YXBub2NodXJhBQlTV1BOQ0hVUkFnEAUUU3lsaGV0IENhZGV0IENvbGxlZ2UFCFN5bGhldENDZxAFDVRlc3QgTWVyY2hhbnQFBFRFU1RnEAUQVHJ1c3RtaWxvbmF5YXRvbgUJVFJVU1RNTFROZxAFCVdlbGxldG1peAUJV0FMTEVUTUlYZxAFKFdlc3QgWm9uZSBQb3dlciBEaXN0cmlidXRpb24gQ29tcGFueSBMdGQFBldaUERDTGdkZGQDFIP8OyjLQPUcR/q382tjItcAVg==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEGENERATOR" Value="{{$HIDDEN1.__VIEWSTATEGENERATOR}}" RecordedValue="43A5872B" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEdACb7UJVn8+wv/2nSCq9TsrCOozoJZpuXxkpOVJKRbHyuHkMHZh9ZuPBRie2vA/HfoRIfcRfNzpAmcbmdbysoE+5v3PEmtgxux+TcrRFTgBcaVpE0XR/1g2lUHXNckZkiOITO7sP3LNnVT3KZl4t9Sx9c27qVfsIqZw0NcfoX5UpvDrb0MDvmptJhFHeFlyag3cWgSNg5k86Xg2aIWA99lWZu/c+FxYxH8Uaa7RKJX/mpkCdyZ5ewDH2+oN6twH3okA73QWP8cF86P8KSZrPNIjzUiR0KffnfvY53bjeo+Oe9cztZoOVd1BGmzqj1BOUxGB88DmGlHHKzLw4+m+DLzuHJMy59H2PVd9nznUMkTEAhF4YlW8IGoMkXQT02NKJwBigzXSPTQ1tVvFSzSi8Dq5MNzcZRrBQBwgYXbm+qJy3xKBJRqMk76v2Afd3WjymxK1jsQ4u6jTJu4BpIMA60l4QVoe+SKVuEPH460wWP0ZGhdL5x0RKmfiKO4wI0eRlvO2oXbllKz52hPUWD/IamNxUXn1jyaRlzAlyU+sEDPjOh0LqNusWW/Nb2mtejCJBNkW49n2aQ1wgnzPCpNWrEf9wmko+M5DXpMUzVkrKY7qZk2+52xRkFat4QPTAhWxVpx7eB8Ck7zcKmzd/D+kfuD262rGg4Fltw3CA+GXBvbE3EN1lRAKw6Kv9hmr2up8zsCtms6aNT87/zAa2jV4/FLvVE5qvSnSXO/Jd6XaZOW4lGUYfQMl5kJph4LPgguvzQCP6AdRAPPP1l9X3XdHXwg2+GH7J4D5UJ6Shy7e0FLf9hXZRhI4RbF0mYCwB7+JmrKc9mH8Ea" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="txtName" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="txtEmail" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="txtAmount" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ddlMarchentType" Value="TEST" RecordedValue="TEST" CorrelationBinding="{{FormPostParam3.ddlMarchentType}}" UrlEncode="True" />
+        <FormPostParameter Name="txtPaymentSuccessUrl" Value="https://ibanking.tblbd.com/TestCheckout/MerchantPaymentConfirmation.aspx" RecordedValue="https://ibanking.tblbd.com/TestCheckout/MerchantPaymentConfirmation.aspx" CorrelationBinding="{{FormPostParam1.txtPaymentSuccessUrl}}" UrlEncode="True" />
+        <FormPostParameter Name="ddlMethod" Value="POST" RecordedValue="POST" CorrelationBinding="{{FormPostParam4.ddlMethod}}" UrlEncode="True" />
+        <FormPostParameter Name="cmdSubmit2" Value="Pay Now" RecordedValue="Pay Now" CorrelationBinding="{{FormPostParam2.cmdSubmit2}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="5adc1745-efa9-4795-b4c2-26c52291cc10" Version="1.1" Url="https://ibanking.tblbd.com/testcheckout/Checkout_Payment.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="1" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://ibanking.tblbd.com/testcheckout/testpayment.aspx" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="OrderID" Value="{{$HIDDEN1.OrderID}}" RecordedValue="TEST_BTE3BGWJUVY4ELTZNYHVEZL1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Amount" Value="{{$HIDDEN1.Amount}}" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="MerchantID" Value="{{$HIDDEN1.MerchantID}}" RecordedValue="TEST" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="FullName" Value="{{$HIDDEN1.FullName}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Email" Value="{{$HIDDEN1.Email}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PaymentSuccessUrl" Value="{{$HIDDEN1.PaymentSuccessUrl}}" RecordedValue="https://ibanking.tblbd.com/TestCheckout/MerchantPaymentConfirmation.aspx" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

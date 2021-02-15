@@ -1,0 +1,75 @@
+﻿body, html, table, td, div, p, a
+{    
+    background: white !important;
+    font-size: 9pt;
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    overflow:auto;
+    vertical-align:top;    
+}
+body a{color:Black;}
+body a:visited{color:Black;}
+
+.div-minute
+{
+    padding:30px !important;
+    width:630px !important;
+    text-align:justify !important;
+}
+.timeago{color:#999;font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;font-size: 11px;}
+.shadow{box-shadow: 0 0 .3em rgba(0, 0, 0, 0.5);}
+.hidden { display:none; }
+.silver {color:Silver;}
+.tr-top{ vertical-align:top; padding-top:10px; }
+.ac_results{box-shadow: 0 1px .5em rgba(0, 0, 0, .5)}
+.ui-state-active{font-weight:bold}
+.hide{display:none}
+.right{text-align:right}
+.nowrap{white-space:nowrap}
+.hidden-print {display:none !important}
+.hidden-screen {display:inherit !important}
+.hidden-screen-table-row{display:table-row}
+a {text-decoration: none}
+time{visibility:hidden}
+.center{text-align:center}
+
+/*.Grid
+{
+    border-collapse:collapse;
+}
+.Grid thead tr
+{
+    border: solid 1px silver !important;
+    background-color:silver !important; 
+    color:black !important;
+}
+.Grid thead tr, .Grid thead tr a
+{
+	font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;
+	font-stretch: Condensed;
+    color:white;
+}
+.Grid td
+{
+    border: solid 1px silver; 
+    padding:2px 3px;
+    font-stretch:condensed !important;
+}
+.Grid a
+{
+    text-decoration:none;
+    color:black;
+}*/
+.bold{font-weight:bold}
+
+.left {text-align:left}
+
+.table{border:1px silver solid;border-collapse:collapse;margin-top:5px;margin-bottom:5px}
+.table td{padding:2px 3px;border:1px silver solid;font-family: "Helvetica Narrow","Arial Narrow",Tahoma,Arial,Helvetica,sans-serif;font-stretch: Condensed}
+.table thead tr {text-align:center;font-weight:bold;background-color:silver;border:1px solid darkslategray;color:black}
+.table thead tr td {white-space:nowrap;background-color:silver}
+
+.footer-row{font-size:120% !important;background-color:antiquewhite !important}
+

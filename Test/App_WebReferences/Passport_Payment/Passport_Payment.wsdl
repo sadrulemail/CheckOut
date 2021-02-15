@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://mobile.trustbanklimited.com/checkout/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://mobile.trustbanklimited.com/checkout/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://mobile.trustbanklimited.com/checkout/">
+      <s:element name="getPassportRefID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderAccType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keycode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPassportRefIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPassportRefIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmPassportRefID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PassportRefID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keycode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MobileMoneyStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmPassportRefIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmPassportRefIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getPassportRefIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPassportRefID" />
+  </wsdl:message>
+  <wsdl:message name="getPassportRefIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPassportRefIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPassportRefIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmPassportRefID" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPassportRefIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmPassportRefIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPassportRefIDHttpPostIn">
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="FullName" type="s:string" />
+    <wsdl:part name="TransactionID" type="s:string" />
+    <wsdl:part name="NotifyMobile" type="s:string" />
+    <wsdl:part name="SenderMobile" type="s:string" />
+    <wsdl:part name="SenderAccType" type="s:string" />
+    <wsdl:part name="EmailAddress" type="s:string" />
+    <wsdl:part name="Keycode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getPassportRefIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPassportRefIDHttpPostIn">
+    <wsdl:part name="PassportRefID" type="s:string" />
+    <wsdl:part name="Keycode" type="s:string" />
+    <wsdl:part name="MobileMoneyStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPassportRefIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="Passport_Payment_ServiceSoap">
+    <wsdl:operation name="getPassportRefID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Save Transation and return 14 Digit PassportRefID&lt;br&gt;Other Returns:&lt;br&gt;-1 = TransationID Already Used&lt;br&gt;-2 = UrlReferrer is not Allowed&lt;br&gt;-4 = SenderMobile Missing&lt;br&gt;-5 = Unable to Retrive from DB</wsdl:documentation>
+      <wsdl:input message="tns:getPassportRefIDSoapIn" />
+      <wsdl:output message="tns:getPassportRefIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPassportRefID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark as UNUSED of a REQ PassportRefID&lt;br&gt;Other Returns:&lt;br&gt;1 = UNUSED mark Successfull&lt;br&gt;2 = Already Verified by Passport Office (Cancel Not Possible)&lt;br&gt;-1 = PassportRefID Not Found&lt;br&gt;-2 = UrlReferrer is not Allowed&lt;br&gt;-5 = Unable to Retrive from DB</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmPassportRefIDSoapIn" />
+      <wsdl:output message="tns:ConfirmPassportRefIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Passport_Payment_ServiceHttpPost">
+    <wsdl:operation name="getPassportRefID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Save Transation and return 14 Digit PassportRefID&lt;br&gt;Other Returns:&lt;br&gt;-1 = TransationID Already Used&lt;br&gt;-2 = UrlReferrer is not Allowed&lt;br&gt;-4 = SenderMobile Missing&lt;br&gt;-5 = Unable to Retrive from DB</wsdl:documentation>
+      <wsdl:input message="tns:getPassportRefIDHttpPostIn" />
+      <wsdl:output message="tns:getPassportRefIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPassportRefID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service Task: Mark as UNUSED of a REQ PassportRefID&lt;br&gt;Other Returns:&lt;br&gt;1 = UNUSED mark Successfull&lt;br&gt;2 = Already Verified by Passport Office (Cancel Not Possible)&lt;br&gt;-1 = PassportRefID Not Found&lt;br&gt;-2 = UrlReferrer is not Allowed&lt;br&gt;-5 = Unable to Retrive from DB</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmPassportRefIDHttpPostIn" />
+      <wsdl:output message="tns:ConfirmPassportRefIDHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Passport_Payment_ServiceSoap" type="tns:Passport_Payment_ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPassportRefID">
+      <soap:operation soapAction="http://mobile.trustbanklimited.com/checkout/getPassportRefID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPassportRefID">
+      <soap:operation soapAction="http://mobile.trustbanklimited.com/checkout/ConfirmPassportRefID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Passport_Payment_ServiceSoap12" type="tns:Passport_Payment_ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPassportRefID">
+      <soap12:operation soapAction="http://mobile.trustbanklimited.com/checkout/getPassportRefID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPassportRefID">
+      <soap12:operation soapAction="http://mobile.trustbanklimited.com/checkout/ConfirmPassportRefID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Passport_Payment_ServiceHttpPost" type="tns:Passport_Payment_ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getPassportRefID">
+      <http:operation location="/getPassportRefID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPassportRefID">
+      <http:operation location="/ConfirmPassportRefID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Passport_Payment_Service">
+    <wsdl:port name="Passport_Payment_ServiceSoap" binding="tns:Passport_Payment_ServiceSoap">
+      <soap:address location="http://localhost:51907/Checkout/Passport_Payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Passport_Payment_ServiceSoap12" binding="tns:Passport_Payment_ServiceSoap12">
+      <soap12:address location="http://localhost:51907/Checkout/Passport_Payment.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Passport_Payment_ServiceHttpPost" binding="tns:Passport_Payment_ServiceHttpPost">
+      <http:address location="http://localhost:51907/Checkout/Passport_Payment.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
